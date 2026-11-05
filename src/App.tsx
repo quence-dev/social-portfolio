@@ -180,11 +180,6 @@ export default function App() {
                     <Icon key={item} role={item} />
                   ))}
                 </div>
-                <span className="metric">
-                  {video.views === null
-                    ? "View post"
-                    : `${compact(video.views)} views`}
-                </span>
               </div>
               <div className="card-copy">
                 <span>{video.creator}</span>
