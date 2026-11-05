@@ -11,6 +11,8 @@ const overwrite = process.argv.includes('--overwrite');
 const headless = process.argv.includes('--headless');
 const limitFlag = process.argv.indexOf('--limit');
 const limit = limitFlag === -1 ? Infinity : Number(process.argv[limitFlag + 1]);
+const limitMessage = 'You have reached the request limit.';
+const limitCooldownMs = 120_000;
 
 function parseCsv(text) {
   const records = [];
@@ -47,36 +49,50 @@ for (const row of rows) {
     try { await fs.access(target); skipped += 1; continue; } catch { /* thumbnail is missing */ }
   }
 
-  try {
-    await page.goto(toolUrl, { waitUntil: 'domcontentloaded', timeout: 60_000 });
-    const reelTab = page.locator('#nav-reel-tab');
-    await reelTab.waitFor({ state: 'visible', timeout: 30_000 });
-    await reelTab.click();
+  let retryAfterLimit = true;
+  while (retryAfterLimit) {
+    retryAfterLimit = false;
+    try {
+      await page.goto(toolUrl, { waitUntil: 'domcontentloaded', timeout: 60_000 });
+      const reelTab = page.locator('#nav-reel-tab');
+      await reelTab.waitFor({ state: 'visible', timeout: 30_000 });
+      await reelTab.click();
 
-    const input = page.locator('input[name="url"]');
-    await input.waitFor({ state: 'visible', timeout: 30_000 });
-    await input.fill(row.url);
-    await page.waitForTimeout(500);
-    if (await input.inputValue() !== row.url) throw new Error('Toolzin reset the URL field while loading.');
+      const input = page.locator('input[name="url"]');
+      await input.waitFor({ state: 'visible', timeout: 30_000 });
+      await input.fill(row.url);
+      await page.waitForTimeout(500);
+      if (await input.inputValue() !== row.url) throw new Error('Toolzin reset the URL field while loading.');
 
-    await page.locator('#btn_submit, button:has-text("Download Now")').first().click();
-    const saveThumbnail = page.locator('a.dl-thumbnail').first();
-    await saveThumbnail.waitFor({ state: 'visible', timeout: 90_000 });
-    const imageUrl = await saveThumbnail.evaluate((link) => link.href);
-    if (!imageUrl || imageUrl.startsWith('javascript:')) {
-      throw new Error('Toolzin returned a Save Thumbnail link without a direct image URL.');
+      await page.locator('#btn_submit, button:has-text("Download Now")').first().click();
+      const saveThumbnail = page.locator('a.dl-thumbnail').first();
+      const rateLimit = page.locator('#ajax_result p').filter({ hasText: limitMessage });
+      const outcome = await Promise.race([
+        saveThumbnail.waitFor({ state: 'visible', timeout: 90_000 }).then(() => 'thumbnail'),
+        rateLimit.waitFor({ state: 'visible', timeout: 90_000 }).then(() => 'limit'),
+      ]);
+      if (outcome === 'limit') {
+        console.warn(`Toolzin reached its request limit. Retrying ${row.post_id} in 120 seconds...`);
+        await page.waitForTimeout(limitCooldownMs);
+        retryAfterLimit = true;
+        continue;
+      }
+      const imageUrl = await saveThumbnail.evaluate((link) => link.href);
+      if (!imageUrl || imageUrl.startsWith('javascript:')) {
+        throw new Error('Toolzin returned a Save Thumbnail link without a direct image URL.');
+      }
+
+      const response = await context.request.get(imageUrl);
+      const contentType = response.headers()['content-type'] || '';
+      if (!response.ok() || !contentType.startsWith('image/')) {
+        throw new Error(`Thumbnail request failed (${response.status()} ${contentType || 'unknown type'}).`);
+      }
+      await fs.writeFile(target, await response.body());
+      downloaded += 1;
+      console.log(`Saved ${path.relative(root, target)}`);
+    } catch (error) {
+      console.warn(`Skipped ${row.post_id}: ${error.message}`);
     }
-
-    const response = await context.request.get(imageUrl);
-    const contentType = response.headers()['content-type'] || '';
-    if (!response.ok() || !contentType.startsWith('image/')) {
-      throw new Error(`Thumbnail request failed (${response.status()} ${contentType || 'unknown type'}).`);
-    }
-    await fs.writeFile(target, await response.body());
-    downloaded += 1;
-    console.log(`Saved ${path.relative(root, target)}`);
-  } catch (error) {
-    console.warn(`Skipped ${row.post_id}: ${error.message}`);
   }
 }
 
@@ -84,4 +100,4 @@ await context.close();
 await browser.close();
 console.log(`Finished: ${downloaded} saved, ${skipped} already present.`);
 
-// shortcut: runs one request at a time; stop and wait if Toolzin signals a limit instead of rotating around it.
+// shortcut: retries only Toolzin's explicit limit message; update the cooldown if Toolzin changes its reset window.
