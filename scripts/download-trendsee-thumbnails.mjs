@@ -47,10 +47,19 @@ for (const row of rows) {
   }
 
   try {
-    await page.goto(toolUrl, { waitUntil: 'domcontentloaded', timeout: 30_000 });
+    await page.goto(toolUrl, { waitUntil: 'networkidle', timeout: 60_000 });
     const input = page.locator('input[aria-label="Instagram URL"][placeholder*="instagram.com/reel/"]').first();
     await input.waitFor({ state: 'visible', timeout: 30_000 });
-    await input.fill(row.url);
+    let retained = false;
+    for (let attempt = 0; attempt < 3; attempt += 1) {
+      await input.fill(row.url);
+      await page.waitForTimeout(1_000);
+      if (await input.inputValue() === row.url) {
+        retained = true;
+        break;
+      }
+    }
+    if (!retained) throw new Error('Trendsee reset the URL field while loading.');
     await page.locator('button:has(span:text-is("Download"))').first().click();
     await page.waitForFunction(() => [...document.querySelectorAll('a')].some((link) =>
       /download thumbnail/i.test(link.textContent || '') || /cdninstagram\.com|fbcdn\.net/.test(link.href),
