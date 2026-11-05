@@ -48,8 +48,10 @@ for (const row of rows) {
   }
 
   try {
-    await page.goto(toolUrl, { waitUntil: 'networkidle', timeout: 60_000 });
-    await page.locator('#nav-reel-tab').click();
+    await page.goto(toolUrl, { waitUntil: 'domcontentloaded', timeout: 60_000 });
+    const reelTab = page.locator('#nav-reel-tab');
+    await reelTab.waitFor({ state: 'visible', timeout: 30_000 });
+    await reelTab.click();
 
     const input = page.locator('input[name="url"]');
     await input.waitFor({ state: 'visible', timeout: 30_000 });
