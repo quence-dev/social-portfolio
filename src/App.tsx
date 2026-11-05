@@ -93,26 +93,110 @@ export default function App() {
   const totalViews = data.videos.reduce((total, video) => total + (video.views || 0), 0);
   const totalLikes = data.videos.reduce((total, video) => total + (video.likes || 0), 0);
 
-  return <main>
-    <header className="hero">
-      <div><p className="eyebrow">Portfolio / 2025—</p><h1>{siteConfig.title}</h1></div>
-      <div className="totals">
-        <div><strong>{compact(totalViews)}</strong><span>tracked views</span></div>
-        <div><strong>{compact(totalLikes)}</strong><span>tracked likes</span></div>
-      </div>
-      {siteConfig.portfolioUrl && <a className="portfolio-link" href={siteConfig.portfolioUrl}>Portfolio ↗</a>}
-    </header>
-    <section className="toolbar" aria-label="Gallery filters">
-      <label>Creator<select value={creator} onChange={(event) => setCreator(event.target.value)}><option value="all">All creators</option>{creators.map((item) => <option key={item}>{item}</option>)}</select></label>
-      <label>Role<select value={role} onChange={(event) => setRole(event.target.value)}><option value="all">All roles</option>{roles.map((item) => <option key={item}>{item}</option>)}</select></label>
-      <label>Sort<select value={sort} onChange={(event) => setSort(event.target.value)}><option value="newest">Newest</option><option value="views">Most views</option></select></label>
-      <span className="result-count">{videos.length} videos</span>
-    </section>
-    <section className="coverage">{data.refreshedAt ? `Metrics refreshed ${new Date(data.refreshedAt).toLocaleDateString()} · ` : 'Metrics not refreshed yet · '}{data.metricCoverage.views}/{data.postCount} posts with view data</section>
-    {videos.length ? <section className="grid" aria-label="Video gallery">{videos.map((video) => <button className="card" key={video.videoId} onClick={() => setSelected(video)}>
-      <div className="thumbnail">{video.thumbnail ? <img src={video.thumbnail} alt="" /> : <div className="placeholder"><span>{video.creator.slice(0, 1)}</span></div>}<div className="badges">{video.roles.map((item) => <Icon key={item} role={item} />)}</div><span className="metric">{video.views === null ? 'View post' : `${compact(video.views)} views`}</span></div>
-      <div className="card-copy"><span>{video.creator}</span><span>{dateLabel(video.publishDate)}</span></div>
-    </button>)}</section> : <p className="empty">No videos match those filters.</p>}
-    {selected && <Modal video={selected} close={() => setSelected(null)} />}
-  </main>;
+  return (
+    <main>
+      <header className="hero">
+        <div>
+          <p className="eyebrow">Portfolio / 2025—</p>
+          <h1>{siteConfig.title}</h1>
+        </div>
+        <div className="totals">
+          <div>
+            <strong>{compact(totalViews)}</strong>
+            <span>tracked views</span>
+          </div>
+          <div>
+            <strong>{compact(totalLikes)}</strong>
+            <span>tracked likes</span>
+          </div>
+        </div>
+        {siteConfig.portfolioUrl && (
+          <a className="portfolio-link" href={siteConfig.portfolioUrl}>
+            Portfolio ↗
+          </a>
+        )}
+      </header>
+      <section className="toolbar" aria-label="Gallery filters">
+        <label>
+          Creator
+          <select
+            value={creator}
+            onChange={(event) => setCreator(event.target.value)}
+          >
+            <option value="all">All creators</option>
+            {creators.map((item) => (
+              <option key={item}>{item}</option>
+            ))}
+          </select>
+        </label>
+        <label>
+          Role
+          <select
+            value={role}
+            onChange={(event) => setRole(event.target.value)}
+          >
+            <option value="all">All roles</option>
+            {roles.map((item) => (
+              <option key={item}>{item}</option>
+            ))}
+          </select>
+        </label>
+        <label>
+          Sort
+          <select
+            value={sort}
+            onChange={(event) => setSort(event.target.value)}
+          >
+            <option value="newest">Newest</option>
+            <option value="views">Most views</option>
+          </select>
+        </label>
+        <span className="result-count">{videos.length} videos</span>
+      </section>
+      <section className="coverage">
+        {data.refreshedAt
+          ? `Metrics refreshed ${new Date(data.refreshedAt).toLocaleDateString()} · `
+          : "Metrics not refreshed yet · "}
+        {data.metricCoverage.views}/{data.postCount} posts with view data
+      </section>
+      {videos.length ? (
+        <section className="grid" aria-label="Video gallery">
+          {videos.map((video) => (
+            <button
+              className="card"
+              key={video.videoId}
+              onClick={() => setSelected(video)}
+            >
+              <div className="thumbnail">
+                {video.thumbnail ? (
+                  <img src={video.thumbnail} alt="" />
+                ) : (
+                  <div className="placeholder">
+                    <span>{video.creator.slice(0, 1)}</span>
+                  </div>
+                )}
+                <div className="badges">
+                  {video.roles.map((item) => (
+                    <Icon key={item} role={item} />
+                  ))}
+                </div>
+                <span className="metric">
+                  {video.views === null
+                    ? "View post"
+                    : `${compact(video.views)} views`}
+                </span>
+              </div>
+              <div className="card-copy">
+                <span>{video.creator}</span>
+                <span>{dateLabel(video.publishDate)}</span>
+              </div>
+            </button>
+          ))}
+        </section>
+      ) : (
+        <p className="empty">No videos match those filters.</p>
+      )}
+      {selected && <Modal video={selected} close={() => setSelected(null)} />}
+    </main>
+  );
 }
