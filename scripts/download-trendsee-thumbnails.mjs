@@ -50,9 +50,12 @@ for (const row of rows) {
     await page.goto(toolUrl, { waitUntil: 'domcontentloaded', timeout: 30_000 });
     await page.getByLabel('Instagram URL').fill(row.url);
     await page.getByRole('button', { name: 'Download' }).click();
-    const download = page.getByRole('link', { name: 'Download thumbnail' });
-    await download.waitFor({ state: 'visible', timeout: 45_000 });
-    const imageUrl = await download.getAttribute('href');
+    await page.waitForFunction(() => [...document.querySelectorAll('a')].some((link) =>
+      /download thumbnail/i.test(link.textContent || '') || /cdninstagram\.com|fbcdn\.net/.test(link.href),
+    ), undefined, { timeout: 90_000 });
+    const imageUrl = await page.evaluate(() => [...document.querySelectorAll('a')]
+      .find((link) => /download thumbnail/i.test(link.textContent || '') || /cdninstagram\.com|fbcdn\.net/.test(link.href))
+      ?.href);
     if (!imageUrl) throw new Error('Trendsee did not return an image URL.');
     const response = await page.request.get(imageUrl);
     if (!response.ok()) throw new Error(`Image request failed (${response.status()}).`);
