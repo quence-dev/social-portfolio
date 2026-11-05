@@ -78,17 +78,10 @@ for (const row of rows) {
         retryAfterLimit = true;
         continue;
       }
-      const imageUrl = await saveThumbnail.evaluate((link) => link.href);
-      if (!imageUrl || imageUrl.startsWith('javascript:')) {
-        throw new Error('Toolzin returned a Save Thumbnail link without a direct image URL.');
-      }
-
-      const response = await context.request.get(imageUrl);
-      const contentType = response.headers()['content-type'] || '';
-      if (!response.ok() || !contentType.startsWith('image/')) {
-        throw new Error(`Thumbnail request failed (${response.status()} ${contentType || 'unknown type'}).`);
-      }
-      await fs.writeFile(target, await response.body());
+      const downloadPromise = page.waitForEvent('download', { timeout: 30_000 });
+      await saveThumbnail.click();
+      const download = await downloadPromise;
+      await download.saveAs(target);
       downloaded += 1;
       console.log(`Saved ${path.relative(root, target)}`);
     } catch (error) {
