@@ -30,6 +30,11 @@ function youtubeEmbed(url: string) {
   return match ? `https://www.youtube.com/embed/${match[1]}` : null;
 }
 
+function linkedinEmbed(url: string) {
+  const match = url.match(/ugcpost-(\d+)/i);
+  return match ? `https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:${match[1]}?compact=1` : null;
+}
+
 function Icon({ role }: { role: string }) {
   const icon = role === 'editor' ? faScissors : faVideo;
   const [width, height, , , path] = icon.icon;
@@ -39,12 +44,18 @@ function Icon({ role }: { role: string }) {
 }
 
 function Embed({ post }: { post: Post }) {
-  const source = post.platform === 'instagram' ? instagramEmbed(post.url) : post.platform === 'youtube' ? youtubeEmbed(post.url) : null;
+  const source = post.platform === 'instagram'
+    ? instagramEmbed(post.url)
+    : post.platform === 'youtube'
+      ? youtubeEmbed(post.url)
+      : post.platform === 'linkedin'
+        ? linkedinEmbed(post.url)
+        : null;
   if (!source) {
     return <a className="embed-fallback" href={post.url} target="_blank" rel="noreferrer">View this post on {platformName(post.platform)} ↗</a>;
   }
   return <div className="embed-shell">
-    <iframe key={post.postId} className="embed" src={source} title={`${platformName(post.platform)} post`} allow="autoplay; clipboard-write; encrypted-media; picture-in-picture" allowFullScreen />
+    <iframe key={post.postId} className={`embed${post.platform === 'linkedin' ? ' linkedin-embed' : ''}`} src={source} title={`${platformName(post.platform)} post`} allow="autoplay; clipboard-write; encrypted-media; picture-in-picture" allowFullScreen />
   </div>;
 }
 
