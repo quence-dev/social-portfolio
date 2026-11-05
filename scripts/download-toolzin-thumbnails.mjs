@@ -65,6 +65,7 @@ for (const row of rows) {
       if (await input.inputValue() !== row.url) throw new Error('Toolzin reset the URL field while loading.');
 
       await page.locator('#btn_submit, button:has-text("Download Now")').first().click();
+      await page.waitForTimeout(3_000);
       const saveThumbnail = page.locator('a.dl-thumbnail').first();
       const rateLimit = page.locator('#ajax_result p').filter({ hasText: limitMessage });
       const outcome = await Promise.race([
