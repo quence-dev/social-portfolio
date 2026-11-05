@@ -33,8 +33,7 @@ function parseCsv(text) {
 }
 
 const rows = parseCsv(await fs.readFile(csvPath, 'utf8'))
-  .filter((row) => row.include.toLowerCase() === 'true' && row.url.includes('instagram.com'))
-  .slice(0, limit);
+  .filter((row) => row.include.toLowerCase() === 'true' && row.url.includes('instagram.com'));
 
 await fs.mkdir(thumbnailDir, { recursive: true });
 const browser = await chromium.launch({ headless });
@@ -44,6 +43,7 @@ let downloaded = 0;
 let skipped = 0;
 
 for (const row of rows) {
+  if (downloaded >= limit) break;
   const target = path.join(thumbnailDir, `${row.post_id}.jpg`);
   if (!overwrite) {
     try { await fs.access(target); skipped += 1; continue; } catch { /* thumbnail is missing */ }

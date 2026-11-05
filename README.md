@@ -56,7 +56,7 @@ Toolzin is available as a separate explicit option. It opens the **Reels** tab, 
 npm run thumbnails:toolzin
 ```
 
-It accepts the same `-- --headless`, `-- --limit 1`, and `-- --overwrite` options. It processes one public post at a time, skips existing thumbnails, and retries the same post after 120 seconds only when Toolzin displays its request-limit message.
+It accepts the same `-- --headless`, `-- --limit 1`, and `-- --overwrite` options. Here, `--limit` is the number of new thumbnails to save—existing files are skipped without consuming it. It processes one public post at a time and retries the same post after 120 seconds only when Toolzin displays its request-limit message.
 
 ## Deploying
 
