@@ -1,0 +1,113 @@
+import { useEffect, useMemo, useState } from 'react';
+import gallery from './data/gallery.generated.json';
+import { siteConfig } from './config';
+import type { GalleryData, Platform, Post, Video } from './types';
+
+const data = gallery as GalleryData;
+
+function compact(value: number | null) {
+  return value === null ? '—' : new Intl.NumberFormat('en-US', { notation: 'compact', maximumFractionDigits: 1 }).format(value);
+}
+
+function dateLabel(value: string | null) {
+  if (!value) return 'Date pending';
+  return new Intl.DateTimeFormat('en-US', { month: 'short', year: 'numeric' }).format(new Date(`${value}T00:00:00Z`));
+}
+
+function platformName(platform: Platform) {
+  return platform === 'instagram' ? 'Instagram' : platform === 'youtube' ? 'YouTube' : platform === 'linkedin' ? 'LinkedIn' : 'Open post';
+}
+
+function instagramEmbed(url: string) {
+  const match = url.match(/instagram\.com\/(?:reel|reels|p)\/([^/?#]+)/);
+  return match ? `https://www.instagram.com/reel/${match[1]}/embed/` : null;
+}
+
+function youtubeEmbed(url: string) {
+  const match = url.match(/(?:youtu\.be\/|shorts\/|[?&]v=)([^?&#/]+)/);
+  return match ? `https://www.youtube.com/embed/${match[1]}` : null;
+}
+
+function Icon({ role }: { role: string }) {
+  return <span className="role-icon" title={role}>{role === 'editor' ? '✂' : '▣'}</span>;
+}
+
+function Embed({ post }: { post: Post }) {
+  const source = post.platform === 'instagram' ? instagramEmbed(post.url) : post.platform === 'youtube' ? youtubeEmbed(post.url) : null;
+  if (!source) {
+    return <a className="embed-fallback" href={post.url} target="_blank" rel="noreferrer">View this post on {platformName(post.platform)} ↗</a>;
+  }
+  return <iframe className="embed" src={source} title={`${platformName(post.platform)} post`} allow="autoplay; clipboard-write; encrypted-media; picture-in-picture" />;
+}
+
+function Modal({ video, close }: { video: Video; close: () => void }) {
+  const [activePost, setActivePost] = useState(video.posts[0]);
+  useEffect(() => {
+    const onKeyDown = (event: KeyboardEvent) => event.key === 'Escape' && close();
+    window.addEventListener('keydown', onKeyDown);
+    return () => window.removeEventListener('keydown', onKeyDown);
+  }, [close]);
+
+  return (
+    <div className="modal-backdrop" role="presentation" onMouseDown={close}>
+      <section className="modal" role="dialog" aria-modal="true" aria-label={`${video.creator} video`} onMouseDown={(event) => event.stopPropagation()}>
+        <button className="close" onClick={close} aria-label="Close post">×</button>
+        <div className="modal-video"><Embed post={activePost} /></div>
+        <div className="modal-info">
+          <p className="eyebrow">{video.creator}</p>
+          <h2>{dateLabel(video.publishDate)}</h2>
+          <div className="stats"><span>{compact(video.views)} views</span><span>{compact(video.likes)} likes</span></div>
+          {video.posts.length > 1 && <div className="tabs" role="tablist" aria-label="Post versions">
+            {video.posts.map((post) => <button key={post.postId} role="tab" aria-selected={activePost.postId === post.postId} className={activePost.postId === post.postId ? 'active' : ''} onClick={() => setActivePost(post)}>
+              {platformName(post.platform)}{post.publishDate ? ` · ${dateLabel(post.publishDate)}` : ''}
+            </button>)}
+          </div>}
+          <dl className="details">
+            <div><dt>Role</dt><dd>{video.roles.join(', ')}</dd></div>
+            {video.sponsors.length > 0 && <div><dt>Brands</dt><dd>{video.sponsors.join(', ')}</dd></div>}
+            <div><dt>Published</dt><dd>{dateLabel(activePost.publishDate || activePost.shootDate)}</dd></div>
+          </dl>
+          <a className="source-link" href={activePost.url} target="_blank" rel="noreferrer">Open on {platformName(activePost.platform)} ↗</a>
+        </div>
+      </section>
+    </div>
+  );
+}
+
+export default function App() {
+  const [creator, setCreator] = useState('all');
+  const [role, setRole] = useState('all');
+  const [sort, setSort] = useState('newest');
+  const [selected, setSelected] = useState<Video | null>(null);
+  const creators = useMemo(() => [...new Set(data.videos.map((video) => video.creator))].sort(), []);
+  const roles = useMemo(() => [...new Set(data.videos.flatMap((video) => video.roles))].sort(), []);
+  const videos = useMemo(() => data.videos
+    .filter((video) => (creator === 'all' || video.creator === creator) && (role === 'all' || video.roles.includes(role)))
+    .sort((a, b) => sort === 'views' ? (b.views || 0) - (a.views || 0) : (b.publishDate || '').localeCompare(a.publishDate || '')),
+  [creator, role, sort]);
+  const totalViews = data.videos.reduce((total, video) => total + (video.views || 0), 0);
+  const totalLikes = data.videos.reduce((total, video) => total + (video.likes || 0), 0);
+
+  return <main>
+    <header className="hero">
+      <div><p className="eyebrow">Portfolio / 2025—</p><h1>{siteConfig.title}</h1><p className="intro">{siteConfig.byline}</p></div>
+      <div className="totals">
+        <div><strong>{compact(totalViews)}</strong><span>tracked views</span></div>
+        <div><strong>{compact(totalLikes)}</strong><span>tracked likes</span></div>
+      </div>
+      {siteConfig.portfolioUrl && <a className="portfolio-link" href={siteConfig.portfolioUrl}>Portfolio ↗</a>}
+    </header>
+    <section className="toolbar" aria-label="Gallery filters">
+      <label>Creator<select value={creator} onChange={(event) => setCreator(event.target.value)}><option value="all">All creators</option>{creators.map((item) => <option key={item}>{item}</option>)}</select></label>
+      <label>Role<select value={role} onChange={(event) => setRole(event.target.value)}><option value="all">All roles</option>{roles.map((item) => <option key={item}>{item}</option>)}</select></label>
+      <label>Sort<select value={sort} onChange={(event) => setSort(event.target.value)}><option value="newest">Newest</option><option value="views">Most views</option></select></label>
+      <span className="result-count">{videos.length} videos</span>
+    </section>
+    <section className="coverage">{data.refreshedAt ? `Metrics refreshed ${new Date(data.refreshedAt).toLocaleDateString()} · ` : 'Metrics not refreshed yet · '}{data.metricCoverage.views}/{data.postCount} posts with view data</section>
+    {videos.length ? <section className="grid" aria-label="Video gallery">{videos.map((video) => <button className="card" key={video.videoId} onClick={() => setSelected(video)}>
+      <div className="thumbnail">{video.thumbnail ? <img src={video.thumbnail} alt="" /> : <div className="placeholder"><span>{video.creator.slice(0, 1)}</span></div>}<div className="badges">{video.roles.map((item) => <Icon key={item} role={item} />)}</div><span className="metric">{video.views === null ? 'View post' : `${compact(video.views)} views`}</span></div>
+      <div className="card-copy"><span>{video.creator}</span><span>{dateLabel(video.publishDate)}</span></div>
+    </button>)}</section> : <p className="empty">No videos match those filters.</p>}
+    {selected && <Modal video={selected} close={() => setSelected(null)} />}
+  </main>;
+}

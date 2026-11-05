@@ -1,0 +1,29 @@
+{
+  "name": "social-portfolio",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "npm run import && vite build",
+    "preview": "vite preview",
+    "import": "node scripts/import-posts.mjs",
+    "validate": "node scripts/import-posts.mjs --check",
+    "refresh": "node scripts/refresh-instagram.mjs",
+    "thumbnails": "node scripts/download-trendsee-thumbnails.mjs"
+  },
+  "dependencies": {
+    "@vitejs/plugin-react": "latest",
+    "react": "latest",
+    "react-dom": "latest",
+    "vite": "latest"
+  },
+  "devDependencies": {
+    "@tailwindcss/vite": "^4.3.4",
+    "@types/react": "latest",
+    "@types/react-dom": "latest",
+    "playwright": "latest",
+    "tailwindcss": "^4.3.4",
+    "typescript": "latest"
+  }
+}
