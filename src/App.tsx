@@ -62,7 +62,6 @@ function Modal({ video, close }: { video: Video; close: () => void }) {
         <button className="close" onClick={close} aria-label="Close post">×</button>
         <div className="modal-video"><Embed post={activePost} /></div>
         <div className="modal-info">
-          <p className="eyebrow">{video.creator}</p>
           <h2>{dateLabel(video.publishDate)}</h2>
           <div className="stats"><span>{compact(video.views)} views</span><span>{compact(video.likes)} likes</span></div>
           {video.posts.length > 1 && <div className="tabs" role="tablist" aria-label="Post versions">
@@ -100,7 +99,6 @@ export default function App() {
     <main>
       <header className="hero">
         <div>
-          <p className="eyebrow">Portfolio / 2025—</p>
           <h1>{siteConfig.title}</h1>
         </div>
         <div className="totals">
