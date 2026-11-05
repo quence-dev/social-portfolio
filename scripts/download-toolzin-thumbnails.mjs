@@ -39,6 +39,9 @@ await fs.mkdir(thumbnailDir, { recursive: true });
 const browser = await chromium.launch({ headless });
 const context = await browser.newContext();
 const page = await context.newPage();
+context.on('page', (popup) => {
+  if (popup !== page) popup.close().catch(() => {});
+});
 let downloaded = 0;
 let skipped = 0;
 
@@ -49,9 +52,10 @@ for (const row of rows) {
     try { await fs.access(target); skipped += 1; continue; } catch { /* thumbnail is missing */ }
   }
 
-  let retryAfterLimit = true;
-  while (retryAfterLimit) {
-    retryAfterLimit = false;
+  let retriedAfterAdNavigation = false;
+  let retry = true;
+  while (retry) {
+    retry = false;
     try {
       await page.goto(toolUrl, { waitUntil: 'domcontentloaded', timeout: 60_000 });
       const reelTab = page.locator('#nav-reel-tab');
@@ -75,7 +79,7 @@ for (const row of rows) {
       if (outcome === 'limit') {
         console.warn(`Toolzin reached its request limit. Retrying ${row.post_id} in 120 seconds...`);
         await page.waitForTimeout(limitCooldownMs);
-        retryAfterLimit = true;
+        retry = true;
         continue;
       }
       const downloadPromise = page.waitForEvent('download', { timeout: 30_000 });
@@ -85,6 +89,14 @@ for (const row of rows) {
       downloaded += 1;
       console.log(`Saved ${path.relative(root, target)}`);
     } catch (error) {
+      const host = new URL(page.url()).hostname;
+      if (!retriedAfterAdNavigation && !host.endsWith('toolzin.com')) {
+        retriedAfterAdNavigation = true;
+        retry = true;
+        console.warn(`Toolzin opened an external page. Retrying ${row.post_id}...`);
+        await page.goBack({ waitUntil: 'domcontentloaded', timeout: 30_000 }).catch(() => null);
+        continue;
+      }
       console.warn(`Skipped ${row.post_id}: ${error.message}`);
     }
   }
@@ -94,4 +106,4 @@ await context.close();
 await browser.close();
 console.log(`Finished: ${downloaded} saved, ${skipped} already present.`);
 
-// shortcut: retries only Toolzin's explicit limit message; update the cooldown if Toolzin changes its reset window.
+// shortcut: retries explicit limits and one ad-triggered navigation; update the cooldown if Toolzin changes its reset window.
