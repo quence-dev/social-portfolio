@@ -90,7 +90,7 @@ export default function App() {
 
   return <main>
     <header className="hero">
-      <div><p className="eyebrow">Portfolio / 2025—</p><h1>{siteConfig.title}</h1><p className="intro">{siteConfig.byline}</p></div>
+      <div><p className="eyebrow">Portfolio / 2025—</p><h1>{siteConfig.title}</h1></div>
       <div className="totals">
         <div><strong>{compact(totalViews)}</strong><span>tracked views</span></div>
         <div><strong>{compact(totalLikes)}</strong><span>tracked likes</span></div>
