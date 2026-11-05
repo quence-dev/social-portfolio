@@ -48,6 +48,16 @@ npm run thumbnails
 
 Pass `-- --headless` to keep the browser hidden, `-- --limit 1` to test one post, or `-- --overwrite` to replace existing image files.
 
+## Downloading thumbnails with Toolzin
+
+Toolzin is available as a separate explicit option. It opens the **Reels** tab, uses the returned **Save Thumbnail** link, and saves the image itself rather than using the browser Downloads folder—so it is named correctly from the start.
+
+```sh
+npm run thumbnails:toolzin
+```
+
+It accepts the same `-- --headless`, `-- --limit 1`, and `-- --overwrite` options. It processes one public post at a time, skips existing thumbnails, and does not switch providers automatically when a service signals a limit.
+
 ## Deploying
 
 Push `main`. The included GitHub Actions workflow builds the site and deploys it to GitHub Pages. In the repository’s **Settings → Pages**, set the deployment source to **GitHub Actions** once.

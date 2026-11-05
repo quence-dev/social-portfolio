@@ -10,7 +10,8 @@
     "import": "node scripts/import-posts.mjs",
     "validate": "node scripts/import-posts.mjs --check",
     "refresh": "node scripts/refresh-instagram.mjs",
-    "thumbnails": "node scripts/download-trendsee-thumbnails.mjs"
+    "thumbnails": "node scripts/download-trendsee-thumbnails.mjs",
+    "thumbnails:toolzin": "node scripts/download-toolzin-thumbnails.mjs"
   },
   "dependencies": {
     "@vitejs/plugin-react": "latest",
