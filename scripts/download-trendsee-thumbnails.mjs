@@ -48,10 +48,10 @@ for (const row of rows) {
 
   try {
     await page.goto(toolUrl, { waitUntil: 'domcontentloaded', timeout: 30_000 });
-    const input = page.locator('input[placeholder*="Instagram" i], input[type="url"], input').first();
+    const input = page.locator('input[aria-label="Instagram URL"][placeholder*="instagram.com/reel/"]').first();
     await input.waitFor({ state: 'visible', timeout: 30_000 });
     await input.fill(row.url);
-    await page.locator('button').filter({ hasText: /^Download$/ }).first().click();
+    await page.locator('button:has(span:text-is("Download"))').first().click();
     await page.waitForFunction(() => [...document.querySelectorAll('a')].some((link) =>
       /download thumbnail/i.test(link.textContent || '') || /cdninstagram\.com|fbcdn\.net/.test(link.href),
     ), undefined, { timeout: 90_000 });
