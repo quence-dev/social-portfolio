@@ -36,11 +36,28 @@ const rows = parseCsv(await fs.readFile(csvPath, 'utf8'))
 
 await fs.mkdir(thumbnailDir, { recursive: true });
 const browser = await chromium.launch({ headless });
-const page = await browser.newPage();
+const context = await browser.newContext(); 
+const page = await context.newPage();
 let downloaded = 0;
 let skipped = 0;
+let stopRequested = false;
+const canListenForEscape = process.stdin.isTTY && typeof process.stdin.setRawMode === 'function';
+const onStdinData = (data) => {
+  if (!data.toString().includes('\u001b')) return;
+  stopRequested = true;
+  console.log('\nStopping after the current request...');
+  browser.close().catch(() => {});
+};
+
+if (canListenForEscape) {
+  process.stdin.setRawMode(true);
+  process.stdin.resume();
+  process.stdin.on('data', onStdinData);
+  console.log('Press Escape to stop.');
+}
 
 for (const row of rows) {
+  if (stopRequested) break;
   const target = path.join(thumbnailDir, `${row.post_id}.jpg`);
   if (!overwrite) {
     try { await fs.access(target); skipped += 1; continue; } catch { /* thumbnail is missing */ }
@@ -74,11 +91,18 @@ for (const row of rows) {
     downloaded += 1;
     console.log(`Saved ${path.relative(root, target)}`);
   } catch (error) {
+    if (stopRequested) break;
     console.warn(`Skipped ${row.post_id}: ${error.message}`);
   }
 }
 
-await browser.close();
+if (canListenForEscape) {
+  process.stdin.off('data', onStdinData);
+  process.stdin.setRawMode(false);
+  process.stdin.pause();
+}
+await context.close().catch(() => {});
+await browser.close().catch(() => {});
 console.log(`Finished: ${downloaded} saved, ${skipped} already present.`);
 
 // shortcut: runs one request at a time to avoid hammering the public service; use a provider API if this becomes a recurring large import.
