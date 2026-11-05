@@ -33,11 +33,16 @@ function Icon({ role }: { role: string }) {
 }
 
 function Embed({ post }: { post: Post }) {
+  const [loaded, setLoaded] = useState(false);
+  useEffect(() => setLoaded(false), [post.postId]);
   const source = post.platform === 'instagram' ? instagramEmbed(post.url) : post.platform === 'youtube' ? youtubeEmbed(post.url) : null;
   if (!source) {
     return <a className="embed-fallback" href={post.url} target="_blank" rel="noreferrer">View this post on {platformName(post.platform)} ↗</a>;
   }
-  return <iframe className="embed" src={source} title={`${platformName(post.platform)} post`} allow="autoplay; clipboard-write; encrypted-media; picture-in-picture" />;
+  return <div className="embed-shell">
+    {!loaded && <span className="embed-loader" aria-live="polite">Loading {platformName(post.platform)} post…</span>}
+    <iframe key={post.postId} className={`embed ${loaded ? 'is-loaded' : 'is-loading'}`} src={source} title={`${platformName(post.platform)} post`} onLoad={() => setLoaded(true)} allow="autoplay; clipboard-write; encrypted-media; picture-in-picture" allowFullScreen />
+  </div>;
 }
 
 function Modal({ video, close }: { video: Video; close: () => void }) {
