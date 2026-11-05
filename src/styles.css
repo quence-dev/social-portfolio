@@ -201,6 +201,12 @@ select {
   font: 14px/1 sans-serif;
 }
 
+.role-icon svg {
+  width: 14px;
+  height: 14px;
+  fill: currentColor;
+}
+
 .metric {
   position: absolute;
   right: 10px;

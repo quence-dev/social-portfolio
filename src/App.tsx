@@ -1,4 +1,6 @@
 import { useEffect, useMemo, useState } from 'react';
+import { faScissors } from '@fortawesome/free-solid-svg-icons/faScissors';
+import { faVideo } from '@fortawesome/free-solid-svg-icons/faVideo';
 import gallery from './data/gallery.generated.json';
 import { siteConfig } from './config';
 import type { GalleryData, Platform, Post, Video } from './types';
@@ -29,7 +31,11 @@ function youtubeEmbed(url: string) {
 }
 
 function Icon({ role }: { role: string }) {
-  return <span className="role-icon" title={role}>{role === 'editor' ? '✂' : '▣'}</span>;
+  const icon = role === 'editor' ? faScissors : faVideo;
+  const [width, height, , , path] = icon.icon;
+  return <span className="role-icon" title={role} aria-label={role}>
+    <svg viewBox={`0 0 ${width} ${height}`} aria-hidden="true"><path d={path as string} /></svg>
+  </span>;
 }
 
 function Embed({ post }: { post: Post }) {
