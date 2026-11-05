@@ -60,10 +60,12 @@ for (const row of rows) {
     if (await input.inputValue() !== row.url) throw new Error('Toolzin reset the URL field while loading.');
 
     await page.locator('#btn_submit, button:has-text("Download Now")').first().click();
-    const saveThumbnail = page.locator('a:has-text("Save Thumbnail")').first();
+    const saveThumbnail = page.locator('a.dl-thumbnail').first();
     await saveThumbnail.waitFor({ state: 'visible', timeout: 90_000 });
-    const imageUrl = await saveThumbnail.getAttribute('href');
-    if (!imageUrl) throw new Error('Toolzin returned a Save Thumbnail link without a URL.');
+    const imageUrl = await saveThumbnail.evaluate((link) => link.href);
+    if (!imageUrl || imageUrl.startsWith('javascript:')) {
+      throw new Error('Toolzin returned a Save Thumbnail link without a direct image URL.');
+    }
 
     const response = await context.request.get(imageUrl);
     const contentType = response.headers()['content-type'] || '';
