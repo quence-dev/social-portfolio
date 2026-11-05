@@ -287,17 +287,6 @@ select {
   transition: opacity .2s ease;
 }
 
-.embed.is-loading {
-  opacity: 0;
-}
-
-.embed-loader {
-  color: #c3bcb0;
-  font: 500 11px "DM Mono", monospace;
-  letter-spacing: .04em;
-  text-transform: uppercase;
-}
-
 .embed-fallback {
   color: #f3eee5;
   text-align: center;
