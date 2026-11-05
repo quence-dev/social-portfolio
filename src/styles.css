@@ -287,11 +287,6 @@ select {
   transition: opacity .2s ease;
 }
 
-.linkedin-embed {
-  width: min(100%, 504px);
-  height: 399px;
-}
-
 .embed-fallback {
   color: #f3eee5;
   text-align: center;
