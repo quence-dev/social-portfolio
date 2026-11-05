@@ -104,6 +104,16 @@ for (const [index, values] of csvRows.slice(1).entries()) {
   seenUrls.add(raw.url);
 
   const cached = refresh[raw.post_id] || {};
+  let thumbnail = cached.thumbnail || null;
+  if (!thumbnail) {
+    const fileName = `${raw.post_id}.jpg`;
+    try {
+      await fs.access(path.join(root, 'public/thumbnails', fileName));
+      thumbnail = `/thumbnails/${fileName}`;
+    } catch {
+      // A thumbnail is optional until it is downloaded.
+    }
+  }
   posts.push({
     videoId: raw.video_id,
     postId: raw.post_id,
@@ -114,7 +124,7 @@ for (const [index, values] of csvRows.slice(1).entries()) {
     publishDate: cached.publishDate || asDate(raw.publish_date),
     roles: list(raw.roles),
     sponsors: list(raw.sponsors),
-    thumbnail: cached.thumbnail || null,
+    thumbnail,
     views: Number.isFinite(cached.views) ? cached.views : null,
     likes: Number.isFinite(cached.likes) ? cached.likes : null,
   });
