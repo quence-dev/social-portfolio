@@ -43,6 +43,17 @@ function Icon({ role }: { role: string }) {
   </span>;
 }
 
+function Thumbnail({ video }: { video: Video }) {
+  const [missing, setMissing] = useState(false);
+  const source = video.thumbnail || `/thumbnails/${video.posts[0].postId}.jpg`;
+  return <div className="thumbnail">
+    {!missing ? <img src={source} alt="" onError={() => setMissing(true)} /> : <div className="placeholder"><span>{video.creator.slice(0, 1)}</span></div>}
+    <div className="badges">
+      {video.roles.map((item) => <Icon key={item} role={item} />)}
+    </div>
+  </div>;
+}
+
 function Embed({ post }: { post: Post }) {
   const source = post.platform === 'instagram'
     ? instagramEmbed(post.url)
@@ -180,20 +191,7 @@ export default function App() {
               key={video.videoId}
               onClick={() => setSelected(video)}
             >
-              <div className="thumbnail">
-                {video.thumbnail ? (
-                  <img src={video.thumbnail} alt="" />
-                ) : (
-                  <div className="placeholder">
-                    <span>{video.creator.slice(0, 1)}</span>
-                  </div>
-                )}
-                <div className="badges">
-                  {video.roles.map((item) => (
-                    <Icon key={item} role={item} />
-                  ))}
-                </div>
-              </div>
+              <Thumbnail video={video} />
               <div className="card-copy">
                 <span>{video.creator}</span>
                 <span>{dateLabel(video.publishDate)}</span>
