@@ -68,6 +68,16 @@ npm run thumbnails:fastvideosave
 
 It accepts the same `-- --headless`, `-- --limit 1`, and `-- --overwrite` options. It waits briefly for FastVideoSave to submit the URL automatically, then uses its **Paste** button if needed.
 
+## Downloading thumbnails with Snaplytics
+
+Snaplytics is another alternative. It waits for its automatic verification and tries the returned **Download thumbnail faster** CDN link first, then its direct Instagram-data link if necessary. Images save directly under the matching post ID.
+
+```sh
+npm run thumbnails:snaplytics
+```
+
+It accepts the same `-- --headless`, `-- --limit 1`, and `-- --overwrite` options.
+
 ## Deploying
 
 Push `main`. The included GitHub Actions workflow builds the site and deploys it to GitHub Pages. In the repository’s **Settings → Pages**, set the deployment source to **GitHub Actions** once.
