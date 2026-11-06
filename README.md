@@ -58,6 +58,16 @@ npm run thumbnails:toolzin
 
 It accepts the same `-- --headless`, `-- --limit 1`, and `-- --overwrite` options. Here, `--limit` is the number of new thumbnails to save—existing files are skipped without consuming it. It processes one public post at a time and retries the same post after 120 seconds only when Toolzin displays its request-limit message.
 
+## Downloading thumbnails with FastVideoSave
+
+This alternative submits an Instagram URL to FastVideoSave and saves its returned CDN image directly as `public/thumbnails/<post_id>.jpg`, without using the browser Downloads folder.
+
+```sh
+npm run thumbnails:fastvideosave
+```
+
+It accepts the same `-- --headless`, `-- --limit 1`, and `-- --overwrite` options. It waits briefly for FastVideoSave to submit the URL automatically, then uses its **Paste** button if needed.
+
 ## Deploying
 
 Push `main`. The included GitHub Actions workflow builds the site and deploys it to GitHub Pages. In the repository’s **Settings → Pages**, set the deployment source to **GitHub Actions** once.

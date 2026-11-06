@@ -11,7 +11,8 @@
     "validate": "node scripts/import-posts.mjs --check",
     "refresh": "node scripts/refresh-instagram.mjs",
     "thumbnails": "node scripts/download-trendsee-thumbnails.mjs",
-    "thumbnails:toolzin": "node scripts/download-toolzin-thumbnails.mjs"
+    "thumbnails:toolzin": "node scripts/download-toolzin-thumbnails.mjs",
+    "thumbnails:fastvideosave": "node scripts/download-fastvideosave-thumbnails.mjs"
   },
   "dependencies": {
     "@fortawesome/free-solid-svg-icons": "^7.3.1",
