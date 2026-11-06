@@ -16,6 +16,11 @@ function dateLabel(value: string | null) {
   return new Intl.DateTimeFormat('en-US', { month: 'short', year: 'numeric' }).format(new Date(`${value}T00:00:00Z`));
 }
 
+function updatedLabel(value: string | null) {
+  if (!value) return 'Updated —';
+  return `Updated ${new Intl.DateTimeFormat('en-US', { month: 'short', day: 'numeric', year: 'numeric', hour: 'numeric', minute: '2-digit' }).format(new Date(value))}`;
+}
+
 function platformName(platform: Platform) {
   return platform === 'instagram' ? 'Instagram' : platform === 'youtube' ? 'YouTube' : platform === 'linkedin' ? 'LinkedIn' : 'Open post';
 }
@@ -105,15 +110,18 @@ export default function App() {
         <div>
           <h1>{siteConfig.title}</h1>
         </div>
-        <div className="totals">
-          <div>
-            <strong>{compact(totalViews)}</strong>
-            <span>tracked views</span>
+        <div className="summary">
+          <div className="totals">
+            <div>
+              <strong>{compact(totalViews)}</strong>
+              <span>views</span>
+            </div>
+            <div>
+              <strong>{compact(totalLikes)}</strong>
+              <span>likes</span>
+            </div>
           </div>
-          <div>
-            <strong>{compact(totalLikes)}</strong>
-            <span>tracked likes</span>
-          </div>
+          <p className="updated-at">{updatedLabel(data.refreshedAt)}</p>
         </div>
         {siteConfig.portfolioUrl && (
           <a className="portfolio-link" href={siteConfig.portfolioUrl}>

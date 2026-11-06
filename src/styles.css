@@ -70,6 +70,15 @@ h1 {
   text-align: right;
 }
 
+.updated-at {
+  color: #a6a096;
+  margin: 8px 0 0;
+  text-align: right;
+  font: 500 10px/1.4 "DM Mono", monospace;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+}
+
 .totals div {
   display: grid;
   gap: 4px;
@@ -365,8 +374,12 @@ select {
     padding-top: 20px;
   }
 
-  .totals {
+  .summary {
     margin-top: 28px;
+  }
+
+  .totals,
+  .updated-at {
     text-align: left;
   }
 
