@@ -1,6 +1,6 @@
 {
   "refreshedAt": null,
-  "postCount": 163,
+  "postCount": 162,
   "metricCoverage": {
     "views": 0,
     "likes": 0
@@ -2302,37 +2302,6 @@
       ],
       "sponsors": [],
       "thumbnail": "/thumbnails/instagram-Da0xJufJ9ek.jpg",
-      "publishDate": "2026-07-13",
-      "shootDate": "2026-07-13",
-      "views": null,
-      "likes": null
-    },
-    {
-      "videoId": "video-0099",
-      "posts": [
-        {
-          "videoId": "video-0099",
-          "postId": "instagram-Da8SK_2pNyG",
-          "url": "https://www.instagram.com/reel/Da8SK_2pNyG",
-          "platform": "instagram",
-          "creator": "Spencer Wright",
-          "shootDate": "2026-07-13",
-          "publishDate": null,
-          "roles": [
-            "videographer"
-          ],
-          "sponsors": [],
-          "thumbnail": null,
-          "views": null,
-          "likes": null
-        }
-      ],
-      "creator": "Spencer Wright",
-      "roles": [
-        "videographer"
-      ],
-      "sponsors": [],
-      "thumbnail": null,
       "publishDate": "2026-07-13",
       "shootDate": "2026-07-13",
       "views": null,
