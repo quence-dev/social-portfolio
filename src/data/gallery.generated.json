@@ -1,6 +1,6 @@
 {
   "refreshedAt": null,
-  "postCount": 162,
+  "postCount": 161,
   "metricCoverage": {
     "views": 0,
     "likes": 0
@@ -320,7 +320,7 @@
             "videographer"
           ],
           "sponsors": [],
-          "thumbnail": null,
+          "thumbnail": "/thumbnails/instagram-Der8P7VCAad.jpg",
           "views": null,
           "likes": null
         }
@@ -330,7 +330,7 @@
         "videographer"
       ],
       "sponsors": [],
-      "thumbnail": null,
+      "thumbnail": "/thumbnails/instagram-Der8P7VCAad.jpg",
       "publishDate": "2026-10-16",
       "shootDate": "2026-10-16",
       "views": null,
@@ -351,7 +351,7 @@
             "videographer"
           ],
           "sponsors": [],
-          "thumbnail": null,
+          "thumbnail": "/thumbnails/instagram-DeuownezI7y.jpg",
           "views": null,
           "likes": null
         }
@@ -361,7 +361,7 @@
         "videographer"
       ],
       "sponsors": [],
-      "thumbnail": null,
+      "thumbnail": "/thumbnails/instagram-DeuownezI7y.jpg",
       "publishDate": "2026-10-16",
       "shootDate": "2026-10-16",
       "views": null,
@@ -382,7 +382,7 @@
             "videographer"
           ],
           "sponsors": [],
-          "thumbnail": null,
+          "thumbnail": "/thumbnails/instagram-DexU84pB_OU.jpg",
           "views": null,
           "likes": null
         }
@@ -392,7 +392,7 @@
         "videographer"
       ],
       "sponsors": [],
-      "thumbnail": null,
+      "thumbnail": "/thumbnails/instagram-DexU84pB_OU.jpg",
       "publishDate": "2026-10-16",
       "shootDate": "2026-10-16",
       "views": null,
@@ -430,37 +430,6 @@
       "likes": null
     },
     {
-      "videoId": "video-0156",
-      "posts": [
-        {
-          "videoId": "video-0156",
-          "postId": "instagram-Dej2OcVRTk5",
-          "url": "https://www.instagram.com/reel/Dej2OcVRTk5",
-          "platform": "instagram",
-          "creator": "Ask a Fuckboy",
-          "shootDate": "2026-10-15",
-          "publishDate": null,
-          "roles": [
-            "videographer"
-          ],
-          "sponsors": [],
-          "thumbnail": null,
-          "views": null,
-          "likes": null
-        }
-      ],
-      "creator": "Ask a Fuckboy",
-      "roles": [
-        "videographer"
-      ],
-      "sponsors": [],
-      "thumbnail": null,
-      "publishDate": "2026-10-15",
-      "shootDate": "2026-10-15",
-      "views": null,
-      "likes": null
-    },
-    {
       "videoId": "video-0157",
       "posts": [
         {
@@ -475,7 +444,7 @@
             "videographer"
           ],
           "sponsors": [],
-          "thumbnail": null,
+          "thumbnail": "/thumbnails/instagram-DfNVqAmpmro.jpg",
           "views": null,
           "likes": null
         }
@@ -485,7 +454,7 @@
         "videographer"
       ],
       "sponsors": [],
-      "thumbnail": null,
+      "thumbnail": "/thumbnails/instagram-DfNVqAmpmro.jpg",
       "publishDate": "2026-10-15",
       "shootDate": "2026-10-15",
       "views": null,
