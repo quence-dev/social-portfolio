@@ -89,6 +89,12 @@ npm run thumbnails:snaplytics
 
 It accepts the same `-- --headless`, `-- --limit 1`, and `-- --overwrite` options.
 
+## Roadmap
+
+- Visualize creator collaborations based on creators appearing in one another's videos.
+- Improve cross-post handling with modal tabs or a carousel, including clear aggregated versus per-upload statistics.
+- Add a creator-focused gallery view alongside the current chronological video grid.
+
 ## Deploying
 
 Push `main`. The included GitHub Actions workflow builds the site and deploys it to GitHub Pages. In the repository’s **Settings → Pages**, set the deployment source to **GitHub Actions** once.
