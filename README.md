@@ -38,6 +38,17 @@ npm run import
 
 Commit the updated `data/refresh.json`, `public/thumbnails/`, and generated gallery data so the GitHub Pages deployment contains the cached results. The `.auth/` directory is intentionally never committed.
 
+## Importing Instagram metrics
+
+Use a Reel-scraper JSON export to update each matching Instagram post's upload timestamp, views, and likes in `data/posts.csv`.
+
+```sh
+npm run metrics:instagram -- --input /absolute/path/to/reel-scraper.json
+npm run build
+```
+
+The import requires a complete one-to-one match with included Instagram posts and writes nothing if any API record cannot be matched.
+
 ## Downloading thumbnails with Trendsee
 
 This uses the public Trendsee downloader to save each included Instagram thumbnail as `public/thumbnails/<post_id>.jpg`. It skips files already on disk and intentionally runs one request at a time.

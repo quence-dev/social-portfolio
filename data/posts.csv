@@ -1,176 +1,176 @@
-video_id,post_id,url,creator,shoot_date,roles,publish_date,include,sponsors
-video-0001,instagram-DP10YoSkrse,https://www.instagram.com/reel/DP10YoSkrse,Austin Nasso,9/30/2025,videographer,,TRUE,
-video-0002,instagram-DP1f_1CkeuD,https://www.instagram.com/reel/DP1f_1CkeuD,Austin Nasso,9/30/2025,videographer,,TRUE,Lovable
-video-0003,instagram-DPjfTslEX2j,https://www.instagram.com/reel/DPjfTslEX2j,Austin Nasso,9/30/2025,videographer,,TRUE,DUB
-video-0004,instagram-DQH92s9ERqR,https://www.instagram.com/reel/DQH92s9ERqR,Austin Nasso,9/30/2025,videographer,,TRUE,CodeRabbit
-video-0005,instagram-DQr1tUXgWBw,https://www.instagram.com/reel/DQr1tUXgWBw,Austin Nasso,10/10/2025,videographer,,TRUE,
-video-0006,instagram-DQMyeWADbPg,https://www.instagram.com/reel/DQMyeWADbPg,Austin Nasso,10/10/2025,videographer,,TRUE,CodeRabbit
-video-0007,instagram-DQxD1_GEbJJ,https://www.instagram.com/reel/DQxD1_GEbJJ,Austin Nasso,10/10/2025,videographer,,TRUE,Temporal
-video-0008,instagram-DQepZFWDcUF,https://www.instagram.com/reel/DQepZFWDcUF,Austin Nasso,10/22/2025,"videographer, editor",,TRUE,DUB
-video-0009,instagram-DQ4xR5NgXI1,https://www.instagram.com/reel/DQ4xR5NgXI1,Austin Nasso,10/22/2025,videographer,,TRUE,
-video-0010,instagram-DQzZhqdjf7A,https://www.instagram.com/reel/DQzZhqdjf7A,Austin Nasso,10/22/2025,videographer,,TRUE,Gamma AI
-video-0011,instagram-DQKSkQCkbRh,https://www.instagram.com/reels/DQKSkQCkbRh,Austin Nasso,10/22/2025,videographer,,TRUE,
-video-0012,instagram-DQmjRZxCTU1,https://www.instagram.com/reel/DQmjRZxCTU1,Varun Rana,10/31/2025,videographer,,TRUE,
-video-0013,instagram-DR2WG7OjZVr,https://www.instagram.com/reel/DR2WG7OjZVr,Varun Rana,11/21/2025,videographer,,TRUE,Rippling
-video-0014,instagram-DRvJw5iDWJ8,https://www.instagram.com/reel/DRvJw5iDWJ8,Varun Rana,11/21/2025,videographer,,TRUE,Jetbrains
-video-0015,instagram-DRiFnzviZRc,https://www.instagram.com/reel/DRiFnzviZRc,Varun Rana,11/21/2025,videographer,,TRUE,Zapier
-video-0016,instagram-DSDN4WpjpWz,https://www.instagram.com/reel/DSDN4WpjpWz,Varun Rana,12/2/2025,videographer,,TRUE,Webflow
-video-0017,instagram-DSnd4pIkkur,https://www.instagram.com/reel/DSnd4pIkkur,MyTechCEO,12/5/2025,videographer,,TRUE,
-video-0018,instagram-DSLGp5_kanb,https://www.instagram.com/reel/DSLGp5_kanb,Alberta.Tech,12/5/2025,videographer,,TRUE,
+video_id,post_id,url,creator,shoot_date,roles,publish_date,include,sponsors,views,likes
+video-0001,instagram-DP10YoSkrse,https://www.instagram.com/reel/DP10YoSkrse,Austin Nasso,9/30/2025,videographer,2025-10-15T19:04:28.000Z,TRUE,,266187,2689
+video-0002,instagram-DP1f_1CkeuD,https://www.instagram.com/reel/DP1f_1CkeuD,Austin Nasso,9/30/2025,videographer,2025-10-15T16:11:01.000Z,TRUE,Lovable,165921,-1
+video-0003,instagram-DPjfTslEX2j,https://www.instagram.com/reel/DPjfTslEX2j,Austin Nasso,9/30/2025,videographer,2025-10-08T16:17:52.000Z,TRUE,DUB,117127,-1
+video-0004,instagram-DQH92s9ERqR,https://www.instagram.com/reel/DQH92s9ERqR,Austin Nasso,9/30/2025,videographer,2025-10-22T20:13:09.000Z,TRUE,CodeRabbit,262600,6040
+video-0005,instagram-DQr1tUXgWBw,https://www.instagram.com/reel/DQr1tUXgWBw,Austin Nasso,10/10/2025,videographer,2025-11-05T18:42:40.000Z,TRUE,,299678,9236
+video-0006,instagram-DQMyeWADbPg,https://www.instagram.com/reel/DQMyeWADbPg,Austin Nasso,10/10/2025,videographer,2025-10-24T17:22:06.000Z,TRUE,CodeRabbit,131051,-1
+video-0007,instagram-DQxD1_GEbJJ,https://www.instagram.com/reel/DQxD1_GEbJJ,Austin Nasso,10/10/2025,videographer,2025-11-07T19:13:39.000Z,TRUE,Temporal,116967,-1
+video-0008,instagram-DQepZFWDcUF,https://www.instagram.com/reel/DQepZFWDcUF,Austin Nasso,10/22/2025,"videographer, editor",2025-10-31T15:41:31.000Z,TRUE,DUB,235031,3129
+video-0009,instagram-DQ4xR5NgXI1,https://www.instagram.com/reel/DQ4xR5NgXI1,Austin Nasso,10/22/2025,videographer,2025-11-10T19:10:52.000Z,TRUE,,1622708,34625
+video-0010,instagram-DQzZhqdjf7A,https://www.instagram.com/reel/DQzZhqdjf7A,Austin Nasso,10/22/2025,videographer,2025-11-08T17:08:55.000Z,TRUE,Gamma AI,105574,-1
+video-0011,instagram-DQKSkQCkbRh,https://www.instagram.com/reels/DQKSkQCkbRh,Austin Nasso,10/22/2025,videographer,2025-10-23T17:52:30.000Z,TRUE,,135171,1098
+video-0012,instagram-DQmjRZxCTU1,https://www.instagram.com/reel/DQmjRZxCTU1,Varun Rana,10/31/2025,videographer,2025-11-03T17:17:53.000Z,TRUE,,280944,9187
+video-0013,instagram-DR2WG7OjZVr,https://www.instagram.com/reel/DR2WG7OjZVr,Varun Rana,11/21/2025,videographer,2025-12-04T17:01:18.000Z,TRUE,Rippling,82525,1465
+video-0014,instagram-DRvJw5iDWJ8,https://www.instagram.com/reel/DRvJw5iDWJ8,Varun Rana,11/21/2025,videographer,2025-12-01T21:59:21.000Z,TRUE,Jetbrains,63717,836
+video-0015,instagram-DRiFnzviZRc,https://www.instagram.com/reel/DRiFnzviZRc,Varun Rana,11/21/2025,videographer,2025-11-26T20:12:37.000Z,TRUE,Zapier,15898,108
+video-0016,instagram-DSDN4WpjpWz,https://www.instagram.com/reel/DSDN4WpjpWz,Varun Rana,12/2/2025,videographer,2025-12-09T16:59:35.000Z,TRUE,Webflow,399396,1775
+video-0017,instagram-DSnd4pIkkur,https://www.instagram.com/reel/DSnd4pIkkur,MyTechCEO,12/5/2025,videographer,2025-12-23T18:56:15.000Z,TRUE,,8593314,154665
+video-0018,instagram-DSLGp5_kanb,https://www.instagram.com/reel/DSLGp5_kanb,Alberta.Tech,12/5/2025,videographer,2025-12-12T18:30:50.000Z,TRUE,,2323150,114611
 video-0019,instagram-DSpt5OpiUcS,https://www.instagram.com/reel/DSpt5OpiUcS,MyTechCEO,12/5/2025,videographer,,FALSE,Claude Code
-video-0020,instagram-DTIvQlrDlWA,https://www.instagram.com/reel/DTIvQlrDlWA,Varun Rana,12/11/2025,videographer,,TRUE,Ramp
-video-0021,instagram-DSk_3NAjlhX,https://www.instagram.com/reel/DSk_3NAjlhX,Varun Rana,12/12/2025,videographer,,TRUE,Zapier
+video-0020,instagram-DTIvQlrDlWA,https://www.instagram.com/reel/DTIvQlrDlWA,Varun Rana,12/11/2025,videographer,2026-01-05T16:58:35.000Z,TRUE,Ramp,22800,296
+video-0021,instagram-DSk_3NAjlhX,https://www.instagram.com/reel/DSk_3NAjlhX,Varun Rana,12/12/2025,videographer,2025-12-22T19:50:59.000Z,TRUE,Zapier,216501,4460
 video-0022,instagram-DTvV-2FDxS9,https://www.instagram.com/reels/DTvV-2FDxS9,MyTechCEO,1/18/2026,videographer,,FALSE,Emergent Labs
-video-0023,instagram-DT28vyWDVw-,https://www.instagram.com/reels/DT28vyWDVw-/,MyTechCEO,1/19/2026,videographer,,TRUE,Moonpay
-video-0024,instagram-DT3GBhJCbvM,https://www.instagram.com/reels/DT3GBhJCbvM/,MyTechCEO,1/19/2026,videographer,,TRUE,Polymarket
-video-0025,instagram-DT1DzdcDp5d,https://www.instagram.com/reel/DT1DzdcDp5d,Varun Rana,1/21/2026,videographer,,TRUE,Emergent Labs
-video-0026,instagram-DT-0RGCjgfW,https://www.instagram.com/reel/DT-0RGCjgfW,Varun Rana,1/21/2026,videographer,,TRUE,
-video-0027,instagram-DU9eNHlANWt,https://www.instagram.com/reel/DU9eNHlANWt,Varun Rana,1/23/2026,videographer,,TRUE,
-video-0028,instagram-DVO2rh-jn0F,https://www.instagram.com/reel/DVO2rh-jn0F,Varun Rana,1/23/2026,videographer,,TRUE,
-video-0029,instagram-DULsaCuDwR3,https://www.instagram.com/reels/DULsaCuDwR3/,MyTechCEO,1/30/2026,videographer,,TRUE,
-video-0030,instagram-DUO7tOtj1dj,https://www.instagram.com/reels/DUO7tOtj1dj/,MyTechCEO,1/30/2026,videographer,,TRUE,
-video-0031,instagram-DUR6XFLACu1,https://www.instagram.com/reel/DUR6XFLACu1,Alberta.Tech,2/1/2026,videographer,,TRUE,
-video-0032,instagram-DUQlMxkDiZB,https://www.instagram.com/reel/DUQlMxkDiZB,Alberta.Tech,2/1/2026,videographer,,TRUE,
-video-0033,instagram-Da_LV_dP2ok,https://www.instagram.com/reel/Da_LV_dP2ok,Alberta.Tech,2/1/2026,videographer,,TRUE,
-video-0034,instagram-DUlb4cUlQlC,https://www.instagram.com/reel/DUlb4cUlQlC,Varun Rana,2/5/2026,videographer,,TRUE,Rippling
-video-0035,instagram-DVMDzvskS2R,https://www.instagram.com/reel/DVMDzvskS2R,Varun Rana,2/12/2026,videographer,,TRUE,
-video-0036,instagram-DUvn_bXDq2g,https://www.instagram.com/reel/DUvn_bXDq2g,Rachel,2/13/2026,videographer,,TRUE,
-video-0037,instagram-DVhMgOHgqOV,https://www.instagram.com/reel/DVhMgOHgqOV,Varun Rana,2/20/2026,videographer,,TRUE,
-video-0038,instagram-DVyk9aiFW6b,https://www.instagram.com/reel/DVyk9aiFW6b,Varun Rana,2/20/2026,videographer,,TRUE,
-video-0039,instagram-DVjPY4IgkCK,https://www.instagram.com/reel/DVjPY4IgkCK,Varun Rana,2/20/2026,videographer,,TRUE,
-video-0040,instagram-DXHm_5MDRYI,https://www.instagram.com/reel/DXHm_5MDRYI,Austin Nasso,3/3/2026,videographer,,TRUE,
-video-0041,instagram-DW9QWRgjS-e,https://www.instagram.com/reel/DW9QWRgjS-e,Austin Nasso,3/3/2026,videographer,,TRUE,
-video-0042,instagram-DYfFeyEB6GN,https://www.instagram.com/reel/DYfFeyEB6GN,Austin Nasso,3/3/2026,videographer,,TRUE,
-video-0043,instagram-DWE7R2gDe8M,https://www.instagram.com/reel/DWE7R2gDe8M,Varun Rana,3/4/2026,videographer,,TRUE,
-video-0044,instagram-DV_cfVbDBKP,https://www.instagram.com/reel/DV_cfVbDBKP,Varun Rana,3/6/2026,videographer,,TRUE,
-video-0045,instagram-DVrpo3hCfqy,https://www.instagram.com/reel/DVrpo3hCfqy,Varun Rana,3/6/2026,videographer,,TRUE,
-video-0046,instagram-DV9EPZxjcXh,https://www.instagram.com/reel/DV9EPZxjcXh,Varun Rana,3/10/2026,videographer,,TRUE,Dovetail
-video-0047,instagram-DWHsn3ACVEE,https://www.instagram.com/reel/DWHsn3ACVEE,Varun Rana,3/17/2026,videographer,,TRUE,Emergent Labs
-video-0048,instagram-DWWxiVhjliv,https://www.instagram.com/reel/DWWxiVhjliv,Varun Rana,3/20/2026,videographer,,TRUE,Zoom
+video-0023,instagram-DT28vyWDVw-,https://www.instagram.com/reels/DT28vyWDVw-/,MyTechCEO,1/19/2026,videographer,2026-01-23T15:45:02.000Z,TRUE,Moonpay,953137,20232
+video-0024,instagram-DT3GBhJCbvM,https://www.instagram.com/reels/DT3GBhJCbvM/,MyTechCEO,1/19/2026,videographer,2026-01-23T17:03:52.000Z,TRUE,Polymarket,53055,930
+video-0025,instagram-DT1DzdcDp5d,https://www.instagram.com/reel/DT1DzdcDp5d,Varun Rana,1/21/2026,videographer,2026-01-22T22:04:43.000Z,TRUE,Emergent Labs,44993,1060
+video-0026,instagram-DT-0RGCjgfW,https://www.instagram.com/reel/DT-0RGCjgfW,Varun Rana,1/21/2026,videographer,2026-01-26T17:01:14.000Z,TRUE,,1175148,29214
+video-0027,instagram-DU9eNHlANWt,https://www.instagram.com/reel/DU9eNHlANWt,Varun Rana,1/23/2026,videographer,2026-02-20T01:01:03.000Z,TRUE,,28968,347
+video-0028,instagram-DVO2rh-jn0F,https://www.instagram.com/reel/DVO2rh-jn0F,Varun Rana,1/23/2026,videographer,2026-02-26T19:02:09.000Z,TRUE,,38410,894
+video-0029,instagram-DULsaCuDwR3,https://www.instagram.com/reels/DULsaCuDwR3/,MyTechCEO,1/30/2026,videographer,2026-01-31T17:03:57.000Z,TRUE,,2807141,85950
+video-0030,instagram-DUO7tOtj1dj,https://www.instagram.com/reels/DUO7tOtj1dj/,MyTechCEO,1/30/2026,videographer,2026-02-01T23:18:17.000Z,TRUE,,1144188,36189
+video-0031,instagram-DUR6XFLACu1,https://www.instagram.com/reel/DUR6XFLACu1,Alberta.Tech,2/1/2026,videographer,2026-02-03T03:03:54.000Z,TRUE,,83058,1837
+video-0032,instagram-DUQlMxkDiZB,https://www.instagram.com/reel/DUQlMxkDiZB,Alberta.Tech,2/1/2026,videographer,2026-02-02T14:15:29.000Z,TRUE,,21675,201
+video-0033,instagram-Da_LV_dP2ok,https://www.instagram.com/reel/Da_LV_dP2ok,Alberta.Tech,2/1/2026,videographer,2026-07-19T20:03:05.000Z,TRUE,,15241,229
+video-0034,instagram-DUlb4cUlQlC,https://www.instagram.com/reel/DUlb4cUlQlC,Varun Rana,2/5/2026,videographer,2026-02-10T16:58:54.000Z,TRUE,Rippling,60581,1616
+video-0035,instagram-DVMDzvskS2R,https://www.instagram.com/reel/DVMDzvskS2R,Varun Rana,2/12/2026,videographer,2026-02-25T16:58:53.000Z,TRUE,,1701743,34975
+video-0036,instagram-DUvn_bXDq2g,https://www.instagram.com/reel/DUvn_bXDq2g,Rachel,2/13/2026,videographer,2026-02-14T16:01:12.000Z,TRUE,,103192,2029
+video-0037,instagram-DVhMgOHgqOV,https://www.instagram.com/reel/DVhMgOHgqOV,Varun Rana,2/20/2026,videographer,2026-03-05T22:01:08.000Z,TRUE,,373624,15253
+video-0038,instagram-DVyk9aiFW6b,https://www.instagram.com/reel/DVyk9aiFW6b,Varun Rana,2/20/2026,videographer,2026-03-12T16:01:27.000Z,TRUE,,60677,1641
+video-0039,instagram-DVjPY4IgkCK,https://www.instagram.com/reel/DVjPY4IgkCK,Varun Rana,2/20/2026,videographer,2026-03-06T17:03:54.000Z,TRUE,,38490,307
+video-0040,instagram-DXHm_5MDRYI,https://www.instagram.com/reel/DXHm_5MDRYI,Austin Nasso,3/3/2026,videographer,2026-04-14T16:33:05.000Z,TRUE,,157558,3088
+video-0041,instagram-DW9QWRgjS-e,https://www.instagram.com/reel/DW9QWRgjS-e,Austin Nasso,3/3/2026,videographer,2026-04-10T16:48:11.000Z,TRUE,,337158,9420
+video-0042,instagram-DYfFeyEB6GN,https://www.instagram.com/reel/DYfFeyEB6GN,Austin Nasso,3/3/2026,videographer,2026-05-18T15:53:26.000Z,TRUE,,1203679,43359
+video-0043,instagram-DWE7R2gDe8M,https://www.instagram.com/reel/DWE7R2gDe8M,Varun Rana,3/4/2026,videographer,2026-03-19T19:01:42.000Z,TRUE,,37278,669
+video-0044,instagram-DV_cfVbDBKP,https://www.instagram.com/reel/DV_cfVbDBKP,Varun Rana,3/6/2026,videographer,2026-03-17T15:55:54.000Z,TRUE,,47099,833
+video-0045,instagram-DVrpo3hCfqy,https://www.instagram.com/reel/DVrpo3hCfqy,Varun Rana,3/6/2026,videographer,2026-03-09T23:27:27.000Z,TRUE,,145756,2787
+video-0046,instagram-DV9EPZxjcXh,https://www.instagram.com/reel/DV9EPZxjcXh,Varun Rana,3/10/2026,videographer,2026-03-16T17:45:31.000Z,TRUE,Dovetail,61976,1447
+video-0047,instagram-DWHsn3ACVEE,https://www.instagram.com/reel/DWHsn3ACVEE,Varun Rana,3/17/2026,videographer,2026-03-20T20:52:06.000Z,TRUE,Emergent Labs,54408,1236
+video-0048,instagram-DWWxiVhjliv,https://www.instagram.com/reel/DWWxiVhjliv,Varun Rana,3/20/2026,videographer,2026-03-26T17:25:38.000Z,TRUE,Zoom,41747,782
 video-0049,youtube-eBRzdfU-K30,https://youtu.be/eBRzdfU-K30?si=WNh9PhM5L-J3Ltch,Alberta.Tech,3/22/2026,videographer,,TRUE,Mobbin
 video-0050,instagram-DWcEz1Ej0iv,https://www.instagram.com/reel/DWcEz1Ej0iv,MyTechCEO,3/27/2026,videographer,,FALSE,
-video-0051,instagram-DXJ-o4CD_YI,https://www.instagram.com/reel/DXJ-o4CD_YI/,Rachel,3/29/2026,videographer,,TRUE,
-video-0052,instagram-DXAG3DfEfAS,https://www.instagram.com/reel/DXAG3DfEfAS,MyTechCEO,3/30/2026,videographer,,TRUE,
-video-0053,instagram-DXZv22BCay1,https://www.instagram.com/reel/DXZv22BCay1,MyTechCEO,3/30/2026,videographer,,TRUE,
-video-0054,instagram-DW1cbThDUk3,https://www.instagram.com/reel/DW1cbThDUk3,MyTechCEO,4/2/2026,videographer,,TRUE,Higgsfield
-video-0055,instagram-DXcOy5riYPS,https://www.instagram.com/reel/DXcOy5riYPS,MyTechCEO,4/2/2026,videographer,,TRUE,Lindy
-video-0056,instagram-DYF1QBpOE4N,https://www.instagram.com/reel/DYF1QBpOE4N,Varun Rana,4/3/2026,videographer,,TRUE,
-video-0057,instagram-DYgDWd0uPH1,https://www.instagram.com/reel/DYgDWd0uPH1,Varun Rana,4/3/2026,videographer,,TRUE,
-video-0058,instagram-DYnXGvEkj-S,https://www.instagram.com/reel/DYnXGvEkj-S,Varun Rana,4/3/2026,videographer,,TRUE,
-video-0059,instagram-DXpoBtCAB4R,https://www.instagram.com/reel/DXpoBtCAB4R,Varun Rana,4/9/2026,videographer,,TRUE,
-video-0060,instagram-DXMtI6VigeQ,https://www.instagram.com/reel/DXMtI6VigeQ,Varun Rana,4/10/2026,videographer,,TRUE,Emergent Labs
-video-0061,instagram-DXhTCioDSuh,https://www.instagram.com/reel/DXhTCioDSuh,Varun Rana,4/10/2026,videographer,,TRUE,Genesys
-video-0062,instagram-DXwxWp5OJeJ,https://www.instagram.com/reel/DXwxWp5OJeJ,Varun Rana,4/24/2026,videographer,,TRUE,Rippling
-video-0063,instagram-DZ-6JdkyAmQ,https://www.instagram.com/reel/DZ-6JdkyAmQ,Varun Rana,5/7/2026,videographer,,TRUE,
-video-0064,instagram-DaMRSmXO6BW,https://www.instagram.com/reel/DaMRSmXO6BW,Varun Rana,5/7/2026,videographer,,TRUE,
-video-0065,instagram-DaS_apmMYD9,https://www.instagram.com/reel/DaS_apmMYD9,Trace Space,5/8/2026,"videographer, editor",,TRUE,
-video-0066,instagram-DaVNCUHsfVR,https://www.instagram.com/reel/DaVNCUHsfVR,Trace Space,5/8/2026,"videographer, editor",,TRUE,
-video-0067,instagram-Da0enc6M6yz,https://www.instagram.com/reel/Da0enc6M6yz,Trace Space,5/8/2026,"videographer, editor",,TRUE,
-video-0068,instagram-DZLJBmLCCl0,https://www.instagram.com/reel/DZLJBmLCCl0,Varun Rana,5/19/2026,videographer,,TRUE,Synthesia
-video-0069,instagram-DY42hv5uiyI,https://www.instagram.com/reel/DY42hv5uiyI,Alberta.Tech,5/21/2026,videographer,,TRUE,
-video-0070,instagram-DZAiHGmxtp9,https://www.instagram.com/reel/DZAiHGmxtp9,Alberta.Tech,5/21/2026,videographer,,TRUE,
-video-0071,instagram-DZF54g1Riz_,https://www.instagram.com/reel/DZF54g1Riz_,Alberta.Tech,5/26/2026,videographer,,TRUE,
-video-0072,instagram-DZDDVuEAT04,https://www.instagram.com/reel/DZDDVuEAT04,MyTechCEO,5/26/2026,videographer,,TRUE,
-video-0073,instagram-DZnF1_KgGnn,https://www.instagram.com/reel/DZnF1_KgGnn,MyTechCEO,5/26/2026,videographer,,TRUE,Fox ONE
-video-0074,instagram-DaRMEoGRuAO,https://www.instagram.com/reel/DaRMEoGRuAO,Alberta.Tech,5/26/2026,videographer,,TRUE,
+video-0051,instagram-DXJ-o4CD_YI,https://www.instagram.com/reel/DXJ-o4CD_YI/,Rachel,3/29/2026,videographer,2026-04-15T14:38:54.000Z,TRUE,,157791,3469
+video-0052,instagram-DXAG3DfEfAS,https://www.instagram.com/reel/DXAG3DfEfAS,MyTechCEO,3/30/2026,videographer,2026-04-11T18:37:46.000Z,TRUE,,1402287,42243
+video-0053,instagram-DXZv22BCay1,https://www.instagram.com/reel/DXZv22BCay1,MyTechCEO,3/30/2026,videographer,2026-04-21T17:41:11.000Z,TRUE,,9248519,322032
+video-0054,instagram-DW1cbThDUk3,https://www.instagram.com/reel/DW1cbThDUk3,MyTechCEO,4/2/2026,videographer,2026-04-07T15:19:43.000Z,TRUE,Higgsfield,207733,5174
+video-0055,instagram-DXcOy5riYPS,https://www.instagram.com/reel/DXcOy5riYPS,MyTechCEO,4/2/2026,videographer,2026-04-22T16:51:06.000Z,TRUE,Lindy,2812943,57151
+video-0056,instagram-DYF1QBpOE4N,https://www.instagram.com/reel/DYF1QBpOE4N,Varun Rana,4/3/2026,videographer,2026-05-08T20:30:42.000Z,TRUE,,115752,4076
+video-0057,instagram-DYgDWd0uPH1,https://www.instagram.com/reel/DYgDWd0uPH1,Varun Rana,4/3/2026,videographer,2026-05-19T00:53:42.000Z,TRUE,,139072,2630
+video-0058,instagram-DYnXGvEkj-S,https://www.instagram.com/reel/DYnXGvEkj-S,Varun Rana,4/3/2026,videographer,2026-05-21T21:01:21.000Z,TRUE,,46670,1013
+video-0059,instagram-DXpoBtCAB4R,https://www.instagram.com/reel/DXpoBtCAB4R,Varun Rana,4/9/2026,videographer,2026-04-27T21:35:59.000Z,TRUE,,101381,2113
+video-0060,instagram-DXMtI6VigeQ,https://www.instagram.com/reel/DXMtI6VigeQ,Varun Rana,4/10/2026,videographer,2026-04-16T16:03:35.000Z,TRUE,Emergent Labs,58058,1297
+video-0061,instagram-DXhTCioDSuh,https://www.instagram.com/reel/DXhTCioDSuh,Varun Rana,4/10/2026,videographer,2026-04-24T15:58:53.000Z,TRUE,Genesys,29096,519
+video-0062,instagram-DXwxWp5OJeJ,https://www.instagram.com/reel/DXwxWp5OJeJ,Varun Rana,4/24/2026,videographer,2026-04-30T16:12:36.000Z,TRUE,Rippling,44741,826
+video-0063,instagram-DZ-6JdkyAmQ,https://www.instagram.com/reel/DZ-6JdkyAmQ,Varun Rana,5/7/2026,videographer,2026-06-24T21:03:24.000Z,TRUE,,566159,16161
+video-0064,instagram-DaMRSmXO6BW,https://www.instagram.com/reel/DaMRSmXO6BW,Varun Rana,5/7/2026,videographer,2026-06-30T01:33:36.000Z,TRUE,,266095,5040
+video-0065,instagram-DaS_apmMYD9,https://www.instagram.com/reel/DaS_apmMYD9,Trace Space,5/8/2026,"videographer, editor",2026-07-02T16:13:22.000Z,TRUE,,522,24
+video-0066,instagram-DaVNCUHsfVR,https://www.instagram.com/reel/DaVNCUHsfVR,Trace Space,5/8/2026,"videographer, editor",2026-07-03T12:52:16.000Z,TRUE,,608,31
+video-0067,instagram-Da0enc6M6yz,https://www.instagram.com/reel/Da0enc6M6yz,Trace Space,5/8/2026,"videographer, editor",2026-07-15T16:20:02.000Z,TRUE,,788,22
+video-0068,instagram-DZLJBmLCCl0,https://www.instagram.com/reel/DZLJBmLCCl0,Varun Rana,5/19/2026,videographer,2026-06-04T18:32:02.000Z,TRUE,Synthesia,190333,5239
+video-0069,instagram-DY42hv5uiyI,https://www.instagram.com/reel/DY42hv5uiyI,Alberta.Tech,5/21/2026,videographer,2026-05-28T16:03:27.000Z,TRUE,,41019,621
+video-0070,instagram-DZAiHGmxtp9,https://www.instagram.com/reel/DZAiHGmxtp9,Alberta.Tech,5/21/2026,videographer,2026-05-31T15:40:07.000Z,TRUE,,247198,8050
+video-0071,instagram-DZF54g1Riz_,https://www.instagram.com/reel/DZF54g1Riz_,Alberta.Tech,5/26/2026,videographer,2026-06-02T17:43:31.000Z,TRUE,,6630865,216183
+video-0072,instagram-DZDDVuEAT04,https://www.instagram.com/reel/DZDDVuEAT04,MyTechCEO,5/26/2026,videographer,2026-06-01T15:08:32.000Z,TRUE,,489446,10565
+video-0073,instagram-DZnF1_KgGnn,https://www.instagram.com/reel/DZnF1_KgGnn,MyTechCEO,5/26/2026,videographer,2026-06-15T15:04:04.000Z,TRUE,Fox ONE,205974,2330
+video-0074,instagram-DaRMEoGRuAO,https://www.instagram.com/reel/DaRMEoGRuAO,Alberta.Tech,5/26/2026,videographer,2026-07-01T23:24:28.000Z,TRUE,,2197594,62408
 video-0075,linkedin-jeanlebouthillier-genai-nyc-datasecurity-ugcpost-7474829661005574144-l-2w,https://www.linkedin.com/posts/jeanlebouthillier_genai-nyc-datasecurity-ugcPost-7474829661005574144-L_2W,Supermomos,6/3/2026,"videographer, editor",,TRUE,
-video-0076,instagram-DZxfNk5AaNI,https://www.instagram.com/reel/DZxfNk5AaNI,Varun Rana,6/5/2026,videographer,,TRUE,Apollo
-video-0077,instagram-DaSwez7lJMH,https://www.instagram.com/reel/DaSwez7lJMH,Varun Rana,6/5/2026,videographer,,TRUE,
-video-0078,instagram-Da0Jlw9JD6S,https://www.instagram.com/reel/Da0Jlw9JD6S,MyTechCEO,6/5/2026,videographer,,TRUE,Vanta
+video-0076,instagram-DZxfNk5AaNI,https://www.instagram.com/reel/DZxfNk5AaNI,Varun Rana,6/5/2026,videographer,2026-06-19T15:55:52.000Z,TRUE,Apollo,24467,355
+video-0077,instagram-DaSwez7lJMH,https://www.instagram.com/reel/DaSwez7lJMH,Varun Rana,6/5/2026,videographer,2026-07-02T14:02:08.000Z,TRUE,,37852,1027
+video-0078,instagram-Da0Jlw9JD6S,https://www.instagram.com/reel/Da0Jlw9JD6S,MyTechCEO,6/5/2026,videographer,2026-07-15T13:16:31.000Z,TRUE,Vanta,560549,6143
 video-0079,instagram-DZf23lRBHdy,https://www.instagram.com/reel/DZf23lRBHdy,Emma Steuer,6/7/2026,videographer,,FALSE,"ASUS, Glance"
 video-0080,instagram-DZvOILOAOXR,https://www.instagram.com/reel/DZvOILOAOXR,Emma Steuer,6/7/2026,videographer,,FALSE,"ASUS, Glance"
-video-0081,instagram-DZ4vPpNuTJa,https://www.instagram.com/reel/DZ4vPpNuTJa,Emma Steuer,6/7/2026,videographer,,TRUE,
-video-0082,instagram-DZgcUBPRn6E,https://www.instagram.com/reel/DZgcUBPRn6E,Alberta.Tech,6/8/2026,videographer,,TRUE,
-video-0083,instagram-DZq0LwnR0ZH,https://www.instagram.com/reel/DZq0LwnR0ZH,Alberta.Tech,6/8/2026,videographer,,TRUE,
-video-0084,instagram-DaMMHW-FOCF,https://www.instagram.com/reel/DaMMHW-FOCF,Varun Rana,6/23/2026,videographer,,TRUE,
-video-0085,instagram-DaOwPYyjS1z,https://www.instagram.com/reel/DaOwPYyjS1z,Varun Rana,6/23/2026,videographer,,TRUE,
-video-0086,instagram-Daxs_IGgkvf,https://www.instagram.com/reel/Daxs_IGgkvf,Varun Rana,6/23/2026,videographer,,TRUE,
-video-0087,instagram-Da0csayFu8e,https://www.instagram.com/reel/Da0csayFu8e,Varun Rana,6/23/2026,videographer,,TRUE,
-video-0088,instagram-DaVi6-tkfcW,https://www.instagram.com/reel/DaVi6-tkfcW,Varun Rana,6/26/2026,videographer,,TRUE,Foxit Software
-video-0089,instagram-DaiiMu_Au3w,https://www.instagram.com/reel/DaiiMu_Au3w,Varun Rana,6/26/2026,videographer,,TRUE,
-video-0090,instagram-Dak8qWdiZS9,https://www.instagram.com/reel/Dak8qWdiZS9,Varun Rana,6/26/2026,videographer,,TRUE,Apollo
+video-0081,instagram-DZ4vPpNuTJa,https://www.instagram.com/reel/DZ4vPpNuTJa,Emma Steuer,6/7/2026,videographer,2026-06-22T11:30:48.000Z,TRUE,,119934,3802
+video-0082,instagram-DZgcUBPRn6E,https://www.instagram.com/reel/DZgcUBPRn6E,Alberta.Tech,6/8/2026,videographer,2026-06-13T01:06:16.000Z,TRUE,,175715,2919
+video-0083,instagram-DZq0LwnR0ZH,https://www.instagram.com/reel/DZq0LwnR0ZH,Alberta.Tech,6/8/2026,videographer,2026-06-17T01:44:15.000Z,TRUE,,22696,100
+video-0084,instagram-DaMMHW-FOCF,https://www.instagram.com/reel/DaMMHW-FOCF,Varun Rana,6/23/2026,videographer,2026-06-30T00:49:35.000Z,TRUE,,371865,16344
+video-0085,instagram-DaOwPYyjS1z,https://www.instagram.com/reel/DaOwPYyjS1z,Varun Rana,6/23/2026,videographer,2026-07-01T00:43:43.000Z,TRUE,,54999,1432
+video-0086,instagram-Daxs_IGgkvf,https://www.instagram.com/reel/Daxs_IGgkvf,Varun Rana,6/23/2026,videographer,2026-07-14T14:29:37.000Z,TRUE,,106367,2276
+video-0087,instagram-Da0csayFu8e,https://www.instagram.com/reel/Da0csayFu8e,Varun Rana,6/23/2026,videographer,2026-07-15T16:03:40.000Z,TRUE,,78636,1840
+video-0088,instagram-DaVi6-tkfcW,https://www.instagram.com/reel/DaVi6-tkfcW,Varun Rana,6/26/2026,videographer,2026-07-03T16:02:17.000Z,TRUE,Foxit Software,22612,411
+video-0089,instagram-DaiiMu_Au3w,https://www.instagram.com/reel/DaiiMu_Au3w,Varun Rana,6/26/2026,videographer,2026-07-08T17:05:23.000Z,TRUE,,51847,1050
+video-0090,instagram-Dak8qWdiZS9,https://www.instagram.com/reel/Dak8qWdiZS9,Varun Rana,6/26/2026,videographer,2026-07-09T15:34:30.000Z,TRUE,Apollo,25582,441
 video-0091,instagram-DavWhJBjOIW,https://www.instagram.com/reel/DavWhJBjOIW,Varun Rana,6/26/2026,videographer,,FALSE,
-video-0092,instagram-DawLEDOjHpY,https://www.instagram.com/reel/DawLEDOjHpY,Varun Rana,6/26/2026,videographer,,TRUE,Zocomputer
-video-0093,instagram-Da0hecNRs1i,https://www.instagram.com/reel/Da0hecNRs1i,Alberta.Tech,7/10/2026,videographer,,TRUE,
-video-0094,instagram-DbPS9Mqxo_I,https://www.instagram.com/reel/DbPS9Mqxo_I,Alberta.Tech,7/10/2026,videographer,,TRUE,
+video-0092,instagram-DawLEDOjHpY,https://www.instagram.com/reel/DawLEDOjHpY,Varun Rana,6/26/2026,videographer,2026-07-14T00:11:59.000Z,TRUE,Zocomputer,46787,1206
+video-0093,instagram-Da0hecNRs1i,https://www.instagram.com/reel/Da0hecNRs1i,Alberta.Tech,7/10/2026,videographer,2026-07-15T16:44:54.000Z,TRUE,,545001,15495
+video-0094,instagram-DbPS9Mqxo_I,https://www.instagram.com/reel/DbPS9Mqxo_I,Alberta.Tech,7/10/2026,videographer,2026-07-26T02:17:41.000Z,TRUE,,396091,16177
 video-0094,youtube-JNnMEhR9iOo,https://youtube.com/shorts/JNnMEhR9iOo,Alberta.Tech,7/10/2026,videographer,,TRUE,
-video-0096,instagram-DbtDnx6xGoh,https://www.instagram.com/reel/DbtDnx6xGoh,Alberta.Tech,7/10/2026,videographer,,TRUE,
-video-0097,instagram-Dbn-AvjJxRA,https://www.instagram.com/reel/Dbn-AvjJxRA,MyTechCEO,7/10/2026,videographer,,TRUE,CodeRabbit
-video-0098,instagram-Da0xJufJ9ek,https://www.instagram.com/reel/Da0xJufJ9ek,Spencer Wright,7/13/2026,videographer,,TRUE,
+video-0096,instagram-DbtDnx6xGoh,https://www.instagram.com/reel/DbtDnx6xGoh,Alberta.Tech,7/10/2026,videographer,2026-08-06T15:40:55.000Z,TRUE,,281353,5705
+video-0097,instagram-Dbn-AvjJxRA,https://www.instagram.com/reel/Dbn-AvjJxRA,MyTechCEO,7/10/2026,videographer,2026-08-04T16:18:44.000Z,TRUE,CodeRabbit,193709,4174
+video-0098,instagram-Da0xJufJ9ek,https://www.instagram.com/reel/Da0xJufJ9ek,Spencer Wright,7/13/2026,videographer,2026-07-15T19:05:02.000Z,TRUE,,568411,18367
 video-0099,instagram-Da8SK_2pNyG,https://www.instagram.com/reel/Da8SK_2pNyG,Spencer Wright,7/13/2026,videographer,,FALSE,
-video-0100,instagram-DbdpzvruYUB,https://www.instagram.com/reel/DbdpzvruYUB,Varun Rana,7/16/2026,videographer,,TRUE,
-video-0101,instagram-Db8dhwZjCoc,https://www.instagram.com/reel/Db8dhwZjCoc,Varun Rana,7/16/2026,videographer,,TRUE,
-video-0102,instagram-DbDy5OeD0Za,https://www.instagram.com/reel/DbDy5OeD0Za,Varun Rana,7/17/2026,videographer,,TRUE,
-video-0103,instagram-DbV4ot8CFeu,https://www.instagram.com/reel/DbV4ot8CFeu,Varun Rana,7/17/2026,videographer,,TRUE,
-video-0104,instagram-DbcI8fTNPmD,https://www.instagram.com/reel/DbcI8fTNPmD,Varun Rana,7/17/2026,videographer,,TRUE,
-video-0105,instagram-DcBlvleDvTW,https://www.instagram.com/reel/DcBlvleDvTW,Varun Rana,7/21/2026,videographer,,TRUE,
-video-0106,instagram-DcRp7PPu2Gw,https://www.instagram.com/reel/DcRp7PPu2Gw,Varun Rana,7/24/2026,videographer,,TRUE,
-video-0107,instagram-DcL2Smtij6k,https://www.instagram.com/reel/DcL2Smtij6k,Varun Rana,7/24/2026,videographer,,TRUE,
-video-0108,instagram-DcRqI0POFyZ,https://www.instagram.com/reel/DcRqI0POFyZ,Varun Rana,7/24/2026,videographer,,TRUE,
-video-0109,instagram-DbbSIW3RoiN,https://www.instagram.com/reel/DbbSIW3RoiN,Alberta.Tech,7/24/2026,videographer,,TRUE,
-video-0110,instagram-DboKoH2x1Kv,https://www.instagram.com/reel/DboKoH2x1Kv,Alberta.Tech,7/24/2026,videographer,,TRUE,
-video-0111,instagram-DbeTWNrv4Zq,https://www.instagram.com/reel/DbeTWNrv4Zq,MyTechCEO,7/28/2026,videographer,,TRUE,Codex
-video-0112,instagram-Dbv6fV3CobM,https://www.instagram.com/reel/Dbv6fV3CobM,Varun Rana,7/31/2026,videographer,,TRUE,LittleBird
-video-0113,instagram-DcGxtdQxyS9,https://www.instagram.com/reel/DcGxtdQxyS9,MyTechCEO,8/5/2026,videographer,,TRUE,
-video-0114,instagram-DcenPurPOip,https://www.instagram.com/reel/DcenPurPOip,MyTechCEO,8/5/2026,videographer,,TRUE,
-video-0115,instagram-Dbv2ZGtJ6Ka,https://www.instagram.com/reel/Dbv2ZGtJ6Ka,Evie,8/6/2026,videographer,,TRUE,OpenArt
-video-0116,instagram-DcRHXRgOiJW,https://www.instagram.com/reel/DcRHXRgOiJW,Evie,8/6/2026,videographer,,TRUE,
-video-0117,instagram-DbuEV6IEUhy,https://www.instagram.com/reel/DbuEV6IEUhy,Varun Rana,8/6/2026,videographer,,TRUE,
-video-0118,instagram-Db6dyGvFaLz,https://www.instagram.com/reel/Db6dyGvFaLz,Varun Rana,8/6/2026,videographer,,TRUE,
-video-0119,instagram-Db_l8wKG-N6,https://www.instagram.com/reel/Db_l8wKG-N6,Varun Rana,8/6/2026,videographer,,TRUE,Campus.edu
-video-0120,instagram-Db5-HBlxJ-c,https://www.instagram.com/reel/Db5-HBlxJ-c,Alberta.Tech,8/10/2026,videographer,,TRUE,
-video-0121,instagram-DcMBEKBOJd-,https://www.instagram.com/reel/DcMBEKBOJd-,Alberta.Tech,8/10/2026,videographer,,TRUE,
-video-0122,instagram-DcRtroJut_J,https://www.instagram.com/reel/DcRtroJut_J,Alberta.Tech,8/10/2026,videographer,,TRUE,
-video-0123,instagram-DcTnCKVRzSU,https://www.instagram.com/reel/DcTnCKVRzSU,Alberta.Tech,8/10/2026,videographer,,TRUE,
-video-0124,instagram-DcMyrU-E0aL,https://www.instagram.com/reel/DcMyrU-E0aL,Varun Rana,8/14/2026,videographer,,TRUE,ChatGPT
-video-0125,instagram-DcKLd5NgKWP,https://www.instagram.com/reel/DcKLd5NgKWP,Varun Rana,8/14/2026,videographer,,TRUE,
-video-0126,instagram-DchBqRZO2B1,https://www.instagram.com/reel/DchBqRZO2B1,Varun Rana,8/21/2026,videographer,,TRUE,
-video-0127,instagram-Dc_SNriDkdY,https://www.instagram.com/reel/Dc_SNriDkdY,Varun Rana,8/21/2026,videographer,,TRUE,Dex
-video-0128,instagram-DcjBy0UxzPI,https://www.instagram.com/reel/DcjBy0UxzPI,Alberta.Tech,8/24/2026,videographer,,TRUE,ChatGPT
-video-0129,instagram-Dc1EriakROz,https://www.instagram.com/reel/Dc1EriakROz,Varun Rana,8/25/2026,videographer,,TRUE,
-video-0130,instagram-DdUoPNPDyP4,https://www.instagram.com/reel/DdUoPNPDyP4,Varun Rana,8/27/2026,videographer,,TRUE,
-video-0131,instagram-DdSbtl_k6-g,https://www.instagram.com/reel/DdSbtl_k6-g,Varun Rana,9/4/2026,videographer,,TRUE,
-video-0132,instagram-DdZxByBibtH,https://www.instagram.com/reel/DdZxByBibtH,Varun Rana,9/4/2026,videographer,,TRUE,
-video-0133,instagram-DdmNXevRaK5,https://www.instagram.com/reel/DdmNXevRaK5,Alberta.Tech,9/6/2026,videographer,,TRUE,Twilio
-video-0134,instagram-DdTyHB0R-c8,https://www.instagram.com/reel/DdTyHB0R-c8,Alexis,9/7/2026,videographer,,TRUE,Okta
-video-0135,instagram-DeCJL7WvIDL,https://www.instagram.com/reel/DeCJL7WvIDL,Alexis,9/7/2026,videographer,,TRUE,Megaport
-video-0136,instagram-Ddwek0SRlWc,https://www.instagram.com/reel/Ddwek0SRlWc,Alexis,9/7/2026,videographer,,TRUE,Okta
-video-0137,instagram-DeNW9AgAJ07,https://www.instagram.com/reel/DeNW9AgAJ07,Alexis,9/7/2026,videographer,,TRUE,Megaport
-video-0138,instagram-DeiFK4KjFPq,https://www.instagram.com/reel/DeiFK4KjFPq,Alexis,9/7/2026,videographer,,TRUE,Megaport
-video-0139,instagram-DePY777AHHr,https://www.instagram.com/reel/DePY777AHHr,Varun Rana,9/8/2026,videographer,,TRUE,
-video-0140,instagram-DdJncrBijJj,https://www.instagram.com/reel/DdJncrBijJj,Evie,9/10/2026,videographer,,TRUE,
-video-0141,instagram-DdRbBa9RRgm,https://www.instagram.com/reel/DdRbBa9RRgm,MyTechCEO,9/10/2026,videographer,,TRUE,
-video-0142,instagram-DdmK4KhJ3qP,https://www.instagram.com/reel/DdmK4KhJ3qP,MyTechCEO,9/10/2026,videographer,,TRUE,
-video-0143,instagram-DdWl8ERjd7Z,https://www.instagram.com/reel/DdWl8ERjd7Z,Varun Rana,9/11/2026,videographer,,TRUE,Apollo
-video-0144,instagram-DdodQ1gnEtv,https://www.instagram.com/reel/DdodQ1gnEtv,Varun Rana,9/11/2026,videographer,,TRUE,Megaport
-video-0145,instagram-Dd4exBDj235,https://www.instagram.com/reel/Dd4exBDj235,Varun Rana,9/11/2026,videographer,,TRUE,Granola
-video-0146,instagram-DdW_58sPwzV,https://www.instagram.com/reel/DdW_58sPwzV,MyTechCEO,9/14/2026,videographer,,TRUE,Whisperflow
-video-0147,instagram-DeIeYX8j49V,https://www.instagram.com/reel/DeIeYX8j49V,Varun Rana,9/21/2026,videographer,,TRUE,Apollo
-video-0148,instagram-Dd1QrwVxfn2,https://www.instagram.com/reel/Dd1QrwVxfn2,Alexis,9/21/2026,videographer,,TRUE,
-video-0149,instagram-DePLL6ERpla,https://www.instagram.com/reel/DePLL6ERpla,Alberta.Tech,10/1/2026,videographer,,TRUE,ChatGPT
-video-0150,instagram-DeahlsSFZUu,https://www.instagram.com/reel/DeahlsSFZUu,Varun Rana,10/2/2026,videographer,,TRUE,
-video-0151,instagram-DecpUs5idl7,https://www.instagram.com/reel/DecpUs5idl7,Varun Rana,10/2/2026,videographer,,TRUE,ChatGPT
+video-0100,instagram-DbdpzvruYUB,https://www.instagram.com/reel/DbdpzvruYUB,Varun Rana,7/16/2026,videographer,2026-07-31T16:06:25.000Z,TRUE,,250682,4996
+video-0101,instagram-Db8dhwZjCoc,https://www.instagram.com/reel/Db8dhwZjCoc,Varun Rana,7/16/2026,videographer,2026-08-12T15:15:44.000Z,TRUE,,69837,1072
+video-0102,instagram-DbDy5OeD0Za,https://www.instagram.com/reel/DbDy5OeD0Za,Varun Rana,7/17/2026,videographer,2026-07-21T15:06:20.000Z,TRUE,,422928,9683
+video-0103,instagram-DbV4ot8CFeu,https://www.instagram.com/reel/DbV4ot8CFeu,Varun Rana,7/17/2026,videographer,2026-07-28T15:46:35.000Z,TRUE,,116879,3626
+video-0104,instagram-DbcI8fTNPmD,https://www.instagram.com/reel/DbcI8fTNPmD,Varun Rana,7/17/2026,videographer,2026-07-31T02:00:16.000Z,TRUE,,41141,871
+video-0105,instagram-DcBlvleDvTW,https://www.instagram.com/reel/DcBlvleDvTW,Varun Rana,7/21/2026,videographer,2026-08-14T15:05:30.000Z,TRUE,,258980,5479
+video-0106,instagram-DcRp7PPu2Gw,https://www.instagram.com/reel/DcRp7PPu2Gw,Varun Rana,7/24/2026,videographer,2026-08-20T20:48:28.000Z,TRUE,,85029,1767
+video-0107,instagram-DcL2Smtij6k,https://www.instagram.com/reel/DcL2Smtij6k,Varun Rana,7/24/2026,videographer,2026-08-18T14:40:34.000Z,TRUE,,131683,2305
+video-0108,instagram-DcRqI0POFyZ,https://www.instagram.com/reel/DcRqI0POFyZ,Varun Rana,7/24/2026,videographer,2026-08-20T20:49:48.000Z,TRUE,,4987,35
+video-0109,instagram-DbbSIW3RoiN,https://www.instagram.com/reel/DbbSIW3RoiN,Alberta.Tech,7/24/2026,videographer,2026-07-30T18:02:52.000Z,TRUE,,1281037,13324
+video-0110,instagram-DboKoH2x1Kv,https://www.instagram.com/reel/DboKoH2x1Kv,Alberta.Tech,7/24/2026,videographer,2026-08-04T18:06:04.000Z,TRUE,,9207983,603358
+video-0111,instagram-DbeTWNrv4Zq,https://www.instagram.com/reel/DbeTWNrv4Zq,MyTechCEO,7/28/2026,videographer,2026-07-31T22:13:50.000Z,TRUE,Codex,222576,6452
+video-0112,instagram-Dbv6fV3CobM,https://www.instagram.com/reel/Dbv6fV3CobM,Varun Rana,7/31/2026,videographer,2026-08-07T18:18:32.000Z,TRUE,LittleBird,50815,1031
+video-0113,instagram-DcGxtdQxyS9,https://www.instagram.com/reel/DcGxtdQxyS9,MyTechCEO,8/5/2026,videographer,2026-08-16T15:27:01.000Z,TRUE,,622703,16399
+video-0114,instagram-DcenPurPOip,https://www.instagram.com/reel/DcenPurPOip,MyTechCEO,8/5/2026,videographer,2026-08-25T21:34:58.000Z,TRUE,,422143,5532
+video-0115,instagram-Dbv2ZGtJ6Ka,https://www.instagram.com/reel/Dbv2ZGtJ6Ka,Evie,8/6/2026,videographer,2026-08-07T17:44:09.000Z,TRUE,OpenArt,67622,440
+video-0116,instagram-DcRHXRgOiJW,https://www.instagram.com/reel/DcRHXRgOiJW,Evie,8/6/2026,videographer,2026-08-20T15:47:22.000Z,TRUE,,97234,980
+video-0117,instagram-DbuEV6IEUhy,https://www.instagram.com/reel/DbuEV6IEUhy,Varun Rana,8/6/2026,videographer,2026-08-07T01:06:09.000Z,TRUE,,375690,9171
+video-0118,instagram-Db6dyGvFaLz,https://www.instagram.com/reel/Db6dyGvFaLz,Varun Rana,8/6/2026,videographer,2026-08-11T20:39:23.000Z,TRUE,,88332,1976
+video-0119,instagram-Db_l8wKG-N6,https://www.instagram.com/reel/Db_l8wKG-N6,Varun Rana,8/6/2026,videographer,2026-08-13T20:26:59.000Z,TRUE,Campus.edu,45428,1016
+video-0120,instagram-Db5-HBlxJ-c,https://www.instagram.com/reel/Db5-HBlxJ-c,Alberta.Tech,8/10/2026,videographer,2026-08-11T16:03:27.000Z,TRUE,,207084,8539
+video-0121,instagram-DcMBEKBOJd-,https://www.instagram.com/reel/DcMBEKBOJd-,Alberta.Tech,8/10/2026,videographer,2026-08-18T16:14:47.000Z,TRUE,,362766,9458
+video-0122,instagram-DcRtroJut_J,https://www.instagram.com/reel/DcRtroJut_J,Alberta.Tech,8/10/2026,videographer,2026-08-20T21:20:42.000Z,TRUE,,9955,143
+video-0123,instagram-DcTnCKVRzSU,https://www.instagram.com/reel/DcTnCKVRzSU,Alberta.Tech,8/10/2026,videographer,2026-08-21T15:01:16.000Z,TRUE,,79589,1326
+video-0124,instagram-DcMyrU-E0aL,https://www.instagram.com/reel/DcMyrU-E0aL,Varun Rana,8/14/2026,videographer,2026-08-18T23:28:17.000Z,TRUE,ChatGPT,22418,214
+video-0125,instagram-DcKLd5NgKWP,https://www.instagram.com/reel/DcKLd5NgKWP,Varun Rana,8/14/2026,videographer,2026-08-17T23:07:10.000Z,TRUE,,255250,4783
+video-0126,instagram-DchBqRZO2B1,https://www.instagram.com/reel/DchBqRZO2B1,Varun Rana,8/21/2026,videographer,2026-08-26T20:06:53.000Z,TRUE,,219116,5030
+video-0127,instagram-Dc_SNriDkdY,https://www.instagram.com/reel/Dc_SNriDkdY,Varun Rana,8/21/2026,videographer,2026-09-07T14:05:48.000Z,TRUE,Dex,186861,706
+video-0128,instagram-DcjBy0UxzPI,https://www.instagram.com/reel/DcjBy0UxzPI,Alberta.Tech,8/24/2026,videographer,2026-08-27T14:47:11.000Z,TRUE,ChatGPT,155555,3943
+video-0129,instagram-Dc1EriakROz,https://www.instagram.com/reel/Dc1EriakROz,Varun Rana,8/25/2026,videographer,2026-09-03T14:58:40.000Z,TRUE,,639229,12763
+video-0130,instagram-DdUoPNPDyP4,https://www.instagram.com/reel/DdUoPNPDyP4,Varun Rana,8/27/2026,videographer,2026-09-15T21:03:06.000Z,TRUE,,526571,12236
+video-0131,instagram-DdSbtl_k6-g,https://www.instagram.com/reel/DdSbtl_k6-g,Varun Rana,9/4/2026,videographer,2026-09-15T00:35:56.000Z,TRUE,,1991279,64039
+video-0132,instagram-DdZxByBibtH,https://www.instagram.com/reel/DdZxByBibtH,Varun Rana,9/4/2026,videographer,2026-09-17T20:56:54.000Z,TRUE,,63454,774
+video-0133,instagram-DdmNXevRaK5,https://www.instagram.com/reel/DdmNXevRaK5,Alberta.Tech,9/6/2026,videographer,2026-09-22T16:56:14.000Z,TRUE,Twilio,119984,2434
+video-0134,instagram-DdTyHB0R-c8,https://www.instagram.com/reel/DdTyHB0R-c8,Alexis,9/7/2026,videographer,2026-09-15T13:10:45.000Z,TRUE,Okta,11781,275
+video-0135,instagram-DeCJL7WvIDL,https://www.instagram.com/reel/DeCJL7WvIDL,Alexis,9/7/2026,videographer,2026-10-03T13:15:07.000Z,TRUE,Megaport,12498,259
+video-0136,instagram-Ddwek0SRlWc,https://www.instagram.com/reel/Ddwek0SRlWc,Alexis,9/7/2026,videographer,2026-09-26T16:37:40.000Z,TRUE,Okta,13186,256
+video-0137,instagram-DeNW9AgAJ07,https://www.instagram.com/reel/DeNW9AgAJ07,Alexis,9/7/2026,videographer,2026-10-07T21:49:05.000Z,TRUE,Megaport,551,32
+video-0138,instagram-DeiFK4KjFPq,https://www.instagram.com/reel/DeiFK4KjFPq,Alexis,9/7/2026,videographer,2026-10-15T22:56:43.000Z,TRUE,Megaport,607,19
+video-0139,instagram-DePY777AHHr,https://www.instagram.com/reel/DePY777AHHr,Varun Rana,9/8/2026,videographer,2026-10-08T16:45:50.000Z,TRUE,,125569,2746
+video-0140,instagram-DdJncrBijJj,https://www.instagram.com/reel/DdJncrBijJj,Evie,9/10/2026,videographer,2026-09-11T14:26:19.000Z,TRUE,,50601,545
+video-0141,instagram-DdRbBa9RRgm,https://www.instagram.com/reel/DdRbBa9RRgm,MyTechCEO,9/10/2026,videographer,2026-09-14T15:10:16.000Z,TRUE,,114990,3119
+video-0142,instagram-DdmK4KhJ3qP,https://www.instagram.com/reel/DdmK4KhJ3qP,MyTechCEO,9/10/2026,videographer,2026-09-22T16:34:06.000Z,TRUE,,334752,6097
+video-0143,instagram-DdWl8ERjd7Z,https://www.instagram.com/reel/DdWl8ERjd7Z,Varun Rana,9/11/2026,videographer,2026-09-16T15:20:46.000Z,TRUE,Apollo,31038,632
+video-0144,instagram-DdodQ1gnEtv,https://www.instagram.com/reel/DdodQ1gnEtv,Varun Rana,9/11/2026,videographer,2026-09-23T13:52:31.000Z,TRUE,Megaport,512298,23031
+video-0145,instagram-Dd4exBDj235,https://www.instagram.com/reel/Dd4exBDj235,Varun Rana,9/11/2026,videographer,2026-09-29T19:13:21.000Z,TRUE,Granola,32657,479
+video-0146,instagram-DdW_58sPwzV,https://www.instagram.com/reel/DdW_58sPwzV,MyTechCEO,9/14/2026,videographer,2026-09-16T19:08:41.000Z,TRUE,Whisperflow,104569,1860
+video-0147,instagram-DeIeYX8j49V,https://www.instagram.com/reel/DeIeYX8j49V,Varun Rana,9/21/2026,videographer,2026-10-06T00:16:47.000Z,TRUE,Apollo,104421,1540
+video-0148,instagram-Dd1QrwVxfn2,https://www.instagram.com/reel/Dd1QrwVxfn2,Alexis,9/21/2026,videographer,2026-09-28T13:11:48.000Z,TRUE,,23695,455
+video-0149,instagram-DePLL6ERpla,https://www.instagram.com/reel/DePLL6ERpla,Alberta.Tech,10/1/2026,videographer,2026-10-08T14:47:14.000Z,TRUE,ChatGPT,171863,4663
+video-0150,instagram-DeahlsSFZUu,https://www.instagram.com/reel/DeahlsSFZUu,Varun Rana,10/2/2026,videographer,2026-10-13T00:32:22.000Z,TRUE,,905486,25639
+video-0151,instagram-DecpUs5idl7,https://www.instagram.com/reel/DecpUs5idl7,Varun Rana,10/2/2026,videographer,2026-10-13T20:18:37.000Z,TRUE,ChatGPT,39117,712
 video-0152,instagram-DePRkFmESMz,https://www.instagram.com/p/DePRkFmESMz,Julia,10/4/2026,videographer,,FALSE,
-video-0153,instagram-DeSOFX9O2rM,https://www.instagram.com/reel/DeSOFX9O2rM,Varun Rana,10/9/2026,videographer,,TRUE,
-video-0154,instagram-Dee4qPaDcMf,https://www.instagram.com/reel/Dee4qPaDcMf,Varun Rana,10/9/2026,videographer,,TRUE,
-video-0155,instagram-Dej0zsilHq4,https://www.instagram.com/reel/Dej0zsilHq4,Varun Rana,10/9/2026,videographer,,TRUE,
+video-0153,instagram-DeSOFX9O2rM,https://www.instagram.com/reel/DeSOFX9O2rM,Varun Rana,10/9/2026,videographer,2026-10-09T19:06:38.000Z,TRUE,,376277,9385
+video-0154,instagram-Dee4qPaDcMf,https://www.instagram.com/reel/Dee4qPaDcMf,Varun Rana,10/9/2026,videographer,2026-10-14T17:09:38.000Z,TRUE,,429920,8198
+video-0155,instagram-Dej0zsilHq4,https://www.instagram.com/reel/Dej0zsilHq4,Varun Rana,10/9/2026,videographer,2026-10-16T15:12:10.000Z,TRUE,,1122533,30989
 video-0156,instagram-Dej2OcVRTk5,https://www.instagram.com/reel/Dej2OcVRTk5,Ask a Fuckboy,10/15/2026,videographer,,FALSE,
-video-0157,instagram-DfNVqAmpmro,https://www.instagram.com/reel/DfNVqAmpmro,Ask a Fuckboy,10/15/2026,videographer,,TRUE,
-video-0158,instagram-Der8P7VCAad,https://www.instagram.com/reel/Der8P7VCAad,Varun Rana,10/16/2026,videographer,,TRUE,
-video-0159,instagram-DeuownezI7y,https://www.instagram.com/reel/DeuownezI7y,Varun Rana,10/16/2026,videographer,,TRUE,
-video-0160,instagram-DexU84pB_OU,https://www.instagram.com/reel/DexU84pB_OU,Varun Rana,10/16/2026,videographer,,TRUE,
-video-0161,instagram-DfHpcq6P_sJ,https://www.instagram.com/reel/DfHpcq6P_sJ,Varun Rana,10/16/2026,videographer,,TRUE,
-video-0162,instagram-DfHtl4pRJYd,https://www.instagram.com/reel/DfHtl4pRJYd,Alexis,10/19/2026,videographer,,TRUE,Faddom
-video-0163,instagram-DfADon_xBxt,https://www.instagram.com/reel/DfADon_xBxt,Alexis,10/19/2026,videographer,,TRUE,NinjaOne
-video-0164,instagram-DfDG_PZhX2u,https://www.instagram.com/reel/DfDG_PZhX2u,Emma Steuer,10/21/2026,videographer,,TRUE,Crusoe Cloud
-video-0165,instagram-DfSUvuHJxoI,https://www.instagram.com/reel/DfSUvuHJxoI,MyTechCEO,10/21/2026,videographer,,TRUE,Solana
-video-0166,instagram-DfF58kNpPor,https://www.instagram.com/reel/DfF58kNpPor,Ask a Fuckboy,10/22/2026,videographer,,TRUE,Lovable
-video-0167,instagram-DfAk5KBJOKM,https://www.instagram.com/reel/DfAk5KBJOKM,Ask a Fuckboy,10/22/2026,videographer,,TRUE,
-video-0168,instagram-De-Sut8Ofa1,https://www.instagram.com/reel/De-Sut8Ofa1,Varun Rana,10/22/2026,videographer,,TRUE,
-video-0169,instagram-DfGER_OuGMt,https://www.instagram.com/reel/DfGER_OuGMt,Varun Rana,10/22/2026,videographer,,TRUE,
-video-0170,instagram-DfS5dR7qakH,https://www.instagram.com/reel/DfS5dR7qakH,Varun Rana,10/22/2026,videographer,,TRUE,
-video-0171,instagram-DfhmvNoxqWe,https://www.instagram.com/reel/DfhmvNoxqWe,Alexis,9/7/2026,videographer,,TRUE,Megaport
-video-0172,instagram-DfihDVLh2HZ,https://www.instagram.com/reel/DfihDVLh2HZ,Varun Rana,9/8/2026,videographer,,TRUE,
-video-0173,instagram-DfVll8NB_-g,https://www.instagram.com/reel/DfVll8NB_-g,Varun Rana,10/30/2026,videographer,,TRUE,
-video-0174,instagram-DfYKYz7gCV1,https://www.instagram.com/reel/DfYKYz7gCV1,Varun Rana,10/30/2026,videographer,,TRUE,
-video-0175,instagram-DfZ_N-tOh71,https://www.instagram.com/reel/DfZ_N-tOh71,Varun Rana,10/30/2026,videographer,,TRUE,
+video-0157,instagram-DfNVqAmpmro,https://www.instagram.com/reel/DfNVqAmpmro,Ask a Fuckboy,10/15/2026,videographer,2026-11-01T18:10:13.000Z,TRUE,,17770,641
+video-0158,instagram-Der8P7VCAad,https://www.instagram.com/reel/Der8P7VCAad,Varun Rana,10/16/2026,videographer,2026-10-19T18:52:44.000Z,TRUE,,68461,1356
+video-0159,instagram-DeuownezI7y,https://www.instagram.com/reel/DeuownezI7y,Varun Rana,10/16/2026,videographer,2026-10-20T19:59:44.000Z,TRUE,,228659,6794
+video-0160,instagram-DexU84pB_OU,https://www.instagram.com/reel/DexU84pB_OU,Varun Rana,10/16/2026,videographer,2026-10-21T21:03:37.000Z,TRUE,,117970,1778
+video-0161,instagram-DfHpcq6P_sJ,https://www.instagram.com/reel/DfHpcq6P_sJ,Varun Rana,10/16/2026,videographer,2026-10-30T13:05:32.000Z,TRUE,,103047,2376
+video-0162,instagram-DfHtl4pRJYd,https://www.instagram.com/reel/DfHtl4pRJYd,Alexis,10/19/2026,videographer,2026-10-30T13:42:11.000Z,TRUE,Faddom,12997,241
+video-0163,instagram-DfADon_xBxt,https://www.instagram.com/reel/DfADon_xBxt,Alexis,10/19/2026,videographer,2026-10-27T14:21:46.000Z,TRUE,NinjaOne,13534,326
+video-0164,instagram-DfDG_PZhX2u,https://www.instagram.com/reel/DfDG_PZhX2u,Emma Steuer,10/21/2026,videographer,2026-10-28T18:47:22.000Z,TRUE,Crusoe Cloud,65121,3180
+video-0165,instagram-DfSUvuHJxoI,https://www.instagram.com/reel/DfSUvuHJxoI,MyTechCEO,10/21/2026,videographer,2026-11-03T16:45:03.000Z,TRUE,Solana,79172,1489
+video-0166,instagram-DfF58kNpPor,https://www.instagram.com/reel/DfF58kNpPor,Ask a Fuckboy,10/22/2026,videographer,2026-10-29T20:52:48.000Z,TRUE,Lovable,33492,1494
+video-0167,instagram-DfAk5KBJOKM,https://www.instagram.com/reel/DfAk5KBJOKM,Ask a Fuckboy,10/22/2026,videographer,2026-10-27T19:11:09.000Z,TRUE,,18355,237
+video-0168,instagram-De-Sut8Ofa1,https://www.instagram.com/reel/De-Sut8Ofa1,Varun Rana,10/22/2026,videographer,2026-10-26T21:53:40.000Z,TRUE,,210777,3076
+video-0169,instagram-DfGER_OuGMt,https://www.instagram.com/reel/DfGER_OuGMt,Varun Rana,10/22/2026,videographer,2026-10-29T22:21:47.000Z,TRUE,,185506,4506
+video-0170,instagram-DfS5dR7qakH,https://www.instagram.com/reel/DfS5dR7qakH,Varun Rana,10/22/2026,videographer,2026-11-03T21:57:06.000Z,TRUE,,139860,2207
+video-0171,instagram-DfhmvNoxqWe,https://www.instagram.com/reel/DfhmvNoxqWe,Alexis,9/7/2026,videographer,2026-11-09T15:02:57.000Z,TRUE,Megaport,8833,215
+video-0172,instagram-DfihDVLh2HZ,https://www.instagram.com/reel/DfihDVLh2HZ,Varun Rana,9/8/2026,videographer,2026-11-09T23:31:29.000Z,TRUE,,50632,898
+video-0173,instagram-DfVll8NB_-g,https://www.instagram.com/reel/DfVll8NB_-g,Varun Rana,10/30/2026,videographer,2026-11-04T23:01:37.000Z,TRUE,,444009,13370
+video-0174,instagram-DfYKYz7gCV1,https://www.instagram.com/reel/DfYKYz7gCV1,Varun Rana,10/30/2026,videographer,2026-11-05T23:01:21.000Z,TRUE,,717410,22938
+video-0175,instagram-DfZ_N-tOh71,https://www.instagram.com/reel/DfZ_N-tOh71,Varun Rana,10/30/2026,videographer,2026-11-06T16:02:09.000Z,TRUE,,214161,6919

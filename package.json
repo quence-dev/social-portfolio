@@ -10,6 +10,7 @@
     "import": "node scripts/import-posts.mjs",
     "validate": "node scripts/import-posts.mjs --check",
     "refresh": "node scripts/refresh-instagram.mjs",
+    "metrics:instagram": "node scripts/import-instagram-metrics.mjs",
     "thumbnails": "node scripts/download-trendsee-thumbnails.mjs",
     "thumbnails:toolzin": "node scripts/download-toolzin-thumbnails.mjs",
     "thumbnails:fastvideosave": "node scripts/download-fastvideosave-thumbnails.mjs",

@@ -8,7 +8,7 @@ const refreshPath = path.join(root, 'data/refresh.json');
 const outputPath = path.join(root, 'src/data/gallery.generated.json');
 const checkOnly = process.argv.includes('--check');
 
-const requiredColumns = ['video_id', 'post_id', 'url', 'creator', 'shoot_date', 'roles', 'publish_date', 'include', 'sponsors'];
+const requiredColumns = ['video_id', 'post_id', 'url', 'creator', 'shoot_date', 'roles', 'publish_date', 'include', 'sponsors', 'views', 'likes'];
 
 function parseCsv(text) {
   const rows = [];
@@ -63,6 +63,12 @@ function platformFor(url) {
 
 function list(value) {
   return value ? value.split(',').map((item) => item.trim()).filter(Boolean) : [];
+}
+
+function metric(value) {
+  if (value === '') return null;
+  const parsed = Number(value);
+  return Number.isFinite(parsed) ? parsed : null;
 }
 
 function unique(values) {
@@ -125,8 +131,8 @@ for (const [index, values] of csvRows.slice(1).entries()) {
     roles: list(raw.roles),
     sponsors: list(raw.sponsors),
     thumbnail,
-    views: Number.isFinite(cached.views) ? cached.views : null,
-    likes: Number.isFinite(cached.likes) ? cached.likes : null,
+    views: Number.isFinite(cached.views) ? cached.views : metric(raw.views),
+    likes: Number.isFinite(cached.likes) ? cached.likes : metric(raw.likes),
   });
 }
 
