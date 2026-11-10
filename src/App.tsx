@@ -43,9 +43,13 @@ function Icon({ role }: { role: string }) {
   </span>;
 }
 
+function thumbnailUrl(path: string) {
+  return `${import.meta.env.BASE_URL}${path.replace(/^\//, '')}`;
+}
+
 function Thumbnail({ video }: { video: Video }) {
   const [missing, setMissing] = useState(false);
-  const source = video.thumbnail || `/thumbnails/${video.posts[0].postId}.jpg`;
+  const source = thumbnailUrl(video.thumbnail || `/thumbnails/${video.posts[0].postId}.jpg`);
   return <div className="thumbnail">
     {!missing ? <img src={source} alt="" onError={() => setMissing(true)} /> : <div className="placeholder"><span>{video.creator.slice(0, 1)}</span></div>}
     <div className="badges">
