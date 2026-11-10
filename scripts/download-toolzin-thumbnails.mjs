@@ -21,8 +21,9 @@ function parseCsv(text) {
     const char = text[index];
     if (char === '"') {
       if (quoted && text[index + 1] === '"') { cell += '"'; index += 1; } else quoted = !quoted;
-    } else if (char === ',' && !quoted) { row.push(cell); cell = ''; }
-    else if ((char === '\n' || char === '\r') && !quoted) {
+    } else if (char === ',' && !quoted) {
+      row.push(cell); cell = '';
+    } else if ((char === '\n' || char === '\r') && !quoted) {
       if (char === '\r' && text[index + 1] === '\n') index += 1;
       row.push(cell); if (row.some(Boolean)) records.push(row); row = []; cell = '';
     } else cell += char;
@@ -106,4 +107,5 @@ await context.close();
 await browser.close();
 console.log(`Finished: ${downloaded} saved, ${skipped} already present.`);
 
-// shortcut: retries explicit limits and one ad-triggered navigation; update the cooldown if Toolzin changes its reset window.
+// shortcut: retries explicit limits and one ad-triggered navigation.
+// Update the cooldown if Toolzin changes its reset window.

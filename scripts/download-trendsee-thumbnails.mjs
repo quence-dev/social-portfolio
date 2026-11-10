@@ -19,8 +19,9 @@ function parseCsv(text) {
     const char = text[i];
     if (char === '"') {
       if (quoted && text[i + 1] === '"') { cell += '"'; i += 1; } else quoted = !quoted;
-    } else if (char === ',' && !quoted) { row.push(cell); cell = ''; }
-    else if ((char === '\n' || char === '\r') && !quoted) {
+    } else if (char === ',' && !quoted) {
+      row.push(cell); cell = '';
+    } else if ((char === '\n' || char === '\r') && !quoted) {
       if (char === '\r' && text[i + 1] === '\n') i += 1;
       row.push(cell); if (row.some(Boolean)) records.push(row); row = []; cell = '';
     } else cell += char;
@@ -36,7 +37,7 @@ const rows = parseCsv(await fs.readFile(csvPath, 'utf8'))
 
 await fs.mkdir(thumbnailDir, { recursive: true });
 const browser = await chromium.launch({ headless });
-const context = await browser.newContext(); 
+const context = await browser.newContext();
 const page = await context.newPage();
 let downloaded = 0;
 let skipped = 0;
@@ -78,9 +79,7 @@ for (const row of rows) {
     }
     if (!retained) throw new Error('Trendsee reset the URL field while loading.');
     await page.locator('button:has(span:text-is("Download"))').first().click();
-    await page.waitForFunction(() => [...document.querySelectorAll('a')].some((link) =>
-      /download thumbnail/i.test(link.textContent || '') || /cdninstagram\.com|fbcdn\.net/.test(link.href),
-    ), undefined, { timeout: 90_000 });
+    await page.waitForFunction(() => [...document.querySelectorAll('a')].some((link) => /download thumbnail/i.test(link.textContent || '') || /cdninstagram\.com|fbcdn\.net/.test(link.href)), undefined, { timeout: 90_000 });
     const imageUrl = await page.evaluate(() => [...document.querySelectorAll('a')]
       .find((link) => /download thumbnail/i.test(link.textContent || '') || /cdninstagram\.com|fbcdn\.net/.test(link.href))
       ?.href);
@@ -105,4 +104,5 @@ await context.close().catch(() => {});
 await browser.close().catch(() => {});
 console.log(`Finished: ${downloaded} saved, ${skipped} already present.`);
 
-// shortcut: runs one request at a time to avoid hammering the public service; use a provider API if this becomes a recurring large import.
+// shortcut: runs one request at a time to avoid hammering the public service.
+// Use a provider API if this becomes a recurring large import.

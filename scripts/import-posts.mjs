@@ -151,8 +151,8 @@ const videos = [...videosById.entries()].map(([videoId, group]) => {
   const primary = ordered[0];
   const values = (field) => group.map((post) => post[field]).filter((value) => value !== null);
   const sum = (field) => {
-    const metric = values(field);
-    return metric.length ? metric.reduce((total, value) => total + value, 0) : null;
+    const metricValues = values(field);
+    return metricValues.length ? metricValues.reduce((total, value) => total + value, 0) : null;
   };
   return {
     videoId,

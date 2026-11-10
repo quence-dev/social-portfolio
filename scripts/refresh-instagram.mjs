@@ -20,8 +20,9 @@ function csvRows(text) {
     const char = text[i];
     if (char === '"') {
       if (quoted && text[i + 1] === '"') { cell += '"'; i += 1; } else quoted = !quoted;
-    } else if (char === ',' && !quoted) { row.push(cell); cell = ''; }
-    else if ((char === '\n' || char === '\r') && !quoted) {
+    } else if (char === ',' && !quoted) {
+      row.push(cell); cell = '';
+    } else if ((char === '\n' || char === '\r') && !quoted) {
       if (char === '\r' && text[i + 1] === '\n') i += 1;
       row.push(cell); if (row.some(Boolean)) records.push(row); row = []; cell = '';
     } else cell += char;

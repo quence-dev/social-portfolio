@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "vite",
     "build": "npm run import && vite build",
+    "lint": "eslint src scripts --ext .js,.mjs,.ts,.tsx",
     "preview": "vite preview",
     "import": "node scripts/import-posts.mjs",
     "validate": "node scripts/import-posts.mjs --check",
@@ -27,6 +28,14 @@
     "@tailwindcss/vite": "^4.3.4",
     "@types/react": "latest",
     "@types/react-dom": "latest",
+    "@typescript-eslint/parser": "^8.72.2",
+    "eslint": "^8.57.1",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-import-resolver-typescript": "^4.4.5",
+    "eslint-plugin-import": "^2.32.0",
+    "eslint-plugin-jsx-a11y": "^6.10.2",
+    "eslint-plugin-react": "^7.37.5",
+    "eslint-plugin-react-hooks": "^4.6.2",
     "playwright": "latest",
     "tailwindcss": "^4.3.4",
     "typescript": "latest"

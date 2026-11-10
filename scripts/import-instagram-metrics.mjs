@@ -18,8 +18,9 @@ function parseCsv(text) {
     const char = text[index];
     if (char === '"') {
       if (quoted && text[index + 1] === '"') { cell += '"'; index += 1; } else quoted = !quoted;
-    } else if (char === ',' && !quoted) { row.push(cell); cell = ''; }
-    else if ((char === '\n' || char === '\r') && !quoted) {
+    } else if (char === ',' && !quoted) {
+      row.push(cell); cell = '';
+    } else if ((char === '\n' || char === '\r') && !quoted) {
       if (char === '\r' && text[index + 1] === '\n') index += 1;
       row.push(cell); if (row.some(Boolean)) rows.push(row); row = []; cell = '';
     } else cell += char;
@@ -51,7 +52,10 @@ if (!Array.isArray(records)) throw new Error('Expected the API file to contain a
 
 const apiByCode = new Map();
 for (const record of records) {
-  if (!record.shortCode || !record.timestamp || !Number.isFinite(record.likesCount) || !Number.isFinite(record.videoPlayCount)) {
+  if (
+    !record.shortCode || !record.timestamp || !Number.isFinite(record.likesCount)
+    || !Number.isFinite(record.videoPlayCount)
+  ) {
     throw new Error(`Incomplete metric record: ${record.inputUrl || record.shortCode || 'unknown'}.`);
   }
   if (apiByCode.has(record.shortCode)) throw new Error(`Duplicate API record: ${record.shortCode}.`);
