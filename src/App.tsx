@@ -36,12 +36,12 @@ function platformName(platform: Platform) {
 }
 
 function instagramEmbed(url: string) {
-  const match = url.match(/instagram\.com\/(?:reel|reels|p)\/([^/?#]+)/);
+  const match = /instagram\.com\/(?:reel|reels|p)\/([^/?#]+)/.exec(url);
   return match ? `https://www.instagram.com/reel/${match[1]}/embed/` : null;
 }
 
 function youtubeEmbed(url: string) {
-  const match = url.match(/(?:youtu\.be\/|shorts\/|[?&]v=)([^?&#/]+)/);
+  const match = /(?:youtu\.be\/|shorts\/|[?&]v=)([^?&#/]+)/.exec(url);
   return match ? `https://www.youtube.com/embed/${match[1]}` : null;
 }
 
@@ -50,7 +50,7 @@ function Icon({ role }: { role: string }) {
   const [width, height, , , path] = icon.icon;
   return (
     <span className="role-icon" title={role} aria-label={role}>
-      <svg viewBox={`0 0 ${width} ${height}`} aria-hidden="true"><path d={path as string} /></svg>
+      <svg viewBox={[0, 0, width, height].join(' ')} aria-hidden="true"><path d={typeof path === 'string' ? path : path.join(' ')} /></svg>
     </span>
   );
 }
@@ -61,10 +61,12 @@ function thumbnailUrl(path: string) {
 
 function Thumbnail({ video }: { video: Video }) {
   const [missing, setMissing] = useState(false);
-  const source = thumbnailUrl(video.thumbnail || `/thumbnails/${video.posts[0].postId}.jpg`);
+  const source = thumbnailUrl(video.thumbnail ?? `/thumbnails/${video.posts[0].postId}.jpg`);
   return (
     <div className="thumbnail">
-      {!missing ? <img src={source} alt="" onError={() => setMissing(true)} /> : <div className="placeholder"><span>{video.creator.slice(0, 1)}</span></div>}
+      {!missing ? <img src={source} alt="" onError={() => {
+        setMissing(true);
+      }} /> : <div className="placeholder"><span>{video.creator.slice(0, 1)}</span></div>}
       <div className="badges">
         {video.roles.map((item) => <Icon key={item} role={item} />)}
       </div>
@@ -97,14 +99,20 @@ function Embed({ post }: { post: Post }) {
 function Modal({ video, close }: { video: Video; close: () => void }) {
   const [activePost, setActivePost] = useState(video.posts[0]);
   useEffect(() => {
-    const onKeyDown = (event: KeyboardEvent) => event.key === 'Escape' && close();
+    const onKeyDown = (event: KeyboardEvent) => {
+      if (event.key === 'Escape') close();
+    };
     window.addEventListener('keydown', onKeyDown);
-    return () => window.removeEventListener('keydown', onKeyDown);
+    return () => {
+      window.removeEventListener('keydown', onKeyDown);
+    };
   }, [close]);
 
   return (
     <div className="modal-backdrop" role="presentation" onMouseDown={close}>
-      <section className="modal" role="dialog" aria-modal="true" aria-label={`${video.creator} video`} onMouseDown={(event) => event.stopPropagation()}>
+      <section className="modal" role="dialog" aria-modal="true" aria-label={`${video.creator} video`} onMouseDown={(event) => {
+        event.stopPropagation();
+      }}>
         <button type="button" className="close" onClick={close} aria-label="Close post">×</button>
         <div className="modal-video"><Embed post={activePost} /></div>
         <div className="modal-info">
@@ -124,7 +132,9 @@ function Modal({ video, close }: { video: Video; close: () => void }) {
           {video.posts.length > 1 && (
           <div className="tabs" role="tablist" aria-label="Post versions">
             {video.posts.map((post) => (
-              <button type="button" key={post.postId} role="tab" aria-selected={activePost.postId === post.postId} className={activePost.postId === post.postId ? 'active' : ''} onClick={() => setActivePost(post)}>
+              <button type="button" key={post.postId} role="tab" aria-selected={activePost.postId === post.postId} className={activePost.postId === post.postId ? 'active' : ''} onClick={() => {
+                setActivePost(post);
+              }}>
                 {platformName(post.platform)}
                 {post.publishDate ? ` · ${dateLabel(post.publishDate)}` : ''}
               </button>
@@ -144,7 +154,7 @@ function Modal({ video, close }: { video: Video; close: () => void }) {
             )}
             <div>
               <dt>Published</dt>
-              <dd>{dateLabel(activePost.publishDate || activePost.shootDate)}</dd>
+              <dd>{dateLabel(activePost.publishDate ?? activePost.shootDate)}</dd>
             </div>
           </dl>
           <a className="source-link" href={activePost.url} target="_blank" rel="noreferrer">
@@ -176,11 +186,11 @@ export default function App() {
         (creator === 'all' || video.creator === creator)
         && (role === 'all' || video.roles.includes(role))
       ))
-      .sort((a, b) => (sort === 'views' ? (b.views || 0) - (a.views || 0) : (b.publishDate || '').localeCompare(a.publishDate || ''))),
+      .sort((a, b) => (sort === 'views' ? (b.views ?? 0) - (a.views ?? 0) : (b.publishDate ?? '').localeCompare(a.publishDate ?? ''))),
     [creator, role, sort],
   );
-  const totalViews = data.videos.reduce((total, video) => total + (video.views || 0), 0);
-  const totalLikes = data.videos.reduce((total, video) => total + (video.likes || 0), 0);
+  const totalViews = data.videos.reduce((total, video) => total + (video.views ?? 0), 0);
+  const totalLikes = data.videos.reduce((total, video) => total + (video.likes ?? 0), 0);
 
   return (
     <main>
@@ -213,7 +223,9 @@ export default function App() {
           <select
             id="creator-filter"
             value={creator}
-            onChange={(event) => setCreator(event.target.value)}
+            onChange={(event) => {
+              setCreator(event.target.value);
+            }}
           >
             <option value="all">All creators</option>
             {creators.map((item) => (
@@ -226,7 +238,9 @@ export default function App() {
           <select
             id="role-filter"
             value={role}
-            onChange={(event) => setRole(event.target.value)}
+            onChange={(event) => {
+              setRole(event.target.value);
+            }}
           >
             <option value="all">All roles</option>
             {roles.map((item) => (
@@ -239,7 +253,9 @@ export default function App() {
           <select
             id="sort-filter"
             value={sort}
-            onChange={(event) => setSort(event.target.value)}
+            onChange={(event) => {
+              setSort(event.target.value);
+            }}
           >
             <option value="newest">Newest</option>
             <option value="views">Most views</option>
@@ -268,7 +284,9 @@ export default function App() {
               type="button"
               className="card"
               key={video.videoId}
-              onClick={() => setSelected(video)}
+              onClick={() => {
+                setSelected(video);
+              }}
             >
               <Thumbnail video={video} />
               <div className="card-copy">
@@ -281,7 +299,9 @@ export default function App() {
       ) : (
         <p className="empty">No videos match those filters.</p>
       )}
-      {selected && <Modal video={selected} close={() => setSelected(null)} />}
+      {selected && <Modal video={selected} close={() => {
+        setSelected(null);
+      }} />}
     </main>
   );
 }

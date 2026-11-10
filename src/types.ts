@@ -1,6 +1,6 @@
 export type Platform = 'instagram' | 'youtube' | 'linkedin' | 'other';
 
-export type Post = {
+export interface Post {
   postId: string;
   url: string;
   platform: Platform;
@@ -12,9 +12,9 @@ export type Post = {
   thumbnail: string | null;
   views: number | null;
   likes: number | null;
-};
+}
 
-export type Video = {
+export interface Video {
   videoId: string;
   posts: Post[];
   creator: string;
@@ -25,11 +25,11 @@ export type Video = {
   shootDate: string;
   views: number | null;
   likes: number | null;
-};
+}
 
-export type GalleryData = {
+export interface GalleryData {
   refreshedAt: string | null;
   postCount: number;
   metricCoverage: { views: number; likes: number };
   videos: Video[];
-};
+}

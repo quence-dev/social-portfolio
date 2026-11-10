@@ -73,7 +73,7 @@ for (const row of rows) {
     let image;
     try {
       image = await imageFrom(context, page, faster);
-    } catch (fasterError) {
+    } catch {
       console.warn(`Faster link failed for ${row.post_id}; trying direct link.`);
       image = await imageFrom(context, page, direct);
     }

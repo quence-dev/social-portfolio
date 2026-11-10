@@ -12,7 +12,7 @@ npm run dev
 
 `data/posts.csv` is the source of truth. Keep one row per public upload. A `video_id` groups cross-posts and re-uploads of the same finished work; `post_id` and `url` must stay unique. Set `include` to `TRUE` to publish a row.
 
-Run the Airbnb-based lint check before committing application or maintenance-script changes:
+Run the TypeScript-, React-, and accessibility-aware lint check before committing application or maintenance-script changes:
 
 ```sh
 npm run lint
