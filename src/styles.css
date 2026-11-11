@@ -71,13 +71,13 @@ main {
 }
 
 .view-nav {
+  position: relative;
   display: flex;
   gap: 20px;
   padding: 18px 0;
 }
 
 .view-nav a {
-  position: relative;
   color: #a6a096;
   font: 500 11px "DM Mono", monospace;
   letter-spacing: .04em;
@@ -89,14 +89,17 @@ main {
   color: #f3eee5;
 }
 
-.view-nav a.active::before {
+.view-nav a:hover {
+  color: #f3eee5;
+}
+
+.view-nav-indicator {
   position: absolute;
-  top: -19px;
-  right: 0;
-  left: 0;
+  top: 0;
   height: 1px;
-  content: '';
   background: #f3eee5;
+  pointer-events: none;
+  transition: transform .22s ease, width .22s ease;
 }
 
 .result-count,

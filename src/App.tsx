@@ -1,5 +1,5 @@
 import {
-  useCallback, useEffect, useMemo, useRef, useState,
+  useCallback, useEffect, useLayoutEffect, useMemo, useRef, useState,
 } from 'react';
 import { faScissors } from '@fortawesome/free-solid-svg-icons/faScissors';
 import { faVideo } from '@fortawesome/free-solid-svg-icons/faVideo';
@@ -77,6 +77,34 @@ function currentRoute(): Route {
   } catch {
     return { page: 'creators' };
   }
+}
+
+function ViewNav({ page }: { page: 'gallery' | 'creators' }) {
+  const navRef = useRef<HTMLElement>(null);
+  const [indicator, setIndicator] = useState({ left: 0, width: 0 });
+  useLayoutEffect(() => {
+    const updateIndicator = () => {
+      const nav = navRef.current;
+      const active = nav?.querySelector<HTMLAnchorElement>('[aria-current="page"]');
+      if (!nav || !active) return;
+      const navRect = nav.getBoundingClientRect();
+      const activeRect = active.getBoundingClientRect();
+      setIndicator({ left: activeRect.left - navRect.left, width: activeRect.width });
+    };
+    updateIndicator();
+    window.addEventListener('resize', updateIndicator);
+    return () => {
+      window.removeEventListener('resize', updateIndicator);
+    };
+  }, [page]);
+
+  return (
+    <nav ref={navRef} className="view-nav" aria-label="Portfolio sections">
+      <span className="view-nav-indicator" aria-hidden="true" style={{ transform: `translateX(${String(indicator.left)}px)`, width: indicator.width }} />
+      <a href="#/" className={page === 'gallery' ? 'active' : ''} aria-current={page === 'gallery' ? 'page' : undefined}>Gallery</a>
+      <a href="#/creators" className={page === 'creators' ? 'active' : ''} aria-current={page === 'creators' ? 'page' : undefined}>Creators</a>
+    </nav>
+  );
 }
 
 function Thumbnail({ video, showRoles = true }: { video: Video; showRoles?: boolean }) {
@@ -320,10 +348,7 @@ export default function App() {
       </header>
       )}
       {route.page !== 'creator' && (
-        <nav className="view-nav" aria-label="Portfolio sections">
-          <a href="#/" className={route.page === 'gallery' ? 'active' : ''}>Gallery</a>
-          <a href="#/creators" className={route.page === 'creators' ? 'active' : ''}>Creators</a>
-        </nav>
+        <ViewNav page={route.page} />
       )}
       {route.page === 'creators' ? (
         <section className="creator-grid" aria-label="Creator directory">
