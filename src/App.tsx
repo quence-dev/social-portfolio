@@ -64,7 +64,7 @@ function Thumbnail({ video }: { video: Video }) {
   const source = thumbnailUrl(video.thumbnail ?? `/thumbnails/${video.posts[0].postId}.jpg`);
   return (
     <div className="thumbnail">
-      {!missing ? <img src={source} alt="" onError={() => {
+      {!missing ? <img src={source} alt="" loading="lazy" decoding="async" onError={() => {
         setMissing(true);
       }} /> : <div className="placeholder"><span>{video.creator.slice(0, 1)}</span></div>}
       <div className="badges">
