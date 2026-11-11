@@ -110,13 +110,13 @@ main {
 }
 
 .about {
-  max-width: 760px;
+  max-width: 640px;
   margin: 0 auto;
-  padding: clamp(80px, 12vw, 180px) 0;
+  padding: clamp(56px, 8vw, 120px) 0;
   color: #c3bcb0;
   font-size: clamp(20px, 2.1vw, 30px);
-  line-height: 1.35;
-  text-align: center;
+  line-height: 1.3;
+  text-align: left;
 }
 
 .about p {
@@ -124,7 +124,7 @@ main {
 }
 
 .about p + p {
-  margin-top: 32px;
+  margin-top: 24px;
 }
 
 .about a {
@@ -565,7 +565,7 @@ select:focus-visible {
   }
 
   .about {
-    padding: 64px 0 96px;
+    padding: 48px 0 72px;
   }
 
   .creator-hero .totals {
