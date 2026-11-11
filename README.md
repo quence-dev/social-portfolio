@@ -18,7 +18,13 @@ Run the TypeScript-, React-, and accessibility-aware lint check before committin
 npm run lint
 ```
 
-After replacing the CSV, run:
+If a Google Sheets export only contains new posts, merge it into the local catalog instead of replacing it. Existing rows—including their cached publish dates, views, and likes—are left untouched:
+
+```sh
+npm run posts:merge -- --input /absolute/path/to/new-posts.csv
+```
+
+The merge matches on both `post_id` and URL, appends only genuinely new rows, and stops on a mismatched ID/URL pair. Then run:
 
 ```sh
 npm run import

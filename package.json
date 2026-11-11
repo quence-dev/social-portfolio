@@ -10,6 +10,7 @@
     "test": "npm run import && node --test scripts/*.test.mjs",
     "preview": "vite preview",
     "import": "node scripts/import-posts.mjs",
+    "posts:merge": "node scripts/merge-posts.mjs",
     "validate": "node scripts/import-posts.mjs --check",
     "refresh": "node scripts/refresh-instagram.mjs",
     "metrics:instagram": "node scripts/import-instagram-metrics.mjs",
