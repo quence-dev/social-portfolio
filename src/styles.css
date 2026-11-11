@@ -235,6 +235,7 @@ select {
   place-items: center;
   padding: 24px;
   background: rgba(0, 0, 0, .78);
+  overscroll-behavior: contain;
 }
 
 .modal {

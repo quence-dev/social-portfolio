@@ -104,6 +104,8 @@ function Modal({ video, close }: { video: Video; close: () => void }) {
   const dialogRef = useRef<HTMLElement>(null);
   const closeButtonRef = useRef<HTMLButtonElement>(null);
   useEffect(() => {
+    const previousOverflow = document.body.style.overflow;
+    document.body.style.overflow = 'hidden';
     closeButtonRef.current?.focus();
     const onKeyDown = (event: KeyboardEvent) => {
       if (event.key === 'Escape') {
@@ -127,6 +129,7 @@ function Modal({ video, close }: { video: Video; close: () => void }) {
     };
     window.addEventListener('keydown', onKeyDown);
     return () => {
+      document.body.style.overflow = previousOverflow;
       window.removeEventListener('keydown', onKeyDown);
     };
   }, [close]);
