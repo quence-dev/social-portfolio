@@ -61,6 +61,13 @@ main {
   margin: 0;
 }
 
+.creator-handle {
+  color: #a6a096;
+  margin: 10px 0 0;
+  font: 500 12px "DM Mono", monospace;
+  letter-spacing: .04em;
+}
+
 .back-link {
   grid-column: 1 / -1;
   color: #a6a096;
@@ -317,13 +324,21 @@ select:focus-visible {
 
 .creator-card-thumbnail {
   position: relative;
+  overflow: hidden;
 }
 
 .creator-card .thumbnail {
   aspect-ratio: 1;
 }
 
-.creator-card .thumbnail::after {
+.creator-profile-image {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: cover;
+}
+
+.creator-card-thumbnail::after {
   position: absolute;
   inset: 40% 0 0;
   content: '';

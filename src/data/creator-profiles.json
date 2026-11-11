@@ -1,0 +1,15 @@
+[
+  { "sourceName": "Alberta.Tech", "name": "Alberta Tech", "handle": "alberta.tech", "image": "/pfp/alberta.tech.jpg" },
+  { "sourceName": "Alexis", "name": "Alexis Bertholf", "handle": "digital.byte_", "image": "/pfp/digital.byte_.jpg" },
+  { "sourceName": "Ask a Fuckboy", "name": "Ask A Fuckboy", "handle": "askafuckboy", "displayHandle": "askaf*ckboy", "image": "/pfp/askafuckboy.jpg" },
+  { "sourceName": "Austin Nasso", "name": "Austin Nasso", "handle": "austinnasso", "image": "/pfp/austinnasso.jpg" },
+  { "sourceName": "Emma Steuer", "name": "Emma Steuer", "handle": "emmyxtech", "image": "/pfp/emmyxtech.jpg" },
+  { "sourceName": "Evie", "name": "Evie", "handle": "movieevelina", "image": "/pfp/movieevelina.jpg" },
+  { "sourceName": "MyTechCEO", "name": "Jason Yeager", "handle": "mytechceo", "image": "/pfp/mytechceo.jpg" },
+  { "sourceName": "Rachel", "name": "Rachel Tokar", "handle": "racheltokar_", "image": "/pfp/racheltokar_.jpg" },
+  { "sourceName": "Spencer Wright", "name": "Spencer Wright", "handle": "speezytaughtme", "image": "/pfp/speezytaughtme.jpg" },
+  { "sourceName": "Supermomos", "name": "Supermomos", "handle": "team.supermomos", "image": "/pfp/team.supermomos.jpg" },
+  { "sourceName": "Trace Space", "name": "Trace.Space", "handle": "hotguyintech", "image": "/pfp/hotguyintech.jpg" },
+  { "sourceName": "Varun Rana", "name": "Varun Rana", "handle": "the_varunrana", "image": "/pfp/the_varunrana.jpg" },
+  { "sourceName": "Bach Match!", "name": "Bach Match!", "handle": "bachmatchshow" }
+]

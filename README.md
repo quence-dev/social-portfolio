@@ -26,6 +26,10 @@ npm run import
 
 This validates the catalog and updates `src/data/gallery.generated.json`.
 
+## Creator profiles
+
+`src/data/creator-profiles.json` maps the creator names currently used by the CSV to their display names, handles, and optional profile images. Creator cards and filters use the handle; individual creator pages show both the full name and handle. Profile images belong in `public/pfp/` and are referenced with paths such as `/pfp/alberta.tech.jpg`.
+
 ## Refreshing Instagram data
 
 Install Playwright's Chromium once, then create a local, gitignored Instagram session:

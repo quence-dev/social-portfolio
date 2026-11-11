@@ -3,13 +3,16 @@ import {
 } from 'react';
 import { faScissors } from '@fortawesome/free-solid-svg-icons/faScissors';
 import { faVideo } from '@fortawesome/free-solid-svg-icons/faVideo';
+import creatorProfiles from './data/creator-profiles.json';
 import gallery from './data/gallery.generated.json';
 import siteConfig from './config';
 import type {
-  GalleryData, Platform, Post, Video,
+  CreatorProfile, GalleryData, Platform, Post, Video,
 } from './types';
 
 const data = gallery as GalleryData;
+const profiles = creatorProfiles as CreatorProfile[];
+const profileBySourceName = new Map(profiles.map((profile) => [profile.sourceName, profile]));
 type Route = { page: 'gallery' | 'creators' } | { page: 'creator'; creator: string };
 const platformNames: Record<Platform, string> = {
   instagram: 'Instagram',
@@ -61,6 +64,19 @@ function Icon({ role }: { role: string }) {
 
 function thumbnailUrl(path: string) {
   return `${import.meta.env.BASE_URL}${path.replace(/^\//, '')}`;
+}
+
+function creatorProfile(creator: string) {
+  return profileBySourceName.get(creator);
+}
+
+function creatorName(creator: string) {
+  return creatorProfile(creator)?.name ?? creator;
+}
+
+function creatorHandle(creator: string) {
+  const profile = creatorProfile(creator);
+  return profile ? `@${profile.displayHandle ?? profile.handle}` : creator;
 }
 
 function creatorPath(creator: string) {
@@ -124,6 +140,15 @@ function Thumbnail({ video, showRoles = true }: { video: Video; showRoles?: bool
   );
 }
 
+function CreatorThumbnail({ video }: { video: Video }) {
+  const [missing, setMissing] = useState(false);
+  const image = creatorProfile(video.creator)?.image;
+  if (!image || missing) return <Thumbnail video={video} showRoles={false} />;
+  return <img className="creator-profile-image" src={thumbnailUrl(image)} alt="" loading="lazy" decoding="async" onError={() => {
+    setMissing(true);
+  }} />;
+}
+
 function Embed({ post }: { post: Post }) {
   let source = null;
   if (post.platform === 'instagram') source = instagramEmbed(post.url);
@@ -183,13 +208,13 @@ function Modal({ video, close }: { video: Video; close: () => void }) {
 
   return (
     <div className="modal-backdrop" role="presentation" onMouseDown={close}>
-      <section ref={dialogRef} className="modal" role="dialog" aria-modal="true" aria-label={`${video.creator} video`} onMouseDown={(event) => {
+      <section ref={dialogRef} className="modal" role="dialog" aria-modal="true" aria-label={`${creatorName(video.creator)} video`} onMouseDown={(event) => {
         event.stopPropagation();
       }}>
         <button ref={closeButtonRef} type="button" className="close" onClick={close} aria-label="Close post">×</button>
         <div className="modal-video"><Embed post={activePost} /></div>
         <div className="modal-info">
-          <h2>{video.creator}</h2>
+          <h2>{creatorName(video.creator)}</h2>
           <p className="modal-date">Posted {dateLabel(activePost.publishDate ?? activePost.shootDate)}</p>
           {(video.views !== null || video.likes !== null) && (
             <div className="stats">
@@ -298,7 +323,10 @@ export default function App() {
       {route.page === 'creator' ? (
       <header className="creator-hero">
         <a className="back-link" href="#/creators">← All creators</a>
-        <h1>{route.creator}</h1>
+        <div>
+          <h1>{creatorName(route.creator)}</h1>
+          <p className="creator-handle">{creatorHandle(route.creator)}</p>
+        </div>
         <div className="totals">
           <div>
             <strong>{videos.length}</strong>
@@ -355,8 +383,8 @@ export default function App() {
           {creatorSummaries.map((item) => (
             <a className="creator-card" href={creatorPath(item.creator)} key={item.creator}>
               <div className="creator-card-thumbnail">
-                <Thumbnail video={item.videos[0]} showRoles={false} />
-                <h2 className="creator-card-name">{item.creator}</h2>
+                <CreatorThumbnail video={item.videos[0]} />
+                <h2 className="creator-card-name">{creatorHandle(item.creator)}</h2>
               </div>
               <div className="creator-card-info">
                 <p>{item.videos.length} videos · {compact(item.views)} views</p>
@@ -380,7 +408,7 @@ export default function App() {
           >
             <option value="all">All creators</option>
             {creators.map((item) => (
-              <option key={item}>{item}</option>
+              <option key={item} value={item}>{creatorHandle(item)}</option>
             ))}
           </select>
         </label>
@@ -426,7 +454,7 @@ export default function App() {
               type="button"
               className="card"
               key={video.videoId}
-              aria-label={`Open video by ${video.creator}, posted ${dateLabel(video.publishDate)}`}
+              aria-label={`Open video by ${creatorName(video.creator)}, posted ${dateLabel(video.publishDate)}`}
               onClick={(event) => {
                 triggerRef.current = event.currentTarget;
                 setSelected(video);

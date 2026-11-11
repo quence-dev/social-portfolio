@@ -33,3 +33,11 @@ export interface GalleryData {
   metricCoverage: { views: number; likes: number };
   videos: Video[];
 }
+
+export interface CreatorProfile {
+  sourceName: string;
+  name: string;
+  handle: string;
+  displayHandle?: string;
+  image?: string;
+}
