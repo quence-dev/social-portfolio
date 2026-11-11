@@ -1,4 +1,6 @@
-import { useEffect, useMemo, useState } from 'react';
+import {
+  useCallback, useEffect, useMemo, useRef, useState,
+} from 'react';
 import { faScissors } from '@fortawesome/free-solid-svg-icons/faScissors';
 import { faVideo } from '@fortawesome/free-solid-svg-icons/faVideo';
 import gallery from './data/gallery.generated.json';
@@ -14,6 +16,7 @@ const platformNames: Record<Platform, string> = {
   linkedin: 'LinkedIn',
   other: 'Open post',
 };
+const focusableSelector = 'a[href], button:not([disabled]), iframe, [tabindex]:not([tabindex="-1"])';
 
 function compact(value: number | null) {
   return value === null ? '—' : new Intl.NumberFormat('en-US', { notation: 'compact', maximumFractionDigits: 1 }).format(value);
@@ -98,9 +101,29 @@ function Embed({ post }: { post: Post }) {
 
 function Modal({ video, close }: { video: Video; close: () => void }) {
   const [activePost, setActivePost] = useState(video.posts[0]);
+  const dialogRef = useRef<HTMLElement>(null);
+  const closeButtonRef = useRef<HTMLButtonElement>(null);
   useEffect(() => {
+    closeButtonRef.current?.focus();
     const onKeyDown = (event: KeyboardEvent) => {
-      if (event.key === 'Escape') close();
+      if (event.key === 'Escape') {
+        close();
+        return;
+      }
+      if (event.key !== 'Tab') return;
+      const focusable = [
+        ...(dialogRef.current?.querySelectorAll<HTMLElement>(focusableSelector) ?? []),
+      ];
+      if (!focusable.length) return;
+      const first = focusable[0];
+      const last = focusable[focusable.length - 1];
+      if (event.shiftKey && document.activeElement === first) {
+        event.preventDefault();
+        last.focus();
+      } else if (!event.shiftKey && document.activeElement === last) {
+        event.preventDefault();
+        first.focus();
+      }
     };
     window.addEventListener('keydown', onKeyDown);
     return () => {
@@ -110,10 +133,10 @@ function Modal({ video, close }: { video: Video; close: () => void }) {
 
   return (
     <div className="modal-backdrop" role="presentation" onMouseDown={close}>
-      <section className="modal" role="dialog" aria-modal="true" aria-label={`${video.creator} video`} onMouseDown={(event) => {
+      <section ref={dialogRef} className="modal" role="dialog" aria-modal="true" aria-label={`${video.creator} video`} onMouseDown={(event) => {
         event.stopPropagation();
       }}>
-        <button type="button" className="close" onClick={close} aria-label="Close post">×</button>
+        <button ref={closeButtonRef} type="button" className="close" onClick={close} aria-label="Close post">×</button>
         <div className="modal-video"><Embed post={activePost} /></div>
         <div className="modal-info">
           <h2>{dateLabel(video.publishDate)}</h2>
@@ -181,6 +204,11 @@ export default function App() {
   const [role, setRole] = useState('all');
   const [sort, setSort] = useState('newest');
   const [selected, setSelected] = useState<Video | null>(null);
+  const triggerRef = useRef<HTMLButtonElement>(null);
+  const closeModal = useCallback(() => {
+    setSelected(null);
+    requestAnimationFrame(() => triggerRef.current?.focus());
+  }, []);
   const creators = useMemo(
     () => [...new Set(data.videos.map((video) => video.creator))].sort(),
     [],
@@ -290,7 +318,8 @@ export default function App() {
               type="button"
               className="card"
               key={video.videoId}
-              onClick={() => {
+              onClick={(event) => {
+                triggerRef.current = event.currentTarget;
                 setSelected(video);
               }}
             >
@@ -305,9 +334,7 @@ export default function App() {
       ) : (
         <p className="empty">No videos match those filters.</p>
       )}
-      {selected && <Modal video={selected} close={() => {
-        setSelected(null);
-      }} />}
+      {selected && <Modal video={selected} close={closeModal} />}
     </main>
   );
 }
