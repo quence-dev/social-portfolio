@@ -323,6 +323,7 @@ export default function App() {
         <p className="empty">No videos match those filters.</p>
       )}
       {selected && <Modal video={selected} close={closeModal} />}
+      <footer className="site-footer">© 2026 by Spencer Vilicic</footer>
     </main>
   );
 }
