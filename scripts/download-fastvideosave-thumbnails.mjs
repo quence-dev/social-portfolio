@@ -2,6 +2,7 @@ import fs from 'node:fs/promises';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { chromium } from 'playwright';
+import { thumbnailFileName } from './thumbnail-file.mjs';
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const csvPath = path.join(root, 'data/posts.csv');
@@ -43,7 +44,7 @@ let skipped = 0;
 
 for (const row of rows) {
   if (downloaded >= limit) break;
-  const target = path.join(thumbnailDir, `${row.post_id}.jpg`);
+  const target = path.join(thumbnailDir, thumbnailFileName(row.post_id));
   if (!overwrite) {
     try { await fs.access(target); skipped += 1; continue; } catch { /* thumbnail is missing */ }
   }

@@ -1,6 +1,7 @@
 import fs from 'node:fs/promises';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { thumbnailFileName } from './thumbnail-file.mjs';
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const sourcePath = path.join(root, 'data/posts.csv');
@@ -110,7 +111,7 @@ for (const [index, values] of csvRows.slice(1).entries()) {
   seenUrls.add(raw.url);
 
   const cached = refresh[raw.post_id] || {};
-  const fileName = `${raw.post_id}.jpg`;
+  const fileName = thumbnailFileName(raw.post_id);
   let thumbnail = null;
   try {
     await fs.access(path.join(root, 'public/thumbnails', fileName));

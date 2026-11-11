@@ -4,6 +4,7 @@ import readline from 'node:readline/promises';
 import { stdin as input, stdout as output } from 'node:process';
 import { fileURLToPath } from 'node:url';
 import { chromium } from 'playwright';
+import { thumbnailFileName } from './thumbnail-file.mjs';
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const csvPath = path.join(root, 'data/posts.csv');
@@ -62,6 +63,7 @@ await fs.mkdir(thumbnailDir, { recursive: true });
 const browser = await chromium.launch({ headless: true });
 const context = await browser.newContext({ storageState: storageStatePath });
 for (const row of rows) {
+  const fileName = thumbnailFileName(row.post_id);
   const page = await context.newPage();
   try {
     await page.goto(row.url, { waitUntil: 'domcontentloaded', timeout: 30_000 });
@@ -70,7 +72,7 @@ for (const row of rows) {
     const timestamp = numberFrom(html, 'taken_at_timestamp');
     const views = numberFrom(html, 'play_count') ?? numberFrom(html, 'video_view_count');
     const likes = numberFrom(html, 'like_count');
-    const thumbnailPath = path.join(thumbnailDir, `${row.post_id}.jpg`);
+    const thumbnailPath = path.join(thumbnailDir, fileName);
     if (thumbnail) {
       const response = await context.request.get(thumbnail);
       if (response.ok()) await fs.writeFile(thumbnailPath, await response.body());
@@ -78,7 +80,7 @@ for (const row of rows) {
     let imagePath = null;
     try {
       await fs.access(thumbnailPath);
-      imagePath = `/thumbnails/${row.post_id}.jpg`;
+      imagePath = `/thumbnails/${fileName}`;
     } catch {
       // A thumbnail is optional until a download succeeds.
     }

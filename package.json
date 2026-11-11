@@ -7,6 +7,7 @@
     "dev": "vite",
     "build": "npm run import && vite build",
     "lint": "eslint src scripts",
+    "test": "node --test scripts/*.test.mjs",
     "preview": "vite preview",
     "import": "node scripts/import-posts.mjs",
     "validate": "node scripts/import-posts.mjs --check",
