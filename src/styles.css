@@ -81,11 +81,12 @@ main {
   position: relative;
   display: flex;
   gap: 20px;
+  padding-bottom: 18px;
 }
 
 .view-nav a {
   display: block;
-  padding: 18px 0;
+  padding-top: 18px;
   color: #a6a096;
   font: 500 11px "DM Mono", monospace;
   letter-spacing: .04em;
