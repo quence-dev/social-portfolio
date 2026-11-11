@@ -13,7 +13,7 @@ import type {
 const data = gallery as GalleryData;
 const profiles = creatorProfiles as CreatorProfile[];
 const profileBySourceName = new Map(profiles.map((profile) => [profile.sourceName, profile]));
-type Route = { page: 'gallery' | 'creators' } | { page: 'creator'; creator: string };
+type Route = { page: 'gallery' | 'creators' | 'about' } | { page: 'creator'; creator: string };
 const platformNames: Record<Platform, string> = {
   instagram: 'Instagram',
   youtube: 'YouTube',
@@ -86,6 +86,7 @@ function creatorPath(creator: string) {
 
 function currentRoute(): Route {
   const parts = window.location.hash.replace(/^#\/?/, '').split('/');
+  if (parts[0] === 'about') return { page: 'about' };
   if (parts[0] !== 'creators') return { page: 'gallery' };
   if (!parts[1]) return { page: 'creators' };
   try {
@@ -96,7 +97,7 @@ function currentRoute(): Route {
   }
 }
 
-function ViewNav({ page }: { page: 'gallery' | 'creators' }) {
+function ViewNav({ page }: { page: 'gallery' | 'creators' | 'about' }) {
   const navRef = useRef<HTMLElement>(null);
   const [indicator, setIndicator] = useState({ left: 0, width: 0 });
   useLayoutEffect(() => {
@@ -120,6 +121,7 @@ function ViewNav({ page }: { page: 'gallery' | 'creators' }) {
       <span className="view-nav-indicator" aria-hidden="true" style={{ transform: `translateX(${String(indicator.left)}px)`, width: indicator.width }} />
       <a href="#/" className={page === 'gallery' ? 'active' : ''} aria-current={page === 'gallery' ? 'page' : undefined}>Gallery</a>
       <a href="#/creators" className={page === 'creators' ? 'active' : ''} aria-current={page === 'creators' ? 'page' : undefined}>Creators</a>
+      <a href="#/about" className={page === 'about' ? 'active' : ''} aria-current={page === 'about' ? 'page' : undefined}>About</a>
     </nav>
   );
 }
@@ -379,7 +381,26 @@ export default function App() {
       {route.page !== 'creator' && (
         <ViewNav page={route.page} />
       )}
-      {route.page === 'creators' ? (
+      {route.page === 'about' ? (
+        <section className="about" aria-label="About Spencer Vilicic">
+          <p>
+            Spencer Vilicic, known by many as Quence, is a multi-hyphenate creative based in
+            {' '}
+            NYC. He&apos;s worked in both tech as a software engineer and traditional film as a
+            {' '}
+            writer/director, cinematographer, and editor. Much of the work featured here meets in
+            {' '}
+            the middle of both worlds—filming skits and short-form content that explores
+            {' '}
+            and critiques the tech industry.
+          </p>
+          <p>
+            Interested in working together or seeing more of my art? Follow me on Instagram (
+            <a href="https://www.instagram.com/_quence_art/" target="_blank" rel="noreferrer">@_quence_art</a>
+            ).
+          </p>
+        </section>
+      ) : route.page === 'creators' ? (
         <section className="creator-grid" aria-label="Creator directory">
           {creatorSummaries.map((item) => (
             <a className="creator-card" href={creatorPath(item.creator)} key={item.creator}>

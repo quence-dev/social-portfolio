@@ -109,6 +109,30 @@ main {
   transition: transform .22s ease, width .22s ease;
 }
 
+.about {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: clamp(80px, 12vw, 180px) 0;
+  color: #c3bcb0;
+  font-size: clamp(20px, 2.1vw, 30px);
+  line-height: 1.35;
+  text-align: center;
+}
+
+.about p {
+  margin: 0;
+}
+
+.about p + p {
+  margin-top: 32px;
+}
+
+.about a {
+  color: #f3eee5;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+}
+
 .result-count,
 .details dt {
   color: #a6a096;
@@ -538,6 +562,10 @@ select:focus-visible {
   .creator-hero {
     display: block;
     padding-top: 20px;
+  }
+
+  .about {
+    padding: 64px 0 96px;
   }
 
   .creator-hero .totals {
