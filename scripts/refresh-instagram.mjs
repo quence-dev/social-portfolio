@@ -70,10 +70,17 @@ for (const row of rows) {
     const timestamp = numberFrom(html, 'taken_at_timestamp');
     const views = numberFrom(html, 'play_count') ?? numberFrom(html, 'video_view_count');
     const likes = numberFrom(html, 'like_count');
-    const imagePath = thumbnail ? `/thumbnails/${row.post_id}.jpg` : null;
+    const thumbnailPath = path.join(thumbnailDir, `${row.post_id}.jpg`);
     if (thumbnail) {
       const response = await context.request.get(thumbnail);
-      if (response.ok()) await fs.writeFile(path.join(thumbnailDir, `${row.post_id}.jpg`), await response.body());
+      if (response.ok()) await fs.writeFile(thumbnailPath, await response.body());
+    }
+    let imagePath = null;
+    try {
+      await fs.access(thumbnailPath);
+      imagePath = `/thumbnails/${row.post_id}.jpg`;
+    } catch {
+      // A thumbnail is optional until a download succeeds.
     }
     refresh[row.post_id] = {
       publishDate: timestamp ? new Date(timestamp * 1000).toISOString().slice(0, 10) : null,
