@@ -179,11 +179,15 @@ h1 {
 }
 
 select {
+  appearance: none;
   color: #f3eee5;
   background: #1b1a17;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6' fill='none'%3E%3Cpath d='m1 1 4 4 4-4' stroke='%23f3eee5' stroke-width='1.5'/%3E%3C/svg%3E");
+  background-position: right 10px center;
+  background-repeat: no-repeat;
   border: 1px solid #504b43;
   border-radius: 0;
-  padding: 8px 28px 8px 9px;
+  padding: 8px 34px 8px 9px;
   font: 500 12px Manrope, sans-serif;
 }
 
