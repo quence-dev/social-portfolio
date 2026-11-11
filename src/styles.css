@@ -127,6 +127,24 @@ main {
   margin-top: 24px;
 }
 
+.about-quote {
+  margin: 32px 0;
+  color: #f3eee5;
+}
+
+.about-quote p {
+  font: 400 clamp(26px, 3vw, 40px)/1 "Instrument Serif", serif;
+}
+
+.about-quote cite {
+  display: block;
+  margin-top: 10px;
+  color: #a6a096;
+  font: 500 11px "DM Mono", monospace;
+  font-style: normal;
+  letter-spacing: .04em;
+}
+
 .about a {
   color: #f3eee5;
 }

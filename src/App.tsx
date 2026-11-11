@@ -397,6 +397,10 @@ export default function App() {
             {' '}
             I previously worked in.
           </p>
+          <blockquote className="about-quote">
+            <p>“The AI B2B SaaS Cinematographer”</p>
+            <cite>— Varun Rana</cite>
+          </blockquote>
           <p>
             If you&apos;d like to work together, or just see more of my art, you can find me on
             {' '}
