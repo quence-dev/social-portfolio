@@ -304,6 +304,7 @@ export default function App() {
     const updateRoute = () => {
       setRoute(currentRoute());
     };
+    updateRoute();
     window.addEventListener('hashchange', updateRoute);
     return () => {
       window.removeEventListener('hashchange', updateRoute);
