@@ -74,9 +74,13 @@ function creatorName(creator: string) {
   return creatorProfile(creator)?.name ?? creator;
 }
 
-function creatorHandle(creator: string) {
+function creatorHandleText(creator: string) {
   const profile = creatorProfile(creator);
-  return profile ? `@${profile.displayHandle ?? profile.handle}` : creator;
+  return profile?.displayHandle ?? profile?.handle ?? creator;
+}
+
+function creatorHandle(creator: string) {
+  return creatorProfile(creator) ? `@${creatorHandleText(creator)}` : creator;
 }
 
 function creatorPath(creator: string) {
@@ -384,7 +388,7 @@ export default function App() {
             <a className="creator-card" href={creatorPath(item.creator)} key={item.creator}>
               <div className="creator-card-thumbnail">
                 <CreatorThumbnail video={item.videos[0]} />
-                <h2 className="creator-card-name">{creatorHandle(item.creator)}</h2>
+                <h2 className={`creator-card-name${creatorHandleText(item.creator).length > 14 ? ' long' : ''}`}>{creatorHandleText(item.creator)}</h2>
               </div>
               <div className="creator-card-info">
                 <p>{item.videos.length} videos · {compact(item.views)} views</p>

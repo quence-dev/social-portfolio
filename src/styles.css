@@ -366,6 +366,10 @@ select:focus-visible {
   font: 400 26px/.95 "Instrument Serif", serif;
 }
 
+.creator-card-name.long {
+  font-size: clamp(17px, 2.1vw, 22px);
+}
+
 .creator-card-info p,
 .creator-card-info span {
   color: #a6a096;
