@@ -31,13 +31,6 @@ function dateLabel(value: string | null) {
   return new Intl.DateTimeFormat('en-US', { month: 'short', year: 'numeric' }).format(new Date(`${value}T00:00:00Z`));
 }
 
-function updatedLabel(value: string | null) {
-  if (!value) return 'Updated —';
-  return `Updated ${new Intl.DateTimeFormat('en-US', {
-    month: 'short', day: 'numeric', year: 'numeric', hour: 'numeric', minute: '2-digit',
-  }).format(new Date(value))}`;
-}
-
 function platformName(platform: Platform) {
   return platformNames[platform];
 }
@@ -370,7 +363,7 @@ export default function App() {
               <span>videos</span>
             </div>
           </div>
-          <p className="updated-at">{updatedLabel(data.refreshedAt)}</p>
+          <p className="updated-at">Updated {siteConfig.metricsUpdatedLabel}</p>
         </div>
         {siteConfig.portfolioUrl && (
           <a className="portfolio-link" href={siteConfig.portfolioUrl}>
