@@ -1,6 +1,7 @@
 import fs from 'node:fs/promises';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { parseCsv } from './csv.mjs';
 import { thumbnailFileName } from './thumbnail-file.mjs';
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
@@ -10,39 +11,6 @@ const outputPath = path.join(root, 'src/data/gallery.generated.json');
 const checkOnly = process.argv.includes('--check');
 
 const requiredColumns = ['video_id', 'post_id', 'url', 'creator', 'shoot_date', 'roles', 'publish_date', 'include', 'sponsors', 'views', 'likes'];
-
-function parseCsv(text) {
-  const rows = [];
-  let row = [];
-  let cell = '';
-  let quoted = false;
-
-  for (let i = 0; i < text.length; i += 1) {
-    const char = text[i];
-    if (char === '"') {
-      if (quoted && text[i + 1] === '"') {
-        cell += '"';
-        i += 1;
-      } else {
-        quoted = !quoted;
-      }
-    } else if (char === ',' && !quoted) {
-      row.push(cell);
-      cell = '';
-    } else if ((char === '\n' || char === '\r') && !quoted) {
-      if (char === '\r' && text[i + 1] === '\n') i += 1;
-      row.push(cell);
-      if (row.some((value) => value !== '')) rows.push(row);
-      row = [];
-      cell = '';
-    } else {
-      cell += char;
-    }
-  }
-  row.push(cell);
-  if (row.some((value) => value !== '')) rows.push(row);
-  return rows;
-}
 
 function asDate(value) {
   if (!value) return null;

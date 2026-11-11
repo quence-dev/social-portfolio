@@ -2,6 +2,7 @@ import fs from 'node:fs/promises';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { chromium } from 'playwright';
+import { csvRecords } from './csv.mjs';
 import { thumbnailFileName } from './thumbnail-file.mjs';
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
@@ -15,26 +16,7 @@ const limit = limitFlag === -1 ? Infinity : Number(process.argv[limitFlag + 1]);
 const limitMessage = 'You have reached the request limit.';
 const limitCooldownMs = 120_000;
 
-function parseCsv(text) {
-  const records = [];
-  let row = []; let cell = ''; let quoted = false;
-  for (let index = 0; index < text.length; index += 1) {
-    const char = text[index];
-    if (char === '"') {
-      if (quoted && text[index + 1] === '"') { cell += '"'; index += 1; } else quoted = !quoted;
-    } else if (char === ',' && !quoted) {
-      row.push(cell); cell = '';
-    } else if ((char === '\n' || char === '\r') && !quoted) {
-      if (char === '\r' && text[index + 1] === '\n') index += 1;
-      row.push(cell); if (row.some(Boolean)) records.push(row); row = []; cell = '';
-    } else cell += char;
-  }
-  row.push(cell); if (row.some(Boolean)) records.push(row);
-  const [headers, ...rows] = records;
-  return rows.map((values) => Object.fromEntries(headers.map((key, index) => [key, values[index] || ''])));
-}
-
-const rows = parseCsv(await fs.readFile(csvPath, 'utf8'))
+const rows = csvRecords(await fs.readFile(csvPath, 'utf8'))
   .filter((row) => row.include.toLowerCase() === 'true' && row.url.includes('instagram.com'));
 
 await fs.mkdir(thumbnailDir, { recursive: true });

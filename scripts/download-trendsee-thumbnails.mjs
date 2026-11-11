@@ -2,6 +2,7 @@ import fs from 'node:fs/promises';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { chromium } from 'playwright';
+import { csvRecords } from './csv.mjs';
 import { thumbnailFileName } from './thumbnail-file.mjs';
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
@@ -13,26 +14,7 @@ const headless = process.argv.includes('--headless');
 const limitFlag = process.argv.indexOf('--limit');
 const limit = limitFlag === -1 ? Infinity : Number(process.argv[limitFlag + 1]);
 
-function parseCsv(text) {
-  const records = [];
-  let row = []; let cell = ''; let quoted = false;
-  for (let i = 0; i < text.length; i += 1) {
-    const char = text[i];
-    if (char === '"') {
-      if (quoted && text[i + 1] === '"') { cell += '"'; i += 1; } else quoted = !quoted;
-    } else if (char === ',' && !quoted) {
-      row.push(cell); cell = '';
-    } else if ((char === '\n' || char === '\r') && !quoted) {
-      if (char === '\r' && text[i + 1] === '\n') i += 1;
-      row.push(cell); if (row.some(Boolean)) records.push(row); row = []; cell = '';
-    } else cell += char;
-  }
-  row.push(cell); if (row.some(Boolean)) records.push(row);
-  const [headers, ...rows] = records;
-  return rows.map((values) => Object.fromEntries(headers.map((key, index) => [key, values[index] || ''])));
-}
-
-const rows = parseCsv(await fs.readFile(csvPath, 'utf8'))
+const rows = csvRecords(await fs.readFile(csvPath, 'utf8'))
   .filter((row) => row.include.toLowerCase() === 'true' && row.url.includes('instagram.com'))
   .slice(0, limit);
 

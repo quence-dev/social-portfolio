@@ -1,6 +1,7 @@
 import fs from 'node:fs/promises';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { csvLine, parseCsv } from './csv.mjs';
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const sourcePath = path.join(root, 'data/posts.csv');
@@ -9,31 +10,6 @@ const inputPath = inputIndex === -1 ? null : process.argv[inputIndex + 1];
 
 if (!inputPath) {
   throw new Error('Usage: npm run metrics:instagram -- --input /absolute/path/to/reel-scraper.json');
-}
-
-function parseCsv(text) {
-  const rows = [];
-  let row = []; let cell = ''; let quoted = false;
-  for (let index = 0; index < text.length; index += 1) {
-    const char = text[index];
-    if (char === '"') {
-      if (quoted && text[index + 1] === '"') { cell += '"'; index += 1; } else quoted = !quoted;
-    } else if (char === ',' && !quoted) {
-      row.push(cell); cell = '';
-    } else if ((char === '\n' || char === '\r') && !quoted) {
-      if (char === '\r' && text[index + 1] === '\n') index += 1;
-      row.push(cell); if (row.some(Boolean)) rows.push(row); row = []; cell = '';
-    } else cell += char;
-  }
-  row.push(cell); if (row.some(Boolean)) rows.push(row);
-  return rows;
-}
-
-function csvLine(values) {
-  return values.map((value) => {
-    const text = String(value ?? '');
-    return /[",\n\r]/.test(text) ? `"${text.replaceAll('"', '""')}"` : text;
-  }).join(',');
 }
 
 function shortcode(url) {
