@@ -385,18 +385,16 @@ export default function App() {
       {route.page === 'about' ? (
         <section className="about" aria-label="About Spencer Vilicic">
           <p>
-            Spencer Vilicic, known by many as Quence, is a multi-hyphenate creative based in
+            I&apos;m Spencer Vilicic, though many people know me as Quence. My background spans
             {' '}
-            NYC. He&apos;s worked in both tech as a software engineer and traditional film as a
+            software engineering and film, where I work as a writer/director, cinematographer,
             {' '}
-            writer/director, cinematographer, and editor. Much of the work featured here meets in
+            and editor. The work here sits between tech and film: skits and short-form videos
             {' '}
-            the middle of both worlds—filming skits and short-form content that explores
-            {' '}
-            and critiques the tech industry.
+            that use humor to examine the industry I&apos;ve also worked in.
           </p>
           <p>
-            Interested in working together or seeing more of my art? Follow me on Instagram (
+            If you&apos;d like to work together, or see more of my art, follow me on Instagram (
             <a href="https://www.instagram.com/_quence_art/" target="_blank" rel="noreferrer">@_quence_art</a>
             ).
           </p>
