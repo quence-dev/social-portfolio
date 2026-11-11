@@ -26,6 +26,10 @@ function compact(value: number | null) {
   return value === null ? '—' : new Intl.NumberFormat('en-US', { notation: 'compact', maximumFractionDigits: 1 }).format(value);
 }
 
+function pluralize(value: number, singular: string) {
+  return value === 1 ? singular : `${singular}s`;
+}
+
 function dateLabel(value: string | null) {
   if (!value) return 'Date pending';
   return new Intl.DateTimeFormat('en-US', { month: 'short', year: 'numeric' }).format(new Date(`${value}T00:00:00Z`));
@@ -219,14 +223,14 @@ function Modal({ video, close }: { video: Video; close: () => void }) {
                 <span>
                   {compact(video.views)}
                   {' '}
-                  views
+                  {pluralize(video.views, 'view')}
                 </span>
               )}
               {video.likes !== null && (
                 <span>
                   {compact(video.likes)}
                   {' '}
-                  likes
+                  {pluralize(video.likes, 'like')}
                 </span>
               )}
             </div>
@@ -327,19 +331,19 @@ export default function App() {
         <div className="totals">
           <div>
             <strong>{videos.length}</strong>
-            <span>videos</span>
+            <span>{pluralize(videos.length, 'video')}</span>
           </div>
           <div>
             <strong>{compact(
               videos.reduce((total, video) => total + (video.views ?? 0), 0),
             )}</strong>
-            <span>views</span>
+            <span>{pluralize(videos.reduce((total, video) => total + (video.views ?? 0), 0), 'view')}</span>
           </div>
           <div>
             <strong>{compact(
               videos.reduce((total, video) => total + (video.likes ?? 0), 0),
             )}</strong>
-            <span>likes</span>
+            <span>{pluralize(videos.reduce((total, video) => total + (video.likes ?? 0), 0), 'like')}</span>
           </div>
         </div>
       </header>
@@ -352,15 +356,15 @@ export default function App() {
           <div className="totals">
             <div>
               <strong>{compact(totalViews)}</strong>
-              <span>views</span>
+              <span>{pluralize(totalViews, 'view')}</span>
             </div>
             <div>
               <strong>{compact(totalLikes)}</strong>
-              <span>likes</span>
+              <span>{pluralize(totalLikes, 'like')}</span>
             </div>
             <div>
               <strong>{data.videos.length}</strong>
-              <span>videos</span>
+              <span>{pluralize(data.videos.length, 'video')}</span>
             </div>
           </div>
           <p className="updated-at">Updated {siteConfig.metricsUpdatedLabel}</p>
@@ -384,7 +388,7 @@ export default function App() {
                 <h2 className={`creator-card-name${creatorHandleText(item.creator).length > 14 ? ' long' : ''}`}>{creatorHandleText(item.creator)}</h2>
               </div>
               <div className="creator-card-info">
-                <p>{item.videos.length} videos · {compact(item.views)} views</p>
+                <p>{item.videos.length} {pluralize(item.videos.length, 'video')} · {compact(item.views)} {pluralize(item.views, 'view')}</p>
                 <span>{item.roles.join(', ')}</span>
               </div>
             </a>
@@ -441,7 +445,7 @@ export default function App() {
         <span className="result-count">
           {videos.length}
           {' '}
-          videos
+          {pluralize(videos.length, 'video')}
         </span>
       </section>
       {videos.length ? (
