@@ -40,6 +40,10 @@ function shortcode(url) {
   return url.match(/instagram\.com\/(?:reel|reels|p)\/([^/?#]+)/)?.[1] || null;
 }
 
+function metric(value) {
+  return Number.isFinite(value) && value >= 0 ? String(value) : '';
+}
+
 const rows = parseCsv(await fs.readFile(sourcePath, 'utf8'));
 const [headers, ...posts] = rows;
 const columns = new Map(headers.map((header, index) => [header, index]));
@@ -72,8 +76,8 @@ for (const post of posts) {
   const record = apiByCode.get(code);
   if (!record) { missingMetrics.push(code); continue; }
   post[columns.get('publish_date')] = record.timestamp;
-  post[columns.get('views')] = String(record.videoPlayCount);
-  post[columns.get('likes')] = String(record.likesCount);
+  post[columns.get('views')] = metric(record.videoPlayCount);
+  post[columns.get('likes')] = metric(record.likesCount);
   matchedCodes.add(code);
   updated += 1;
 }

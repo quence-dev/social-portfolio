@@ -3,7 +3,7 @@
   "postCount": 166,
   "metricCoverage": {
     "views": 163,
-    "likes": 163
+    "likes": 158
   },
   "videos": [
     {
@@ -5035,7 +5035,7 @@
           ],
           "thumbnail": "/thumbnails/instagram-DQzZhqdjf7A.jpg",
           "views": 105574,
-          "likes": -1
+          "likes": null
         }
       ],
       "creator": "Austin Nasso",
@@ -5049,7 +5049,7 @@
       "publishDate": "2025-11-08",
       "shootDate": "2025-10-22",
       "views": 105574,
-      "likes": -1
+      "likes": null
     },
     {
       "videoId": "video-0007",
@@ -5070,7 +5070,7 @@
           ],
           "thumbnail": "/thumbnails/instagram-DQxD1_GEbJJ.jpg",
           "views": 116967,
-          "likes": -1
+          "likes": null
         }
       ],
       "creator": "Austin Nasso",
@@ -5084,7 +5084,7 @@
       "publishDate": "2025-11-07",
       "shootDate": "2025-10-10",
       "views": 116967,
-      "likes": -1
+      "likes": null
     },
     {
       "videoId": "video-0005",
@@ -5204,7 +5204,7 @@
           ],
           "thumbnail": "/thumbnails/instagram-DQMyeWADbPg.jpg",
           "views": 131051,
-          "likes": -1
+          "likes": null
         }
       ],
       "creator": "Austin Nasso",
@@ -5218,7 +5218,7 @@
       "publishDate": "2025-10-24",
       "shootDate": "2025-10-10",
       "views": 131051,
-      "likes": -1
+      "likes": null
     },
     {
       "videoId": "video-0011",
@@ -5336,7 +5336,7 @@
           ],
           "thumbnail": "/thumbnails/instagram-DP1f_1CkeuD.jpg",
           "views": 165921,
-          "likes": -1
+          "likes": null
         }
       ],
       "creator": "Austin Nasso",
@@ -5350,7 +5350,7 @@
       "publishDate": "2025-10-15",
       "shootDate": "2025-09-30",
       "views": 165921,
-      "likes": -1
+      "likes": null
     },
     {
       "videoId": "video-0003",
@@ -5371,7 +5371,7 @@
           ],
           "thumbnail": "/thumbnails/instagram-DPjfTslEX2j.jpg",
           "views": 117127,
-          "likes": -1
+          "likes": null
         }
       ],
       "creator": "Austin Nasso",
@@ -5385,7 +5385,7 @@
       "publishDate": "2025-10-08",
       "shootDate": "2025-09-30",
       "views": 117127,
-      "likes": -1
+      "likes": null
     }
   ]
 }

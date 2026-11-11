@@ -68,7 +68,7 @@ function list(value) {
 function metric(value) {
   if (value === '') return null;
   const parsed = Number(value);
-  return Number.isFinite(parsed) ? parsed : null;
+  return Number.isFinite(parsed) && parsed >= 0 ? parsed : null;
 }
 
 function unique(values) {
@@ -131,8 +131,8 @@ for (const [index, values] of csvRows.slice(1).entries()) {
     roles: list(raw.roles),
     sponsors: list(raw.sponsors),
     thumbnail,
-    views: Number.isFinite(cached.views) ? cached.views : metric(raw.views),
-    likes: Number.isFinite(cached.likes) ? cached.likes : metric(raw.likes),
+    views: metric(cached.views) ?? metric(raw.views),
+    likes: metric(cached.likes) ?? metric(raw.likes),
   });
 }
 

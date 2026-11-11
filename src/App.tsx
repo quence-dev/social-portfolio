@@ -117,18 +117,24 @@ function Modal({ video, close }: { video: Video; close: () => void }) {
         <div className="modal-video"><Embed post={activePost} /></div>
         <div className="modal-info">
           <h2>{dateLabel(video.publishDate)}</h2>
-          <div className="stats">
-            <span>
-              {compact(video.views)}
-              {' '}
-              views
-            </span>
-            <span>
-              {compact(video.likes)}
-              {' '}
-              likes
-            </span>
-          </div>
+          {(video.views !== null || video.likes !== null) && (
+            <div className="stats">
+              {video.views !== null && (
+                <span>
+                  {compact(video.views)}
+                  {' '}
+                  views
+                </span>
+              )}
+              {video.likes !== null && (
+                <span>
+                  {compact(video.likes)}
+                  {' '}
+                  likes
+                </span>
+              )}
+            </div>
+          )}
           {video.posts.length > 1 && (
           <div className="tabs" role="tablist" aria-label="Post versions">
             {video.posts.map((post) => (
