@@ -452,7 +452,7 @@ select:focus-visible {
   height: min(760px, 92vh);
   overflow: hidden;
   display: grid;
-  grid-template-columns: minmax(320px, .9fr) minmax(280px, .7fr);
+  grid-template-columns: minmax(0, .9fr) minmax(280px, .7fr);
   background: #1b1a17;
 }
 
@@ -472,7 +472,9 @@ select:focus-visible {
 }
 
 .modal-video {
+  min-width: 0;
   min-height: 0;
+  overflow: hidden;
   background: #080807;
   display: grid;
   place-items: center;
@@ -480,6 +482,8 @@ select:focus-visible {
 
 .embed-shell {
   position: relative;
+  min-width: 0;
+  min-height: 0;
   width: auto;
   max-width: 100%;
   height: 100%;
@@ -489,8 +493,10 @@ select:focus-visible {
 }
 
 .embed {
+  display: block;
   position: relative;
   z-index: 1;
+  min-width: 0;
   width: 100%;
   height: 100%;
   border: 0;
@@ -574,6 +580,14 @@ select:focus-visible {
   text-decoration: none;
 }
 
+@media (max-width: 900px) {
+  .modal {
+    width: min(640px, 100%);
+    grid-template-columns: 1fr;
+    grid-template-rows: minmax(260px, 1fr) minmax(0, .82fr);
+  }
+}
+
 @media (max-width: 720px) {
   main {
     padding: 18px;
@@ -618,15 +632,6 @@ select:focus-visible {
   .creator-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 9px;
-  }
-
-  .modal {
-    grid-template-columns: 1fr;
-    grid-template-rows: minmax(250px, 1fr) minmax(0, .9fr);
-  }
-
-  .modal-video {
-    min-height: 0;
   }
 
   .modal-info {
