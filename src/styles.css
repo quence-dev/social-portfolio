@@ -278,10 +278,8 @@ select {
 
 .creator-card {
   color: #f3eee5;
-  border: 1px solid #3d3a34;
   background: #1b1a17;
   text-decoration: none;
-  transition: border-color .2s ease, transform .2s ease;
 }
 
 .creator-card-thumbnail {
@@ -299,17 +297,10 @@ select {
   background: linear-gradient(transparent, rgba(0, 0, 0, .78));
 }
 
-.creator-card:hover img {
-  transform: scale(1.03);
-}
-
-.creator-card:hover {
-  border-color: #777067;
-  transform: translateY(-2px);
-}
-
 .creator-card-info {
-  padding: 10px 12px 12px;
+  display: grid;
+  gap: 3px;
+  padding: 8px 12px 10px;
 }
 
 .creator-card-info p {
@@ -330,13 +321,13 @@ select {
 .creator-card-info p,
 .creator-card-info span {
   color: #a6a096;
-  font: 500 10px/1.5 "DM Mono", monospace;
+  font: 500 10px/1.2 "DM Mono", monospace;
   letter-spacing: .04em;
   text-transform: uppercase;
 }
 
 .creator-card-info p {
-  margin: 0 0 2px;
+  margin: 0;
 }
 
 .modal-backdrop {
