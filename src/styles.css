@@ -48,6 +48,46 @@ main {
   padding: 30px 0 32px;
 }
 
+.creator-hero {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 24px;
+  align-items: end;
+  border-bottom: 1px solid #3d3a34;
+  padding: 30px 0 32px;
+}
+
+.creator-hero h1 {
+  margin: 0;
+}
+
+.back-link {
+  grid-column: 1 / -1;
+  color: #a6a096;
+  font: 500 11px "DM Mono", monospace;
+  letter-spacing: .04em;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.view-nav {
+  display: flex;
+  gap: 20px;
+  padding: 18px 0;
+}
+
+.view-nav a {
+  color: #a6a096;
+  font: 500 11px "DM Mono", monospace;
+  letter-spacing: .04em;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.view-nav a.active {
+  color: #f3eee5;
+}
+
 .result-count,
 .details dt {
   color: #a6a096;
@@ -154,6 +194,9 @@ select {
 }
 
 .card:focus-visible,
+.creator-card:focus-visible,
+.view-nav a:focus-visible,
+.back-link:focus-visible,
 .tabs button:focus-visible,
 .close:focus-visible {
   outline: 2px solid #005c57;
@@ -225,6 +268,50 @@ select {
   min-height: 200px;
   padding-top: 50px;
   color: #a6a096;
+}
+
+.creator-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.creator-card {
+  color: #f3eee5;
+  text-decoration: none;
+}
+
+.creator-card .thumbnail {
+  aspect-ratio: 4 / 3;
+}
+
+.creator-card:hover img {
+  transform: scale(1.03);
+}
+
+.creator-card-info {
+  padding: 10px 0 18px;
+}
+
+.creator-card-info h2,
+.creator-card-info p {
+  margin: 0;
+}
+
+.creator-card-info h2 {
+  font: 400 26px/.95 "Instrument Serif", serif;
+}
+
+.creator-card-info p,
+.creator-card-info span {
+  color: #a6a096;
+  font: 500 10px/1.5 "DM Mono", monospace;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+}
+
+.creator-card-info p {
+  margin: 7px 0 2px;
 }
 
 .modal-backdrop {
@@ -380,6 +467,15 @@ select {
     padding-top: 20px;
   }
 
+  .creator-hero {
+    display: block;
+    padding-top: 20px;
+  }
+
+  .creator-hero .totals {
+    margin-top: 28px;
+  }
+
   .summary {
     margin-top: 28px;
   }
@@ -391,6 +487,11 @@ select {
 
   .grid {
     grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 9px;
+  }
+
+  .creator-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 9px;
   }
 

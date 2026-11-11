@@ -10,6 +10,7 @@ import type {
 } from './types';
 
 const data = gallery as GalleryData;
+type Route = { page: 'gallery' | 'creators' } | { page: 'creator'; creator: string };
 const platformNames: Record<Platform, string> = {
   instagram: 'Instagram',
   youtube: 'YouTube',
@@ -60,6 +61,22 @@ function Icon({ role }: { role: string }) {
 
 function thumbnailUrl(path: string) {
   return `${import.meta.env.BASE_URL}${path.replace(/^\//, '')}`;
+}
+
+function creatorPath(creator: string) {
+  return `#/creators/${encodeURIComponent(creator)}`;
+}
+
+function currentRoute(): Route {
+  const parts = window.location.hash.replace(/^#\/?/, '').split('/');
+  if (parts[0] !== 'creators') return { page: 'gallery' };
+  if (!parts[1]) return { page: 'creators' };
+  try {
+    const creator = decodeURIComponent(parts.slice(1).join('/'));
+    return data.videos.some((video) => video.creator === creator) ? { page: 'creator', creator } : { page: 'creators' };
+  } catch {
+    return { page: 'creators' };
+  }
 }
 
 function Thumbnail({ video }: { video: Video }) {
@@ -200,6 +217,7 @@ function Modal({ video, close }: { video: Video; close: () => void }) {
 }
 
 export default function App() {
+  const [route, setRoute] = useState<Route>(currentRoute);
   const [creator, setCreator] = useState('all');
   const [role, setRole] = useState('all');
   const [sort, setSort] = useState('newest');
@@ -214,20 +232,63 @@ export default function App() {
     [],
   );
   const roles = useMemo(() => [...new Set(data.videos.flatMap((video) => video.roles))].sort(), []);
+  const creatorSummaries = useMemo(() => creators.map((item) => {
+    const videos = data.videos.filter((video) => video.creator === item);
+    return {
+      creator: item,
+      videos,
+      roles: [...new Set(videos.flatMap((video) => video.roles))],
+      views: videos.reduce((total, video) => total + (video.views ?? 0), 0),
+      likes: videos.reduce((total, video) => total + (video.likes ?? 0), 0),
+    };
+  }), [creators]);
+  useEffect(() => {
+    const updateRoute = () => {
+      setRoute(currentRoute());
+    };
+    window.addEventListener('hashchange', updateRoute);
+    return () => {
+      window.removeEventListener('hashchange', updateRoute);
+    };
+  }, []);
   const videos = useMemo(
     () => data.videos
       .filter((video) => (
-        (creator === 'all' || video.creator === creator)
+        ((route.page === 'creator' ? video.creator === route.creator : creator === 'all' || video.creator === creator))
         && (role === 'all' || video.roles.includes(role))
       ))
       .sort((a, b) => (sort === 'views' ? (b.views ?? 0) - (a.views ?? 0) : (b.publishDate ?? '').localeCompare(a.publishDate ?? ''))),
-    [creator, role, sort],
+    [creator, role, route, sort],
   );
   const totalViews = data.videos.reduce((total, video) => total + (video.views ?? 0), 0);
   const totalLikes = data.videos.reduce((total, video) => total + (video.likes ?? 0), 0);
 
   return (
     <main>
+      {route.page === 'creator' ? (
+      <header className="creator-hero">
+        <a className="back-link" href="#/creators">← All creators</a>
+        <h1>{route.creator}</h1>
+        <div className="totals">
+          <div>
+            <strong>{videos.length}</strong>
+            <span>videos</span>
+          </div>
+          <div>
+            <strong>{compact(
+              videos.reduce((total, video) => total + (video.views ?? 0), 0),
+            )}</strong>
+            <span>views</span>
+          </div>
+          <div>
+            <strong>{compact(
+              videos.reduce((total, video) => total + (video.likes ?? 0), 0),
+            )}</strong>
+            <span>likes</span>
+          </div>
+        </div>
+      </header>
+      ) : (
       <header className="hero">
         <div>
           <h1>{siteConfig.title}</h1>
@@ -255,7 +316,28 @@ export default function App() {
           </a>
         )}
       </header>
+      )}
+      <nav className="view-nav" aria-label="Portfolio sections">
+        <a href="#/" className={route.page === 'gallery' ? 'active' : ''}>Gallery</a>
+        <a href="#/creators" className={route.page === 'creators' || route.page === 'creator' ? 'active' : ''}>Creators</a>
+      </nav>
+      {route.page === 'creators' ? (
+        <section className="creator-grid" aria-label="Creator directory">
+          {creatorSummaries.map((item) => (
+            <a className="creator-card" href={creatorPath(item.creator)} key={item.creator}>
+              <Thumbnail video={item.videos[0]} />
+              <div className="creator-card-info">
+                <h2>{item.creator}</h2>
+                <p>{item.videos.length} videos · {compact(item.views)} views</p>
+                <span>{item.roles.join(', ')}</span>
+              </div>
+            </a>
+          ))}
+        </section>
+      ) : (
+      <>
       <section className="toolbar" aria-label="Gallery filters">
+        {route.page !== 'creator' && (
         <label htmlFor="creator-filter">
           Creator
           <select
@@ -271,6 +353,7 @@ export default function App() {
             ))}
           </select>
         </label>
+        )}
         <label htmlFor="role-filter">
           Role
           <select
@@ -324,6 +407,8 @@ export default function App() {
         </section>
       ) : (
         <p className="empty">No videos match those filters.</p>
+      )}
+      </>
       )}
       {selected && <Modal video={selected} close={closeModal} />}
       <footer className="site-footer">© 2026 by Spencer Vilicic</footer>
