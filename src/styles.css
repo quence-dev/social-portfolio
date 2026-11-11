@@ -129,8 +129,17 @@ main {
 
 .about a {
   color: #f3eee5;
+}
+
+a:not([class]) {
+  text-decoration: none;
   text-decoration-thickness: 1px;
   text-underline-offset: 3px;
+}
+
+a:not([class]):hover,
+a:not([class]):focus-visible {
+  text-decoration-line: underline;
 }
 
 .result-count,
