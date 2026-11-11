@@ -278,7 +278,7 @@ select {
 
 .creator-card {
   color: #f3eee5;
-  background: #1b1a17;
+  background: #000;
   text-decoration: none;
   transition: transform .2s ease;
 }
@@ -299,7 +299,7 @@ select {
   position: absolute;
   inset: 40% 0 0;
   content: '';
-  background: linear-gradient(transparent, rgba(0, 0, 0, .78));
+  background: linear-gradient(transparent, #000);
 }
 
 .creator-card-info {
@@ -326,7 +326,7 @@ select {
 .creator-card-info p,
 .creator-card-info span {
   color: #a6a096;
-  font: 500 10px/1.2 "DM Mono", monospace;
+  font: 500 11px/1.2 "DM Mono", monospace;
   letter-spacing: .04em;
   text-transform: uppercase;
 }
