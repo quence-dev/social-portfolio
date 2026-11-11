@@ -69,7 +69,7 @@ for (const [index, values] of csvRows.slice(1).entries()) {
   const raw = Object.fromEntries(headers.map((header, column) => [header, (values[column] || '').trim()]));
   if (raw.include.toLowerCase() !== 'true') continue;
   const rowNumber = index + 2;
-  for (const key of ['video_id', 'post_id', 'url', 'creator', 'shoot_date', 'roles']) {
+  for (const key of ['video_id', 'post_id', 'url', 'creator', 'roles']) {
     if (!raw[key]) throw new Error(`Row ${rowNumber}: ${key} is required for included posts.`);
   }
   if (!/^https?:\/\//.test(raw.url)) throw new Error(`Row ${rowNumber}: invalid URL.`);
