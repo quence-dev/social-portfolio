@@ -385,13 +385,17 @@ export default function App() {
       {route.page === 'about' ? (
         <section className="about" aria-label="About Spencer Vilicic">
           <p>
-            I&apos;m Spencer Vilicic, though many people know me as Quence. My background spans
+            I&apos;m Spencer Vilicic, though many people know me as Quence. I&apos;m based in NYC
             {' '}
-            software engineering and film, where I work as a writer/director, cinematographer,
+            and currently work as a writer/director, cinematographer, and editor. My background
             {' '}
-            and editor. The work here sits between tech and film: skits and short-form videos
+            spans
             {' '}
-            that use humor to examine the industry I&apos;ve also worked in.
+            software engineering and film, and much of the work featured here sits between them:
+            {' '}
+            skits and short-form videos that use humor to examine the tech industry
+            {' '}
+            I previously worked in.
           </p>
           <p>
             If you&apos;d like to work together, or see more of my art, follow me on Instagram (
