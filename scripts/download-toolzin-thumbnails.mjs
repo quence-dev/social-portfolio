@@ -1,25 +1,14 @@
-import fs from 'node:fs/promises';
-import path from 'node:path';
-import { fileURLToPath } from 'node:url';
 import { chromium } from 'playwright';
-import { csvRecords } from './csv.mjs';
-import { thumbnailFileName } from './thumbnail-file.mjs';
+import {
+  downloaderOptions, instagramRows, relativePath, thumbnailTarget,
+} from './thumbnail-downloader.mjs';
 
-const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
-const csvPath = path.join(root, 'data/posts.csv');
-const thumbnailDir = path.join(root, 'public/thumbnails');
 const toolUrl = 'https://toolzin.com/tools/instagram-downloader/';
-const overwrite = process.argv.includes('--overwrite');
-const headless = process.argv.includes('--headless');
-const limitFlag = process.argv.indexOf('--limit');
-const limit = limitFlag === -1 ? Infinity : Number(process.argv[limitFlag + 1]);
+const { headless, limit, overwrite } = downloaderOptions();
 const limitMessage = 'You have reached the request limit.';
 const limitCooldownMs = 120_000;
 
-const rows = csvRecords(await fs.readFile(csvPath, 'utf8'))
-  .filter((row) => row.include.toLowerCase() === 'true' && row.url.includes('instagram.com'));
-
-await fs.mkdir(thumbnailDir, { recursive: true });
+const rows = await instagramRows();
 const browser = await chromium.launch({ headless });
 const context = await browser.newContext();
 const page = await context.newPage();
@@ -31,10 +20,8 @@ let skipped = 0;
 
 for (const row of rows) {
   if (downloaded >= limit) break;
-  const target = path.join(thumbnailDir, thumbnailFileName(row.post_id));
-  if (!overwrite) {
-    try { await fs.access(target); skipped += 1; continue; } catch { /* thumbnail is missing */ }
-  }
+  const target = await thumbnailTarget(row.post_id, overwrite);
+  if (!target) { skipped += 1; continue; }
 
   let retriedAfterAdNavigation = false;
   let retry = true;
@@ -71,7 +58,7 @@ for (const row of rows) {
       const download = await downloadPromise;
       await download.saveAs(target);
       downloaded += 1;
-      console.log(`Saved ${path.relative(root, target)}`);
+      console.log(`Saved ${relativePath(target)}`);
     } catch (error) {
       const host = new URL(page.url()).hostname;
       if (!retriedAfterAdNavigation && !host.endsWith('toolzin.com')) {
