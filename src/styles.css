@@ -240,8 +240,8 @@ select {
 .modal {
   position: relative;
   width: min(1040px, 100%);
-  max-height: min(760px, 92vh);
-  overflow: auto;
+  height: min(760px, 92vh);
+  overflow: hidden;
   display: grid;
   grid-template-columns: minmax(320px, .9fr) minmax(280px, .7fr);
   background: #1b1a17;
@@ -263,7 +263,7 @@ select {
 }
 
 .modal-video {
-  min-height: 500px;
+  min-height: 0;
   background: #080807;
   display: grid;
   place-items: center;
@@ -271,8 +271,10 @@ select {
 
 .embed-shell {
   position: relative;
-  width: 100%;
-  height: min(82vh, 700px);
+  width: auto;
+  max-width: 100%;
+  height: 100%;
+  aspect-ratio: 9 / 16;
   display: grid;
   place-items: center;
 }
@@ -294,6 +296,7 @@ select {
 
 .modal-info {
   padding: 44px 34px 30px;
+  overflow-y: auto;
 }
 
 .modal-info h2 {
@@ -392,14 +395,11 @@ select {
 
   .modal {
     grid-template-columns: 1fr;
+    grid-template-rows: minmax(250px, 1fr) minmax(0, .9fr);
   }
 
   .modal-video {
-    min-height: 430px;
-  }
-
-  .embed {
-    height: 530px;
+    min-height: 0;
   }
 
   .modal-info {
