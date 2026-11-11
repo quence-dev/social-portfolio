@@ -139,7 +139,8 @@ function Modal({ video, close }: { video: Video; close: () => void }) {
         <button ref={closeButtonRef} type="button" className="close" onClick={close} aria-label="Close post">×</button>
         <div className="modal-video"><Embed post={activePost} /></div>
         <div className="modal-info">
-          <h2>{dateLabel(video.publishDate)}</h2>
+          <h2>{video.creator}</h2>
+          <p className="modal-date">Posted {dateLabel(activePost.publishDate ?? activePost.shootDate)}</p>
           {(video.views !== null || video.likes !== null) && (
             <div className="stats">
               {video.views !== null && (
@@ -181,10 +182,6 @@ function Modal({ video, close }: { video: Video; close: () => void }) {
               <dd>{video.sponsors.join(', ')}</dd>
             </div>
             )}
-            <div>
-              <dt>Published</dt>
-              <dd>{dateLabel(activePost.publishDate ?? activePost.shootDate)}</dd>
-            </div>
           </dl>
           <a className="source-link" href={activePost.url} target="_blank" rel="noreferrer">
             Open on
@@ -241,6 +238,10 @@ export default function App() {
             <div>
               <strong>{compact(totalLikes)}</strong>
               <span>likes</span>
+            </div>
+            <div>
+              <strong>{data.videos.length}</strong>
+              <span>videos</span>
             </div>
           </div>
           <p className="updated-at">{updatedLabel(data.refreshedAt)}</p>
@@ -308,16 +309,13 @@ export default function App() {
               type="button"
               className="card"
               key={video.videoId}
+              aria-label={`Open video by ${video.creator}, posted ${dateLabel(video.publishDate)}`}
               onClick={(event) => {
                 triggerRef.current = event.currentTarget;
                 setSelected(video);
               }}
             >
               <Thumbnail video={video} />
-              <div className="card-copy">
-                <span>{video.creator}</span>
-                <span>{dateLabel(video.publishDate)}</span>
-              </div>
             </button>
           ))}
         </section>

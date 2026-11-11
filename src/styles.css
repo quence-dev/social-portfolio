@@ -42,7 +42,6 @@ main {
 }
 
 .result-count,
-.card-copy,
 .details dt {
   color: #a6a096;
   font: 500 11px/1.4 "DM Mono", monospace;
@@ -215,17 +214,6 @@ select {
   font: 500 10px "DM Mono", monospace;
 }
 
-.card-copy {
-  display: flex;
-  justify-content: space-between;
-  gap: 12px;
-  padding: 9px 1px 22px;
-}
-
-.card-copy span:last-child {
-  text-align: right;
-}
-
 .empty {
   min-height: 200px;
   padding-top: 50px;
@@ -303,7 +291,15 @@ select {
 
 .modal-info h2 {
   font: 400 45px/.9 "Instrument Serif", serif;
-  margin: 10px 0 24px;
+  margin: 10px 0 8px;
+}
+
+.modal-date {
+  color: #a6a096;
+  font: 500 11px/1.4 "DM Mono", monospace;
+  letter-spacing: .04em;
+  margin: 0 0 24px;
+  text-transform: uppercase;
 }
 
 .stats {
@@ -381,10 +377,6 @@ select {
   .grid {
     grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 9px;
-  }
-
-  .card-copy {
-    font-size: 9px;
   }
 
   .modal {
