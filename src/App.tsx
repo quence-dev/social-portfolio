@@ -398,9 +398,11 @@ export default function App() {
             I previously worked in.
           </p>
           <p>
-            If you&apos;d like to work together, or see more of my art, follow me on Instagram (
-            <a href="https://www.instagram.com/_quence_art/" target="_blank" rel="noreferrer">@_quence_art</a>
-            ).
+            If you&apos;d like to work together, or just see more of my art, you can find me on
+            {' '}
+            Instagram at
+            {' '}
+            <a href="https://www.instagram.com/_quence_art/" target="_blank" rel="noreferrer">@_quence_art</a>.
           </p>
         </section>
       ) : route.page === 'creators' ? (
