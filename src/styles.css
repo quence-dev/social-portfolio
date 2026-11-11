@@ -273,12 +273,15 @@ select {
 .creator-grid {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 14px;
+  gap: 12px;
 }
 
 .creator-card {
   color: #f3eee5;
+  border: 1px solid #3d3a34;
+  background: #1b1a17;
   text-decoration: none;
+  transition: border-color .2s ease, transform .2s ease;
 }
 
 .creator-card-thumbnail {
@@ -286,7 +289,7 @@ select {
 }
 
 .creator-card .thumbnail {
-  aspect-ratio: 4 / 3;
+  aspect-ratio: 1;
 }
 
 .creator-card .thumbnail::after {
@@ -300,8 +303,13 @@ select {
   transform: scale(1.03);
 }
 
+.creator-card:hover {
+  border-color: #777067;
+  transform: translateY(-2px);
+}
+
 .creator-card-info {
-  padding: 8px 0 18px;
+  padding: 10px 12px 12px;
 }
 
 .creator-card-info p {
@@ -311,9 +319,9 @@ select {
 .creator-card-name {
   position: absolute;
   z-index: 1;
-  right: 14px;
-  bottom: 13px;
-  left: 14px;
+  right: 12px;
+  bottom: 11px;
+  left: 12px;
   margin: 0;
   color: #fff;
   font: 400 26px/.95 "Instrument Serif", serif;
@@ -328,7 +336,7 @@ select {
 }
 
 .creator-card-info p {
-  margin: 7px 0 2px;
+  margin: 0 0 2px;
 }
 
 .modal-backdrop {
