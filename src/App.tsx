@@ -79,7 +79,7 @@ function currentRoute(): Route {
   }
 }
 
-function Thumbnail({ video }: { video: Video }) {
+function Thumbnail({ video, showRoles = true }: { video: Video; showRoles?: boolean }) {
   const [missing, setMissing] = useState(false);
   const source = thumbnailUrl(video.thumbnail ?? `/thumbnails/${video.posts[0].postId}.jpg`);
   return (
@@ -87,9 +87,11 @@ function Thumbnail({ video }: { video: Video }) {
       {!missing ? <img src={source} alt="" loading="lazy" decoding="async" onError={() => {
         setMissing(true);
       }} /> : <div className="placeholder"><span>{video.creator.slice(0, 1)}</span></div>}
-      <div className="badges">
-        {video.roles.map((item) => <Icon key={item} role={item} />)}
-      </div>
+      {showRoles && (
+        <div className="badges">
+          {video.roles.map((item) => <Icon key={item} role={item} />)}
+        </div>
+      )}
     </div>
   );
 }
@@ -317,17 +319,21 @@ export default function App() {
         )}
       </header>
       )}
-      <nav className="view-nav" aria-label="Portfolio sections">
-        <a href="#/" className={route.page === 'gallery' ? 'active' : ''}>Gallery</a>
-        <a href="#/creators" className={route.page === 'creators' || route.page === 'creator' ? 'active' : ''}>Creators</a>
-      </nav>
+      {route.page !== 'creator' && (
+        <nav className="view-nav" aria-label="Portfolio sections">
+          <a href="#/" className={route.page === 'gallery' ? 'active' : ''}>Gallery</a>
+          <a href="#/creators" className={route.page === 'creators' ? 'active' : ''}>Creators</a>
+        </nav>
+      )}
       {route.page === 'creators' ? (
         <section className="creator-grid" aria-label="Creator directory">
           {creatorSummaries.map((item) => (
             <a className="creator-card" href={creatorPath(item.creator)} key={item.creator}>
-              <Thumbnail video={item.videos[0]} />
+              <div className="creator-card-thumbnail">
+                <Thumbnail video={item.videos[0]} showRoles={false} />
+                <h2 className="creator-card-name">{item.creator}</h2>
+              </div>
               <div className="creator-card-info">
-                <h2>{item.creator}</h2>
                 <p>{item.videos.length} videos · {compact(item.views)} views</p>
                 <span>{item.roles.join(', ')}</span>
               </div>

@@ -281,8 +281,19 @@ select {
   text-decoration: none;
 }
 
+.creator-card-thumbnail {
+  position: relative;
+}
+
 .creator-card .thumbnail {
   aspect-ratio: 4 / 3;
+}
+
+.creator-card .thumbnail::after {
+  position: absolute;
+  inset: 40% 0 0;
+  content: '';
+  background: linear-gradient(transparent, rgba(0, 0, 0, .78));
 }
 
 .creator-card:hover img {
@@ -290,15 +301,21 @@ select {
 }
 
 .creator-card-info {
-  padding: 10px 0 18px;
+  padding: 8px 0 18px;
 }
 
-.creator-card-info h2,
 .creator-card-info p {
   margin: 0;
 }
 
-.creator-card-info h2 {
+.creator-card-name {
+  position: absolute;
+  z-index: 1;
+  right: 14px;
+  bottom: 13px;
+  left: 14px;
+  margin: 0;
+  color: #fff;
   font: 400 26px/.95 "Instrument Serif", serif;
 }
 
