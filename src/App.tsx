@@ -301,16 +301,6 @@ export default function App() {
           videos
         </span>
       </section>
-      <section className="coverage">
-        {data.refreshedAt
-          ? `Metrics refreshed ${new Date(data.refreshedAt).toLocaleDateString()} · `
-          : 'Metrics not refreshed yet · '}
-        {data.metricCoverage.views}
-        /
-        {data.postCount}
-        {' '}
-        posts with view data
-      </section>
       {videos.length ? (
         <section className="grid" aria-label="Video gallery">
           {videos.map((video) => (

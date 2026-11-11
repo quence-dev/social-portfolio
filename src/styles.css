@@ -41,7 +41,6 @@ main {
   padding: 30px 0 32px;
 }
 
-.coverage,
 .result-count,
 .card-copy,
 .details dt {
@@ -133,13 +132,9 @@ select {
   padding-bottom: 9px;
 }
 
-.coverage {
-  padding-bottom: 24px;
-}
-
 .grid {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(5, minmax(0, 1fr));
   gap: 14px;
 }
 
@@ -384,7 +379,7 @@ select {
   }
 
   .grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 9px;
   }
 
@@ -415,15 +410,5 @@ select {
 
   .toolbar {
     gap: 8px;
-  }
-}
-
-@media (max-width: 390px) {
-  .grid {
-    grid-template-columns: 1fr;
-  }
-
-  .thumbnail {
-    aspect-ratio: 9 / 11;
   }
 }
