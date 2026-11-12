@@ -161,6 +161,7 @@ function CreatorThumbnail({ video }: { video: Video }) {
 }
 
 function Embed({ post }: { post: Post }) {
+  const [loaded, setLoaded] = useState(false);
   let source = null;
   if (post.platform === 'instagram') source = instagramEmbed(post.url);
   if (post.platform === 'youtube') source = youtubeEmbed(post.url);
@@ -177,7 +178,11 @@ function Embed({ post }: { post: Post }) {
   }
   return (
     <div className="embed-shell">
-      <iframe key={post.postId} className="embed" src={source} title={`${platformName(post.platform)} post`} allow="autoplay; clipboard-write; encrypted-media; picture-in-picture" allowFullScreen />
+      {!loaded && post.thumbnail && <img className="embed-placeholder" src={thumbnailUrl(post.thumbnail)} alt="" />}
+      {!loaded && <span className="embed-loading" role="status">Loading video…</span>}
+      <iframe className={`embed${loaded ? ' loaded' : ''}`} src={source} title={`${platformName(post.platform)} post`} allow="autoplay; clipboard-write; encrypted-media; picture-in-picture" allowFullScreen onLoad={() => {
+        setLoaded(true);
+      }} />
     </div>
   );
 }
@@ -223,7 +228,7 @@ function Modal({ video, close }: { video: Video; close: () => void }) {
         event.stopPropagation();
       }}>
         <button ref={closeButtonRef} type="button" className="close" onClick={close} aria-label="Close post">×</button>
-        <div className="modal-video"><Embed post={activePost} /></div>
+        <div className="modal-video"><Embed key={activePost.postId} post={activePost} /></div>
         <div className="modal-info">
           <h2>{creatorName(video.creator)}</h2>
           <p className="modal-date">Posted {dateLabel(activePost.publishDate ?? activePost.shootDate)}</p>
