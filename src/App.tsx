@@ -12,6 +12,14 @@ import type {
 
 const data = gallery as GalleryData;
 const profiles = creatorProfiles as CreatorProfile[];
+const brands = [
+  ['Apollo', 'apollo.svg'], ['ChatGPT', 'chatgpt.svg'], ['Claude', 'claude.svg'],
+  ['CodeRabbit', 'coderabbit.svg'], ['Codex', 'codex.svg'], ['Granola', 'granola.svg'],
+  ['JetBrains', 'jetbrains.svg'], ['Lovable', 'lovable.svg'], ['Megaport', 'megaport.svg'],
+  ['MoonPay', 'MoonPay.svg'], ['Ramp', 'ramp.svg'], ['Rippling', 'rippling.svg'],
+  ['Solana', 'solana.svg'], ['Twilio', 'Twilio.svg'], ['Webflow', 'webflow.svg'],
+  ['Zapier', 'zapier.svg'], ['Zoom', 'zoom.svg'],
+];
 const profileBySourceName = new Map(profiles.map((profile) => [profile.sourceName, profile]));
 type Route = { page: 'gallery' | 'creators' | 'about' } | { page: 'creator'; creator: string };
 const platformNames: Record<Platform, string> = {
@@ -408,6 +416,20 @@ export default function App() {
             {' '}
             <a href="https://www.instagram.com/_quence_art/" target="_blank" rel="noreferrer">@_quence_art</a>.
           </p>
+          <section className="brand-showcase" aria-label="Brands featured in sponsored content">
+            <p>My work has appeared in sponsored content for</p>
+            <div className="brand-marquee">
+              <div className="brand-track">
+                {[0, 1].map((copy) => (
+                  <div className="brand-group" key={copy} aria-hidden={copy === 1 ? true : undefined}>
+                    {brands.map(([name, file]) => (
+                      <img key={file} src={thumbnailUrl(`/brands/${file}`)} alt={name} />
+                    ))}
+                  </div>
+                ))}
+              </div>
+            </div>
+          </section>
         </section>
       ) : route.page === 'creators' ? (
         <section className="creator-grid" aria-label="Creator directory">

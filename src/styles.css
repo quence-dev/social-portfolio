@@ -151,6 +151,53 @@ main {
   color: #f3eee5;
 }
 
+.brand-showcase {
+  margin-top: 72px;
+}
+
+.brand-showcase > p {
+  font: 400 14px/1.5 "DM Mono", monospace;
+}
+
+.brand-marquee {
+  overflow: hidden;
+  margin-top: 24px;
+}
+
+.brand-track {
+  display: flex;
+  width: max-content;
+  animation: brand-scroll 90s linear infinite;
+}
+
+.brand-marquee:hover .brand-track {
+  animation-play-state: paused;
+}
+
+.brand-group {
+  display: flex;
+  align-items: center;
+  gap: 48px;
+  padding-right: 48px;
+}
+
+.brand-group img {
+  width: 110px;
+  height: 42px;
+  object-fit: contain;
+  filter: brightness(0) invert(1);
+}
+
+@keyframes brand-scroll {
+  to { transform: translateX(-50%); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .brand-marquee { overflow-x: auto; }
+  .brand-track { animation: none; }
+  .brand-group[aria-hidden="true"] { display: none; }
+}
+
 a:not([class]) {
   text-decoration: none;
   text-decoration-thickness: 1px;
