@@ -18,19 +18,21 @@ Run the TypeScript-, React-, and accessibility-aware lint check before committin
 npm run lint
 ```
 
-If a Google Sheets export only contains new posts, merge it into the local catalog instead of replacing it. Existing rows—including their cached publish dates, views, and likes—are left untouched:
+## Adding posts
+
+Export your Posts sheet as a CSV and merge it into the local catalog. The export can contain existing posts too; their local publish dates and metrics are left untouched:
 
 ```sh
 npm run posts:merge -- --input /absolute/path/to/new-posts.csv
 ```
 
-The merge matches on both `post_id` and URL, appends only genuinely new rows, and stops on a mismatched ID/URL pair. Then run:
+The merge matches on both `post_id` and URL, appends only genuinely new rows, and stops on a mismatched ID/URL pair. Check what's still missing:
 
 ```sh
-npm run import
+npm run posts:status
 ```
 
-This validates the catalog and updates `src/data/gallery.generated.json`.
+This validates the catalog, updates `src/data/gallery.generated.json`, and lists posts missing thumbnails, publish dates, views, or likes. Some missing likes are expected for posts where Instagram does not expose them. Add thumbnails as `public/thumbnails/<post_id>.jpg` and import metrics using the command below, then run the status command again. `npm run import` remains available when you only need to rebuild the gallery data.
 
 ## Creator profiles
 

@@ -11,6 +11,7 @@
     "preview": "vite preview",
     "import": "node scripts/import-posts.mjs",
     "posts:merge": "node scripts/merge-posts.mjs",
+    "posts:status": "npm run import && node scripts/posts-status.mjs",
     "validate": "node scripts/import-posts.mjs --check",
     "refresh": "node scripts/refresh-instagram.mjs",
     "metrics:instagram": "node scripts/import-instagram-metrics.mjs",
