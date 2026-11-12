@@ -2,8 +2,8 @@
   "refreshedAt": null,
   "postCount": 176,
   "metricCoverage": {
-    "views": 163,
-    "likes": 158
+    "views": 173,
+    "likes": 168
   },
   "videos": [
     {
@@ -16,14 +16,14 @@
           "platform": "instagram",
           "creator": "Alberta.Tech",
           "shootDate": "2026-11-10",
-          "publishDate": "2026-11-10",
+          "publishDate": "2026-11-11",
           "roles": [
             "videographer"
           ],
           "sponsors": [],
           "thumbnail": "/thumbnails/instagram-DflhV5WRyr9.jpg",
-          "views": null,
-          "likes": null
+          "views": 961979,
+          "likes": 22338
         }
       ],
       "creator": "Alberta.Tech",
@@ -32,10 +32,10 @@
       ],
       "sponsors": [],
       "thumbnail": "/thumbnails/instagram-DflhV5WRyr9.jpg",
-      "publishDate": "2026-11-10",
+      "publishDate": "2026-11-11",
       "shootDate": "2026-11-10",
-      "views": null,
-      "likes": null
+      "views": 961979,
+      "likes": 22338
     },
     {
       "videoId": "video-0171",
@@ -981,6 +981,39 @@
       "likes": 1540
     },
     {
+      "videoId": "video-0185",
+      "posts": [
+        {
+          "videoId": "video-0185",
+          "postId": "instagram-DeJ0XTwsuc9",
+          "url": "https://www.instagram.com/reel/DeJ0XTwsuc9",
+          "platform": "instagram",
+          "creator": "Trace Space",
+          "shootDate": "2026-05-08",
+          "publishDate": "2026-10-06",
+          "roles": [
+            "videographer",
+            "editor"
+          ],
+          "sponsors": [],
+          "thumbnail": "/thumbnails/instagram-DeJ0XTwsuc9.jpg",
+          "views": 1019,
+          "likes": 22
+        }
+      ],
+      "creator": "Trace Space",
+      "roles": [
+        "videographer",
+        "editor"
+      ],
+      "sponsors": [],
+      "thumbnail": "/thumbnails/instagram-DeJ0XTwsuc9.jpg",
+      "publishDate": "2026-10-06",
+      "shootDate": "2026-05-08",
+      "views": 1019,
+      "likes": 22
+    },
+    {
       "videoId": "video-0135",
       "posts": [
         {
@@ -1416,6 +1449,39 @@
       "likes": 275
     },
     {
+      "videoId": "video-0184",
+      "posts": [
+        {
+          "videoId": "video-0184",
+          "postId": "instagram-DdUFUwQN-2Y",
+          "url": "https://www.instagram.com/reel/DdUFUwQN-2Y",
+          "platform": "instagram",
+          "creator": "Trace Space",
+          "shootDate": "2026-05-08",
+          "publishDate": "2026-09-15",
+          "roles": [
+            "videographer",
+            "editor"
+          ],
+          "sponsors": [],
+          "thumbnail": "/thumbnails/instagram-DdUFUwQN-2Y.jpg",
+          "views": 749,
+          "likes": 9
+        }
+      ],
+      "creator": "Trace Space",
+      "roles": [
+        "videographer",
+        "editor"
+      ],
+      "sponsors": [],
+      "thumbnail": "/thumbnails/instagram-DdUFUwQN-2Y.jpg",
+      "publishDate": "2026-09-15",
+      "shootDate": "2026-05-08",
+      "views": 749,
+      "likes": 9
+    },
+    {
       "videoId": "video-0141",
       "posts": [
         {
@@ -1476,6 +1542,39 @@
       "shootDate": "2026-09-10",
       "views": 50601,
       "likes": 545
+    },
+    {
+      "videoId": "video-0183",
+      "posts": [
+        {
+          "videoId": "video-0183",
+          "postId": "instagram-DdJg-8ntQQk",
+          "url": "https://www.instagram.com/reel/DdJg-8ntQQk",
+          "platform": "instagram",
+          "creator": "Trace Space",
+          "shootDate": "2026-05-08",
+          "publishDate": "2026-09-11",
+          "roles": [
+            "videographer",
+            "editor"
+          ],
+          "sponsors": [],
+          "thumbnail": "/thumbnails/instagram-DdJg-8ntQQk.jpg",
+          "views": 584,
+          "likes": 18
+        }
+      ],
+      "creator": "Trace Space",
+      "roles": [
+        "videographer",
+        "editor"
+      ],
+      "sponsors": [],
+      "thumbnail": "/thumbnails/instagram-DdJg-8ntQQk.jpg",
+      "publishDate": "2026-09-11",
+      "shootDate": "2026-05-08",
+      "views": 584,
+      "likes": 18
     },
     {
       "videoId": "video-0127",
@@ -1544,6 +1643,39 @@
       "likes": 12763
     },
     {
+      "videoId": "video-0182",
+      "posts": [
+        {
+          "videoId": "video-0182",
+          "postId": "instagram-DcvmGDoNQcf",
+          "url": "https://www.instagram.com/reel/DcvmGDoNQcf",
+          "platform": "instagram",
+          "creator": "Trace Space",
+          "shootDate": "2026-05-08",
+          "publishDate": "2026-09-01",
+          "roles": [
+            "videographer",
+            "editor"
+          ],
+          "sponsors": [],
+          "thumbnail": "/thumbnails/instagram-DcvmGDoNQcf.jpg",
+          "views": 523,
+          "likes": 19
+        }
+      ],
+      "creator": "Trace Space",
+      "roles": [
+        "videographer",
+        "editor"
+      ],
+      "sponsors": [],
+      "thumbnail": "/thumbnails/instagram-DcvmGDoNQcf.jpg",
+      "publishDate": "2026-09-01",
+      "shootDate": "2026-05-08",
+      "views": 523,
+      "likes": 19
+    },
+    {
       "videoId": "video-0128",
       "posts": [
         {
@@ -1577,6 +1709,39 @@
       "shootDate": "2026-08-24",
       "views": 155555,
       "likes": 3943
+    },
+    {
+      "videoId": "video-0181",
+      "posts": [
+        {
+          "videoId": "video-0181",
+          "postId": "instagram-Dci4zf2MK_k",
+          "url": "https://www.instagram.com/reel/Dci4zf2MK_k",
+          "platform": "instagram",
+          "creator": "Trace Space",
+          "shootDate": "2026-05-08",
+          "publishDate": "2026-08-27",
+          "roles": [
+            "videographer",
+            "editor"
+          ],
+          "sponsors": [],
+          "thumbnail": "/thumbnails/instagram-Dci4zf2MK_k.jpg",
+          "views": 1340,
+          "likes": 15
+        }
+      ],
+      "creator": "Trace Space",
+      "roles": [
+        "videographer",
+        "editor"
+      ],
+      "sponsors": [],
+      "thumbnail": "/thumbnails/instagram-Dci4zf2MK_k.jpg",
+      "publishDate": "2026-08-27",
+      "shootDate": "2026-05-08",
+      "views": 1340,
+      "likes": 15
     },
     {
       "videoId": "video-0126",
@@ -1670,6 +1835,39 @@
       "shootDate": "2026-08-10",
       "views": 79589,
       "likes": 1326
+    },
+    {
+      "videoId": "video-0180",
+      "posts": [
+        {
+          "videoId": "video-0180",
+          "postId": "instagram-DcTIvJQMzn0",
+          "url": "https://www.instagram.com/reel/DcTIvJQMzn0",
+          "platform": "instagram",
+          "creator": "Trace Space",
+          "shootDate": "2026-05-08",
+          "publishDate": "2026-08-21",
+          "roles": [
+            "videographer",
+            "editor"
+          ],
+          "sponsors": [],
+          "thumbnail": "/thumbnails/instagram-DcTIvJQMzn0.jpg",
+          "views": 7679,
+          "likes": 27
+        }
+      ],
+      "creator": "Trace Space",
+      "roles": [
+        "videographer",
+        "editor"
+      ],
+      "sponsors": [],
+      "thumbnail": "/thumbnails/instagram-DcTIvJQMzn0.jpg",
+      "publishDate": "2026-08-21",
+      "shootDate": "2026-05-08",
+      "views": 7679,
+      "likes": 27
     },
     {
       "videoId": "video-0106",
@@ -2021,6 +2219,39 @@
       "likes": 1016
     },
     {
+      "videoId": "video-0179",
+      "posts": [
+        {
+          "videoId": "video-0179",
+          "postId": "instagram-Db-xo1hxsWa",
+          "url": "https://www.instagram.com/reel/Db-xo1hxsWa",
+          "platform": "instagram",
+          "creator": "Trace Space",
+          "shootDate": "2026-05-08",
+          "publishDate": "2026-08-13",
+          "roles": [
+            "videographer",
+            "editor"
+          ],
+          "sponsors": [],
+          "thumbnail": "/thumbnails/instagram-Db-xo1hxsWa.jpg",
+          "views": 541,
+          "likes": 26
+        }
+      ],
+      "creator": "Trace Space",
+      "roles": [
+        "videographer",
+        "editor"
+      ],
+      "sponsors": [],
+      "thumbnail": "/thumbnails/instagram-Db-xo1hxsWa.jpg",
+      "publishDate": "2026-08-13",
+      "shootDate": "2026-05-08",
+      "views": 541,
+      "likes": 26
+    },
+    {
       "videoId": "video-0101",
       "posts": [
         {
@@ -2213,6 +2444,39 @@
       "shootDate": "2026-08-06",
       "views": 375690,
       "likes": 9171
+    },
+    {
+      "videoId": "video-0178",
+      "posts": [
+        {
+          "videoId": "video-0178",
+          "postId": "instagram-DbvqmNyOk3P",
+          "url": "https://www.instagram.com/reel/DbvqmNyOk3P",
+          "platform": "instagram",
+          "creator": "Trace Space",
+          "shootDate": "2026-05-08",
+          "publishDate": "2026-08-07",
+          "roles": [
+            "videographer",
+            "editor"
+          ],
+          "sponsors": [],
+          "thumbnail": "/thumbnails/instagram-DbvqmNyOk3P.jpg",
+          "views": 588,
+          "likes": 17
+        }
+      ],
+      "creator": "Trace Space",
+      "roles": [
+        "videographer",
+        "editor"
+      ],
+      "sponsors": [],
+      "thumbnail": "/thumbnails/instagram-DbvqmNyOk3P.jpg",
+      "publishDate": "2026-08-07",
+      "shootDate": "2026-05-08",
+      "views": 588,
+      "likes": 17
     },
     {
       "videoId": "video-0096",
@@ -3639,270 +3903,6 @@
       "likes": 4076
     },
     {
-      "videoId": "video-0178",
-      "posts": [
-        {
-          "videoId": "video-0178",
-          "postId": "instagram-DbvqmNyOk3P",
-          "url": "https://www.instagram.com/reel/DbvqmNyOk3P",
-          "platform": "instagram",
-          "creator": "Trace Space",
-          "shootDate": "2026-05-08",
-          "publishDate": null,
-          "roles": [
-            "videographer",
-            "editor"
-          ],
-          "sponsors": [],
-          "thumbnail": "/thumbnails/instagram-DbvqmNyOk3P.jpg",
-          "views": null,
-          "likes": null
-        }
-      ],
-      "creator": "Trace Space",
-      "roles": [
-        "videographer",
-        "editor"
-      ],
-      "sponsors": [],
-      "thumbnail": "/thumbnails/instagram-DbvqmNyOk3P.jpg",
-      "publishDate": "2026-05-08",
-      "shootDate": "2026-05-08",
-      "views": null,
-      "likes": null
-    },
-    {
-      "videoId": "video-0179",
-      "posts": [
-        {
-          "videoId": "video-0179",
-          "postId": "instagram-Db-xo1hxsWa",
-          "url": "https://www.instagram.com/reel/Db-xo1hxsWa",
-          "platform": "instagram",
-          "creator": "Trace Space",
-          "shootDate": "2026-05-08",
-          "publishDate": null,
-          "roles": [
-            "videographer",
-            "editor"
-          ],
-          "sponsors": [],
-          "thumbnail": "/thumbnails/instagram-Db-xo1hxsWa.jpg",
-          "views": null,
-          "likes": null
-        }
-      ],
-      "creator": "Trace Space",
-      "roles": [
-        "videographer",
-        "editor"
-      ],
-      "sponsors": [],
-      "thumbnail": "/thumbnails/instagram-Db-xo1hxsWa.jpg",
-      "publishDate": "2026-05-08",
-      "shootDate": "2026-05-08",
-      "views": null,
-      "likes": null
-    },
-    {
-      "videoId": "video-0180",
-      "posts": [
-        {
-          "videoId": "video-0180",
-          "postId": "instagram-DcTIvJQMzn0",
-          "url": "https://www.instagram.com/reel/DcTIvJQMzn0",
-          "platform": "instagram",
-          "creator": "Trace Space",
-          "shootDate": "2026-05-08",
-          "publishDate": null,
-          "roles": [
-            "videographer",
-            "editor"
-          ],
-          "sponsors": [],
-          "thumbnail": "/thumbnails/instagram-DcTIvJQMzn0.jpg",
-          "views": null,
-          "likes": null
-        }
-      ],
-      "creator": "Trace Space",
-      "roles": [
-        "videographer",
-        "editor"
-      ],
-      "sponsors": [],
-      "thumbnail": "/thumbnails/instagram-DcTIvJQMzn0.jpg",
-      "publishDate": "2026-05-08",
-      "shootDate": "2026-05-08",
-      "views": null,
-      "likes": null
-    },
-    {
-      "videoId": "video-0181",
-      "posts": [
-        {
-          "videoId": "video-0181",
-          "postId": "instagram-Dci4zf2MK_k",
-          "url": "https://www.instagram.com/reel/Dci4zf2MK_k",
-          "platform": "instagram",
-          "creator": "Trace Space",
-          "shootDate": "2026-05-08",
-          "publishDate": null,
-          "roles": [
-            "videographer",
-            "editor"
-          ],
-          "sponsors": [],
-          "thumbnail": "/thumbnails/instagram-Dci4zf2MK_k.jpg",
-          "views": null,
-          "likes": null
-        }
-      ],
-      "creator": "Trace Space",
-      "roles": [
-        "videographer",
-        "editor"
-      ],
-      "sponsors": [],
-      "thumbnail": "/thumbnails/instagram-Dci4zf2MK_k.jpg",
-      "publishDate": "2026-05-08",
-      "shootDate": "2026-05-08",
-      "views": null,
-      "likes": null
-    },
-    {
-      "videoId": "video-0182",
-      "posts": [
-        {
-          "videoId": "video-0182",
-          "postId": "instagram-DcvmGDoNQcf",
-          "url": "https://www.instagram.com/reel/DcvmGDoNQcf",
-          "platform": "instagram",
-          "creator": "Trace Space",
-          "shootDate": "2026-05-08",
-          "publishDate": null,
-          "roles": [
-            "videographer",
-            "editor"
-          ],
-          "sponsors": [],
-          "thumbnail": "/thumbnails/instagram-DcvmGDoNQcf.jpg",
-          "views": null,
-          "likes": null
-        }
-      ],
-      "creator": "Trace Space",
-      "roles": [
-        "videographer",
-        "editor"
-      ],
-      "sponsors": [],
-      "thumbnail": "/thumbnails/instagram-DcvmGDoNQcf.jpg",
-      "publishDate": "2026-05-08",
-      "shootDate": "2026-05-08",
-      "views": null,
-      "likes": null
-    },
-    {
-      "videoId": "video-0183",
-      "posts": [
-        {
-          "videoId": "video-0183",
-          "postId": "instagram-DdJg-8ntQQk",
-          "url": "https://www.instagram.com/reel/DdJg-8ntQQk",
-          "platform": "instagram",
-          "creator": "Trace Space",
-          "shootDate": "2026-05-08",
-          "publishDate": null,
-          "roles": [
-            "videographer",
-            "editor"
-          ],
-          "sponsors": [],
-          "thumbnail": "/thumbnails/instagram-DdJg-8ntQQk.jpg",
-          "views": null,
-          "likes": null
-        }
-      ],
-      "creator": "Trace Space",
-      "roles": [
-        "videographer",
-        "editor"
-      ],
-      "sponsors": [],
-      "thumbnail": "/thumbnails/instagram-DdJg-8ntQQk.jpg",
-      "publishDate": "2026-05-08",
-      "shootDate": "2026-05-08",
-      "views": null,
-      "likes": null
-    },
-    {
-      "videoId": "video-0184",
-      "posts": [
-        {
-          "videoId": "video-0184",
-          "postId": "instagram-DdUFUwQN-2Y",
-          "url": "https://www.instagram.com/reel/DdUFUwQN-2Y",
-          "platform": "instagram",
-          "creator": "Trace Space",
-          "shootDate": "2026-05-08",
-          "publishDate": null,
-          "roles": [
-            "videographer",
-            "editor"
-          ],
-          "sponsors": [],
-          "thumbnail": "/thumbnails/instagram-DdUFUwQN-2Y.jpg",
-          "views": null,
-          "likes": null
-        }
-      ],
-      "creator": "Trace Space",
-      "roles": [
-        "videographer",
-        "editor"
-      ],
-      "sponsors": [],
-      "thumbnail": "/thumbnails/instagram-DdUFUwQN-2Y.jpg",
-      "publishDate": "2026-05-08",
-      "shootDate": "2026-05-08",
-      "views": null,
-      "likes": null
-    },
-    {
-      "videoId": "video-0185",
-      "posts": [
-        {
-          "videoId": "video-0185",
-          "postId": "instagram-DeJ0XTwsuc9",
-          "url": "https://www.instagram.com/reel/DeJ0XTwsuc9",
-          "platform": "instagram",
-          "creator": "Trace Space",
-          "shootDate": "2026-05-08",
-          "publishDate": null,
-          "roles": [
-            "videographer",
-            "editor"
-          ],
-          "sponsors": [],
-          "thumbnail": "/thumbnails/instagram-DeJ0XTwsuc9.jpg",
-          "views": null,
-          "likes": null
-        }
-      ],
-      "creator": "Trace Space",
-      "roles": [
-        "videographer",
-        "editor"
-      ],
-      "sponsors": [],
-      "thumbnail": "/thumbnails/instagram-DeJ0XTwsuc9.jpg",
-      "publishDate": "2026-05-08",
-      "shootDate": "2026-05-08",
-      "views": null,
-      "likes": null
-    },
-    {
       "videoId": "video-0062",
       "posts": [
         {
@@ -5226,8 +5226,8 @@
           ],
           "sponsors": [],
           "thumbnail": "/thumbnails/instagram-DR2WbE4jalZ.jpg",
-          "views": null,
-          "likes": null
+          "views": 377468,
+          "likes": 9273
         }
       ],
       "creator": "Austin Nasso",
@@ -5238,8 +5238,8 @@
       "thumbnail": "/thumbnails/instagram-DR2WbE4jalZ.jpg",
       "publishDate": "2025-12-04",
       "shootDate": null,
-      "views": null,
-      "likes": null
+      "views": 377468,
+      "likes": 9273
     },
     {
       "videoId": "video-0014",

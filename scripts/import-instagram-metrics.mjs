@@ -32,17 +32,11 @@ if (!Array.isArray(records)) throw new Error('Expected the API file to contain a
 
 const apiByCode = new Map();
 for (const record of records) {
-  if (
-    !record.shortCode || !record.timestamp || !Number.isFinite(record.likesCount)
-    || !Number.isFinite(record.videoPlayCount)
-  ) {
-    throw new Error(`Incomplete metric record: ${record.inputUrl || record.shortCode || 'unknown'}.`);
-  }
+  if (!record.shortCode) throw new Error(`Metric record is missing a shortcode: ${record.inputUrl || 'unknown'}.`);
   if (apiByCode.has(record.shortCode)) throw new Error(`Duplicate API record: ${record.shortCode}.`);
   apiByCode.set(record.shortCode, record);
 }
 
-const missingMetrics = [];
 const matchedCodes = new Set();
 let updated = 0;
 for (const post of posts) {
@@ -50,18 +44,18 @@ for (const post of posts) {
   const code = shortcode(post[columns.get('url')]);
   if (!code) continue;
   const record = apiByCode.get(code);
-  if (!record) { missingMetrics.push(code); continue; }
-  post[columns.get('publish_date')] = record.timestamp;
-  post[columns.get('views')] = metric(record.videoPlayCount);
-  post[columns.get('likes')] = metric(record.likesCount);
+  if (!record) continue;
+  if (record.timestamp) post[columns.get('publish_date')] = record.timestamp;
+  const views = metric(record.videoPlayCount);
+  const likes = metric(record.likesCount);
+  if (views) post[columns.get('views')] = views;
+  if (likes) post[columns.get('likes')] = likes;
   matchedCodes.add(code);
   updated += 1;
 }
 
 const unmatchedApiCodes = [...apiByCode.keys()].filter((code) => !matchedCodes.has(code));
-if (missingMetrics.length || unmatchedApiCodes.length) {
-  throw new Error(`No changes written. Missing API metrics for: ${missingMetrics.join(', ') || 'none'}. Unmatched API records: ${unmatchedApiCodes.join(', ') || 'none'}.`);
-}
+if (!updated) throw new Error('No included Instagram posts matched this API export.');
 
 await fs.writeFile(sourcePath, `${[headers, ...posts].map(csvLine).join('\n')}\n`);
-console.log(`Updated publish date, views, and likes for ${updated} Instagram posts.`);
+console.log(`Updated publish date, views, and likes for ${updated} Instagram posts. Ignored ${unmatchedApiCodes.length} unmatched API records.`);

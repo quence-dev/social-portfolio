@@ -63,7 +63,7 @@ npm run metrics:instagram -- --input /absolute/path/to/reel-scraper.json
 npm run build
 ```
 
-The import requires a complete one-to-one match with included Instagram posts and writes nothing if any API record cannot be matched.
+The import merges matching included Instagram posts and leaves all other catalog metrics untouched. It does not overwrite an existing metric with an unavailable API value.
 
 ## Downloading thumbnails with Trendsee
 
