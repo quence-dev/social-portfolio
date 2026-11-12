@@ -293,6 +293,7 @@ export default function App() {
   const [creator, setCreator] = useState('all');
   const [role, setRole] = useState('all');
   const [sort, setSort] = useState('newest');
+  const [selectedTopic, setSelectedTopic] = useState<string | null>(null);
   const [selected, setSelected] = useState<Video | null>(null);
   const triggerRef = useRef<HTMLButtonElement>(null);
   const closeModal = useCallback(() => {
@@ -466,8 +467,15 @@ export default function App() {
               ['work', 'medium'], ['product', 'small'], ['engineers', 'large'],
               ['burnout', 'medium'], ['venture capital', 'small'], ['tech', 'largest'],
               ['the office', 'medium'], ['launch', 'small'], ['Silicon Valley', 'large'],
-            ].map(([word, size]) => <span className={`topic-${size}`} key={word}>{word}</span>)}
+            ].map(([word, size]) => (
+              <button type="button" className={`topic-${size}`} key={word} aria-pressed={selectedTopic === word} onClick={() => {
+                setSelectedTopic(selectedTopic === word ? null : word);
+              }}>{word}</button>
+            ))}
           </div>
+          <p className="topic-selection" aria-live="polite">
+            {selectedTopic ? `“${selectedTopic}” selected · Example topic, not transcript data` : 'Select a topic to explore it'}
+          </p>
         </section>
         </>
       ) : (

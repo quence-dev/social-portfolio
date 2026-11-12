@@ -442,6 +442,33 @@ select:focus-visible {
   line-height: 1.1;
 }
 
+.topic-cloud button {
+  padding: 0;
+  border: 0;
+  background: none;
+  font-weight: inherit;
+  cursor: pointer;
+  transition: color .2s ease;
+}
+
+.topic-cloud button:hover,
+.topic-cloud button[aria-pressed="true"] {
+  color: #fff;
+  text-decoration: underline;
+  text-underline-offset: .12em;
+}
+
+.topic-cloud button:focus-visible {
+  outline: 2px solid #f3eee5;
+  outline-offset: 4px;
+}
+
+.topic-demo .topic-selection {
+  min-height: 2em;
+  margin-top: 32px;
+  text-align: center;
+}
+
 .topic-small { color: #a6a096; font-size: clamp(18px, 2vw, 26px); }
 .topic-medium { color: #c3bcb0; font-size: clamp(24px, 3vw, 40px); }
 .topic-large { font-size: clamp(32px, 4.5vw, 60px); }
