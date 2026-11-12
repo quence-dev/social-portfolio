@@ -1,5 +1,5 @@
 export default {
   title: 'Social Video Work',
   portfolioUrl: '',
-  metricsUpdatedLabel: 'Nov 10, 2026',
+  metricsUpdatedLabel: 'Nov 11, 2026',
 };
