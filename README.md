@@ -109,9 +109,10 @@ It accepts the same `-- --headless`, `-- --limit 1`, and `-- --overwrite` option
 
 ## Roadmap
 
-- Visualize creator collaborations based on creators appearing in one another's videos.
-- Improve cross-post handling with modal tabs or a carousel, including clear aggregated versus per-upload statistics.
-- Add a creator-focused gallery view alongside the current chronological video grid.
+- Continue identifying cross-posts and re-uploads, linking each upload with the same `video_id`. Improve the modal presentation and clarify aggregated versus per-upload statistics.
+- Visualize creator collaborations. Distinguish posting accounts, coauthors, tags, and confirmed appearances; allow one video to appear on multiple creator pages without duplicating gallery cards or site-wide totals.
+- Continue simplifying the import workflow for Sheets exports, thumbnails, and metrics.
+- Explore a transcript-based topic or word-frequency visualization, possibly weighting terms by how many videos mention them. A fake-data prototype lives on the `experiment/creator-word-cloud` branch.
 
 ## Deploying
 
