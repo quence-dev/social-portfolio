@@ -284,6 +284,7 @@ function Modal({ video, close }: { video: Video; close: () => void }) {
 
 export default function App() {
   const [route, setRoute] = useState<Route>(currentRoute);
+  const routeCreator = route.page === 'creator' ? route.creator : null;
   const [creator, setCreator] = useState('all');
   const [role, setRole] = useState('all');
   const [sort, setSort] = useState('newest');
@@ -291,7 +292,7 @@ export default function App() {
   const triggerRef = useRef<HTMLButtonElement>(null);
   const closeModal = useCallback(() => {
     setSelected(null);
-    requestAnimationFrame(() => triggerRef.current?.focus());
+    requestAnimationFrame(() => triggerRef.current?.focus({ preventScroll: true }));
   }, []);
   const creators = useMemo(
     () => [...new Set(data.videos.map((video) => video.creator))].sort(),
@@ -318,6 +319,9 @@ export default function App() {
       window.removeEventListener('hashchange', updateRoute);
     };
   }, []);
+  useLayoutEffect(() => {
+    window.scrollTo(0, 0);
+  }, [route.page, routeCreator]);
   const videos = useMemo(
     () => data.videos
       .filter((video) => (
