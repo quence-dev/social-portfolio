@@ -3,7 +3,7 @@
   "postCount": 176,
   "metricCoverage": {
     "views": 173,
-    "likes": 168
+    "likes": 169
   },
   "videos": [
     {
@@ -22,7 +22,7 @@
           ],
           "sponsors": [],
           "thumbnail": "/thumbnails/instagram-DflhV5WRyr9.jpg",
-          "views": 961979,
+          "views": 1100000,
           "likes": 22338
         }
       ],
@@ -34,7 +34,7 @@
       "thumbnail": "/thumbnails/instagram-DflhV5WRyr9.jpg",
       "publishDate": "2026-11-11",
       "shootDate": "2026-11-10",
-      "views": 961979,
+      "views": 1100000,
       "likes": 22338
     },
     {
@@ -3639,7 +3639,7 @@
           "sponsors": [],
           "thumbnail": null,
           "views": null,
-          "likes": null
+          "likes": 76
         }
       ],
       "creator": "Supermomos",
@@ -3652,7 +3652,7 @@
       "publishDate": "2026-06-03",
       "shootDate": "2026-06-03",
       "views": null,
-      "likes": null
+      "likes": 76
     },
     {
       "videoId": "video-0071",
