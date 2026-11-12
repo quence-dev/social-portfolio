@@ -412,6 +412,41 @@ select:focus-visible {
   gap: 12px;
 }
 
+.topic-demo {
+  margin-top: clamp(72px, 10vw, 140px);
+  padding: 32px 0 56px;
+  border-top: 1px solid #3d3a34;
+}
+
+.topic-demo h2 {
+  margin: 0;
+  font-size: clamp(20px, 2.5vw, 28px);
+}
+
+.topic-demo p {
+  margin: 12px 0 0;
+  color: #a6a096;
+  font: 400 12px/1.5 "DM Mono", monospace;
+}
+
+.topic-cloud {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: center;
+  gap: .15em .4em;
+  max-width: 950px;
+  margin: 56px auto 0;
+  color: #f3eee5;
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+.topic-small { color: #a6a096; font-size: clamp(18px, 2vw, 26px); }
+.topic-medium { color: #c3bcb0; font-size: clamp(24px, 3vw, 40px); }
+.topic-large { font-size: clamp(32px, 4.5vw, 60px); }
+.topic-largest { font-size: clamp(42px, 6vw, 82px); }
+
 .creator-card {
   color: #f3eee5;
   background: #000;

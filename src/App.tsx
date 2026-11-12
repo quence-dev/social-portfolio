@@ -441,6 +441,7 @@ export default function App() {
           </section>
         </section>
       ) : route.page === 'creators' ? (
+        <>
         <section className="creator-grid" aria-label="Creator directory">
           {creatorSummaries.map((item) => (
             <a className="creator-card" href={creatorPath(item.creator)} key={item.creator}>
@@ -455,6 +456,20 @@ export default function App() {
             </a>
           ))}
         </section>
+        <section className="topic-demo" aria-labelledby="topic-demo-title">
+          <h2 id="topic-demo-title">What are these creators talking about?</h2>
+          <p>Example only · Words and sizes are made up</p>
+          <div className="topic-cloud" aria-label="Example topics">
+            {[
+              ['startups', 'large'], ['meetings', 'small'], ['AI', 'largest'],
+              ['founders', 'medium'], ['hiring', 'small'], ['code', 'large'],
+              ['work', 'medium'], ['product', 'small'], ['engineers', 'large'],
+              ['burnout', 'medium'], ['venture capital', 'small'], ['tech', 'largest'],
+              ['the office', 'medium'], ['launch', 'small'], ['Silicon Valley', 'large'],
+            ].map(([word, size]) => <span className={`topic-${size}`} key={word}>{word}</span>)}
+          </div>
+        </section>
+        </>
       ) : (
       <>
       <section className="toolbar" aria-label="Gallery filters">
