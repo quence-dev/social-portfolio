@@ -2,8 +2,8 @@
   "refreshedAt": null,
   "postCount": 331,
   "metricCoverage": {
-    "views": 257,
-    "likes": 253
+    "views": 294,
+    "likes": 290
   },
   "videos": [
     {
@@ -58,6 +58,22 @@
         },
         {
           "videoId": "video-0186",
+          "postId": "tiktok-7707083398279351566",
+          "url": "https://www.tiktok.com/@alberta.nyc/video/7707083398279351566",
+          "platform": "tiktok",
+          "creator": "Alberta.Tech",
+          "shootDate": "2026-11-10",
+          "publishDate": "2026-11-12",
+          "roles": [
+            "videographer"
+          ],
+          "sponsors": [],
+          "thumbnail": "/thumbnails/tiktok-7707083398279351566.jpg",
+          "views": 18300,
+          "likes": 1537
+        },
+        {
+          "videoId": "video-0186",
           "postId": "instagram-Dfnzt4aRE9a",
           "url": "https://www.instagram.com/p/Dfnzt4aRE9a",
           "platform": "instagram",
@@ -77,22 +93,6 @@
           "postId": "twitter-2120682357673861573",
           "url": "https://x.com/albertadevs/status/2120682357673861573",
           "platform": "twitter",
-          "creator": "Alberta.Tech",
-          "shootDate": "2026-11-10",
-          "publishDate": null,
-          "roles": [
-            "videographer"
-          ],
-          "sponsors": [],
-          "thumbnail": null,
-          "views": null,
-          "likes": null
-        },
-        {
-          "videoId": "video-0186",
-          "postId": "tiktok-7707083398279351566",
-          "url": "https://www.tiktok.com/@alberta.nyc/video/7707083398279351566",
-          "platform": "tiktok",
           "creator": "Alberta.Tech",
           "shootDate": "2026-11-10",
           "publishDate": null,
@@ -129,8 +129,8 @@
       "thumbnail": "/thumbnails/instagram-Dfnzt4aRE9a.jpg",
       "publishDate": "2026-11-12",
       "shootDate": "2026-11-10",
-      "views": 530744,
-      "likes": 15701
+      "views": 549044,
+      "likes": 17238
     },
     {
       "videoId": "video-0188",
@@ -222,25 +222,25 @@
         },
         {
           "videoId": "video-0176",
-          "postId": "twitter-2120360149353402738",
-          "url": "https://x.com/albertadevs/status/2120360149353402738",
-          "platform": "twitter",
+          "postId": "tiktok-7706752295756729614",
+          "url": "https://www.tiktok.com/@alberta.nyc/video/7706752295756729614",
+          "platform": "tiktok",
           "creator": "Alberta.Tech",
           "shootDate": "2026-11-10",
-          "publishDate": null,
+          "publishDate": "2026-11-11",
           "roles": [
             "videographer"
           ],
           "sponsors": [],
-          "thumbnail": null,
-          "views": null,
-          "likes": null
+          "thumbnail": "/thumbnails/tiktok-7706752295756729614.jpg",
+          "views": 31600,
+          "likes": 2788
         },
         {
           "videoId": "video-0176",
-          "postId": "tiktok-7706752295756729614",
-          "url": "https://www.tiktok.com/@alberta.nyc/video/7706752295756729614",
-          "platform": "tiktok",
+          "postId": "twitter-2120360149353402738",
+          "url": "https://x.com/albertadevs/status/2120360149353402738",
+          "platform": "twitter",
           "creator": "Alberta.Tech",
           "shootDate": "2026-11-10",
           "publishDate": null,
@@ -277,8 +277,8 @@
       "thumbnail": "/thumbnails/instagram-DflhV5WRyr9.jpg",
       "publishDate": "2026-11-11",
       "shootDate": "2026-11-10",
-      "views": 2257119,
-      "likes": 58045
+      "views": 2288719,
+      "likes": 60833
     },
     {
       "videoId": "video-0171",
@@ -1033,25 +1033,25 @@
         },
         {
           "videoId": "video-0123",
-          "postId": "twitter-2113334803990790504",
-          "url": "https://x.com/albertadevs/status/2113334803990790504",
-          "platform": "twitter",
+          "postId": "tiktok-7699559536578907405",
+          "url": "https://www.tiktok.com/@alberta.nyc/video/7699559536578907405",
+          "platform": "tiktok",
           "creator": "Alberta.Tech",
           "shootDate": "2026-08-10",
-          "publishDate": null,
+          "publishDate": "2026-10-22",
           "roles": [
             "videographer"
           ],
           "sponsors": [],
-          "thumbnail": null,
-          "views": null,
-          "likes": null
+          "thumbnail": "/thumbnails/tiktok-7699559536578907405.jpg",
+          "views": 49700,
+          "likes": 3838
         },
         {
           "videoId": "video-0123",
-          "postId": "tiktok-7699559536578907405",
-          "url": "https://www.tiktok.com/@alberta.nyc/video/7699559536578907405",
-          "platform": "tiktok",
+          "postId": "twitter-2113334803990790504",
+          "url": "https://x.com/albertadevs/status/2113334803990790504",
+          "platform": "twitter",
           "creator": "Alberta.Tech",
           "shootDate": "2026-08-10",
           "publishDate": null,
@@ -1072,8 +1072,8 @@
       "thumbnail": "/thumbnails/instagram-DcTnCKVRzSU.jpg",
       "publishDate": "2026-10-22",
       "shootDate": "2026-08-10",
-      "views": 567687,
-      "likes": 16695
+      "views": 617387,
+      "likes": 20533
     },
     {
       "videoId": "video-0160",
@@ -1537,16 +1537,16 @@
           "platform": "tiktok",
           "creator": "Alberta.Tech",
           "shootDate": "2026-10-01",
-          "publishDate": null,
+          "publishDate": "2026-10-08",
           "roles": [
             "videographer"
           ],
           "sponsors": [
             "ChatGPT"
           ],
-          "thumbnail": null,
-          "views": null,
-          "likes": null
+          "thumbnail": "/thumbnails/tiktok-7694309026661715213.jpg",
+          "views": 92200,
+          "likes": 4587
         }
       ],
       "creator": "Alberta.Tech",
@@ -1559,8 +1559,8 @@
       "thumbnail": "/thumbnails/instagram-DePLL6ERpla.jpg",
       "publishDate": "2026-10-08",
       "shootDate": "2026-10-01",
-      "views": 1486798,
-      "likes": 30635
+      "views": 1578998,
+      "likes": 35222
     },
     {
       "videoId": "video-0137",
@@ -2510,16 +2510,16 @@
           "platform": "tiktok",
           "creator": "Alberta.Tech",
           "shootDate": "2026-08-24",
-          "publishDate": null,
+          "publishDate": "2026-08-27",
           "roles": [
             "videographer"
           ],
           "sponsors": [
             "ChatGPT"
           ],
-          "thumbnail": null,
-          "views": null,
-          "likes": null
+          "thumbnail": "/thumbnails/tiktok-7678723522914503950.jpg",
+          "views": 31100,
+          "likes": 1952
         }
       ],
       "creator": "Alberta.Tech",
@@ -2532,8 +2532,8 @@
       "thumbnail": "/thumbnails/instagram-DcjBy0UxzPI.jpg",
       "publishDate": "2026-08-27",
       "shootDate": "2026-08-24",
-      "views": 1313317,
-      "likes": 26508
+      "views": 1344417,
+      "likes": 28460
     },
     {
       "videoId": "video-0181",
@@ -2636,25 +2636,25 @@
         },
         {
           "videoId": "video-0114",
-          "postId": "twitter-2092365758344937553",
-          "url": "https://x.com/albertadevs/status/2092365758344937553",
-          "platform": "twitter",
+          "postId": "tiktok-7678086975319985422",
+          "url": "https://www.tiktok.com/@alberta.nyc/video/7678086975319985422",
+          "platform": "tiktok",
           "creator": "Alberta.Tech",
           "shootDate": "2026-08-05",
-          "publishDate": null,
+          "publishDate": "2026-08-25",
           "roles": [
             "videographer"
           ],
           "sponsors": [],
-          "thumbnail": null,
-          "views": null,
-          "likes": null
+          "thumbnail": "/thumbnails/tiktok-7678086975319985422.jpg",
+          "views": 63500,
+          "likes": 3258
         },
         {
           "videoId": "video-0114",
-          "postId": "tiktok-7678086975319985422",
-          "url": "https://www.tiktok.com/@alberta.nyc/video/7678086975319985422",
-          "platform": "tiktok",
+          "postId": "twitter-2092365758344937553",
+          "url": "https://x.com/albertadevs/status/2092365758344937553",
+          "platform": "twitter",
           "creator": "Alberta.Tech",
           "shootDate": "2026-08-05",
           "publishDate": null,
@@ -2691,8 +2691,8 @@
       "thumbnail": "/thumbnails/instagram-DcenPurPOip.jpg",
       "publishDate": "2026-08-25",
       "shootDate": "2026-08-05",
-      "views": 2769149,
-      "likes": 41172
+      "views": 2832649,
+      "likes": 44430
     },
     {
       "videoId": "video-0180",
@@ -2888,25 +2888,25 @@
         },
         {
           "videoId": "video-0121",
-          "postId": "twitter-2090125582163980709",
-          "url": "https://x.com/albertadevs/status/2090125582163980709",
-          "platform": "twitter",
+          "postId": "tiktok-7675792616696368398",
+          "url": "https://www.tiktok.com/@alberta.nyc/video/7675792616696368398",
+          "platform": "tiktok",
           "creator": "Alberta.Tech",
           "shootDate": "2026-08-10",
-          "publishDate": null,
+          "publishDate": "2026-08-19",
           "roles": [
             "videographer"
           ],
           "sponsors": [],
-          "thumbnail": null,
-          "views": null,
-          "likes": null
+          "thumbnail": "/thumbnails/tiktok-7675792616696368398.jpg",
+          "views": 61600,
+          "likes": 5472
         },
         {
           "videoId": "video-0121",
-          "postId": "tiktok-7675792616696368398",
-          "url": "https://www.tiktok.com/@alberta.nyc/video/7675792616696368398",
-          "platform": "tiktok",
+          "postId": "twitter-2090125582163980709",
+          "url": "https://x.com/albertadevs/status/2090125582163980709",
+          "platform": "twitter",
           "creator": "Alberta.Tech",
           "shootDate": "2026-08-10",
           "publishDate": null,
@@ -2927,8 +2927,8 @@
       "thumbnail": "/thumbnails/instagram-DcMBEKBOJd-.jpg",
       "publishDate": "2026-08-19",
       "shootDate": "2026-08-10",
-      "views": 1069481,
-      "likes": 30986
+      "views": 1131081,
+      "likes": 36458
     },
     {
       "videoId": "video-0107",
@@ -3098,25 +3098,25 @@
         },
         {
           "videoId": "video-0113",
-          "postId": "twitter-2089009830946066539",
-          "url": "https://x.com/albertadevs/status/2089009830946066539",
-          "platform": "twitter",
+          "postId": "tiktok-7674649320892763406",
+          "url": "https://www.tiktok.com/@alberta.nyc/video/7674649320892763406",
+          "platform": "tiktok",
           "creator": "Alberta.Tech",
           "shootDate": "2026-08-05",
-          "publishDate": null,
+          "publishDate": "2026-08-16",
           "roles": [
             "videographer"
           ],
           "sponsors": [],
-          "thumbnail": null,
-          "views": null,
-          "likes": null
+          "thumbnail": "/thumbnails/tiktok-7674649320892763406.jpg",
+          "views": 65900,
+          "likes": 3955
         },
         {
           "videoId": "video-0113",
-          "postId": "tiktok-7674649320892763406",
-          "url": "https://www.tiktok.com/@alberta.nyc/video/7674649320892763406",
-          "platform": "tiktok",
+          "postId": "twitter-2089009830946066539",
+          "url": "https://x.com/albertadevs/status/2089009830946066539",
+          "platform": "twitter",
           "creator": "Alberta.Tech",
           "shootDate": "2026-08-05",
           "publishDate": null,
@@ -3137,8 +3137,8 @@
       "thumbnail": "/thumbnails/instagram-DcGxtdQxyS9.jpg",
       "publishDate": "2026-08-16",
       "shootDate": "2026-08-05",
-      "views": 1799321,
-      "likes": 41217
+      "views": 1865221,
+      "likes": 45172
     },
     {
       "videoId": "video-0105",
@@ -3386,25 +3386,25 @@
         },
         {
           "videoId": "video-0120",
-          "postId": "twitter-2087209354759946570",
-          "url": "https://x.com/albertadevs/status/2087209354759946570",
-          "platform": "twitter",
+          "postId": "tiktok-7672805777073032462",
+          "url": "https://www.tiktok.com/@alberta.nyc/video/7672805777073032462",
+          "platform": "tiktok",
           "creator": "Alberta.Tech",
           "shootDate": "2026-08-10",
-          "publishDate": null,
+          "publishDate": "2026-08-11",
           "roles": [
             "videographer"
           ],
           "sponsors": [],
-          "thumbnail": null,
-          "views": null,
-          "likes": null
+          "thumbnail": "/thumbnails/tiktok-7672805777073032462.jpg",
+          "views": 71100,
+          "likes": 6804
         },
         {
           "videoId": "video-0120",
-          "postId": "tiktok-7672805777073032462",
-          "url": "https://www.tiktok.com/@alberta.nyc/video/7672805777073032462",
-          "platform": "tiktok",
+          "postId": "twitter-2087209354759946570",
+          "url": "https://x.com/albertadevs/status/2087209354759946570",
+          "platform": "twitter",
           "creator": "Alberta.Tech",
           "shootDate": "2026-08-10",
           "publishDate": null,
@@ -3441,8 +3441,8 @@
       "thumbnail": "/thumbnails/instagram-Db5-HBlxJ-c.jpg",
       "publishDate": "2026-08-11",
       "shootDate": "2026-08-10",
-      "views": 1174921,
-      "likes": 37609
+      "views": 1246021,
+      "likes": 44413
     },
     {
       "videoId": "video-0112",
@@ -3715,25 +3715,25 @@
         },
         {
           "videoId": "video-0110",
-          "postId": "twitter-2084704076487331872",
-          "url": "https://x.com/albertadevs/status/2084704076487331872",
-          "platform": "twitter",
+          "postId": "tiktok-7670240006182685965",
+          "url": "https://www.tiktok.com/@alberta.nyc/video/7670240006182685965",
+          "platform": "tiktok",
           "creator": "Alberta.Tech",
           "shootDate": "2026-07-24",
-          "publishDate": null,
+          "publishDate": "2026-08-04",
           "roles": [
             "videographer"
           ],
           "sponsors": [],
-          "thumbnail": null,
-          "views": null,
-          "likes": null
+          "thumbnail": "/thumbnails/tiktok-7670240006182685965.jpg",
+          "views": 1500000,
+          "likes": 169400
         },
         {
           "videoId": "video-0110",
-          "postId": "tiktok-7670240006182685965",
-          "url": "https://www.tiktok.com/@alberta.nyc/video/7670240006182685965",
-          "platform": "tiktok",
+          "postId": "twitter-2084704076487331872",
+          "url": "https://x.com/albertadevs/status/2084704076487331872",
+          "platform": "twitter",
           "creator": "Alberta.Tech",
           "shootDate": "2026-07-24",
           "publishDate": null,
@@ -3770,8 +3770,8 @@
       "thumbnail": "/thumbnails/instagram-DboKoH2x1Kv.jpg",
       "publishDate": "2026-08-04",
       "shootDate": "2026-07-24",
-      "views": 12425537,
-      "likes": 724100
+      "views": 13925537,
+      "likes": 893500
     },
     {
       "videoId": "video-0100",
@@ -3893,6 +3893,22 @@
       "posts": [
         {
           "videoId": "video-0109",
+          "postId": "tiktok-7668383333537041677",
+          "url": "https://www.tiktok.com/@alberta.nyc/video/7668383333537041677",
+          "platform": "tiktok",
+          "creator": "Alberta.Tech",
+          "shootDate": "2026-07-24",
+          "publishDate": "2026-07-30",
+          "roles": [
+            "videographer"
+          ],
+          "sponsors": [],
+          "thumbnail": "/thumbnails/tiktok-7668383333537041677.jpg",
+          "views": 8800000,
+          "likes": 16600
+        },
+        {
+          "videoId": "video-0109",
           "postId": "instagram-DbbSIW3RoiN",
           "url": "https://www.instagram.com/reel/DbbSIW3RoiN",
           "platform": "instagram",
@@ -3922,22 +3938,6 @@
           "thumbnail": "/thumbnails/youtube-G_n2EKqYx7M.jpg",
           "views": 408839,
           "likes": 14028
-        },
-        {
-          "videoId": "video-0109",
-          "postId": "tiktok-7668383333537041677",
-          "url": "https://www.tiktok.com/@alberta.nyc/video/7668383333537041677",
-          "platform": "tiktok",
-          "creator": "Alberta.Tech",
-          "shootDate": "2026-07-24",
-          "publishDate": null,
-          "roles": [
-            "videographer"
-          ],
-          "sponsors": [],
-          "thumbnail": null,
-          "views": null,
-          "likes": null
         }
       ],
       "creator": "Alberta.Tech",
@@ -3948,8 +3948,8 @@
       "thumbnail": "/thumbnails/instagram-DbbSIW3RoiN.jpg",
       "publishDate": "2026-07-30",
       "shootDate": "2026-07-24",
-      "views": 1689876,
-      "likes": 27352
+      "views": 10489876,
+      "likes": 43952
     },
     {
       "videoId": "video-0094",
@@ -3988,25 +3988,25 @@
         },
         {
           "videoId": "video-0094",
-          "postId": "twitter-2104275877236203985",
-          "url": "https://x.com/albertadevs/status/2104275877236203985",
-          "platform": "twitter",
+          "postId": "tiktok-7690282299962805518",
+          "url": "https://www.tiktok.com/@alberta.nyc/video/7690282299962805518",
+          "platform": "tiktok",
           "creator": "Alberta.Tech",
           "shootDate": "2026-07-10",
-          "publishDate": null,
+          "publishDate": "2026-09-27",
           "roles": [
             "videographer"
           ],
           "sponsors": [],
-          "thumbnail": null,
-          "views": null,
-          "likes": null
+          "thumbnail": "/thumbnails/tiktok-7690282299962805518.jpg",
+          "views": 161400,
+          "likes": 14800
         },
         {
           "videoId": "video-0094",
-          "postId": "tiktok-7690282299962805518",
-          "url": "https://www.tiktok.com/@alberta.nyc/video/7690282299962805518",
-          "platform": "tiktok",
+          "postId": "twitter-2104275877236203985",
+          "url": "https://x.com/albertadevs/status/2104275877236203985",
+          "platform": "twitter",
           "creator": "Alberta.Tech",
           "shootDate": "2026-07-10",
           "publishDate": null,
@@ -4027,8 +4027,8 @@
       "thumbnail": "/thumbnails/instagram-DbPS9Mqxo_I.jpg",
       "publishDate": "2026-07-29",
       "shootDate": "2026-07-10",
-      "views": 1507280,
-      "likes": 42078
+      "views": 1668680,
+      "likes": 56878
     },
     {
       "videoId": "video-0103",
@@ -4207,25 +4207,25 @@
         },
         {
           "videoId": "video-0093",
-          "postId": "twitter-2078119837910319553",
-          "url": "https://x.com/albertadevs/status/2078119837910319553",
-          "platform": "twitter",
+          "postId": "tiktok-7663498379980213518",
+          "url": "https://www.tiktok.com/@alberta.nyc/video/7663498379980213518",
+          "platform": "tiktok",
           "creator": "Alberta.Tech",
           "shootDate": "2026-07-10",
-          "publishDate": null,
+          "publishDate": "2026-07-17",
           "roles": [
             "videographer"
           ],
           "sponsors": [],
-          "thumbnail": null,
-          "views": null,
-          "likes": null
+          "thumbnail": "/thumbnails/tiktok-7663498379980213518.jpg",
+          "views": 134300,
+          "likes": 9146
         },
         {
           "videoId": "video-0093",
-          "postId": "tiktok-7663498379980213518",
-          "url": "https://www.tiktok.com/@alberta.nyc/video/7663498379980213518",
-          "platform": "tiktok",
+          "postId": "twitter-2078119837910319553",
+          "url": "https://x.com/albertadevs/status/2078119837910319553",
+          "platform": "twitter",
           "creator": "Alberta.Tech",
           "shootDate": "2026-07-10",
           "publishDate": null,
@@ -4246,8 +4246,8 @@
       "thumbnail": "/thumbnails/instagram-Da0hecNRs1i.jpg",
       "publishDate": "2026-07-17",
       "shootDate": "2026-07-10",
-      "views": 1429774,
-      "likes": 36675
+      "views": 1564074,
+      "likes": 45821
     },
     {
       "videoId": "video-0067",
@@ -4732,25 +4732,25 @@
         },
         {
           "videoId": "video-0074",
-          "postId": "twitter-2072486535027454391",
-          "url": "https://x.com/albertadevs/status/2072486535027454391",
-          "platform": "twitter",
+          "postId": "tiktok-7657729837301304590",
+          "url": "https://www.tiktok.com/@alberta.nyc/video/7657729837301304590",
+          "platform": "tiktok",
           "creator": "Alberta.Tech",
           "shootDate": "2026-05-26",
-          "publishDate": null,
+          "publishDate": "2026-07-02",
           "roles": [
             "videographer"
           ],
           "sponsors": [],
-          "thumbnail": null,
-          "views": null,
-          "likes": null
+          "thumbnail": "/thumbnails/tiktok-7657729837301304590.jpg",
+          "views": 260900,
+          "likes": 19300
         },
         {
           "videoId": "video-0074",
-          "postId": "tiktok-7657729837301304590",
-          "url": "https://www.tiktok.com/@alberta.nyc/video/7657729837301304590",
-          "platform": "tiktok",
+          "postId": "twitter-2072486535027454391",
+          "url": "https://x.com/albertadevs/status/2072486535027454391",
+          "platform": "twitter",
           "creator": "Alberta.Tech",
           "shootDate": "2026-05-26",
           "publishDate": null,
@@ -4771,8 +4771,8 @@
       "thumbnail": "/thumbnails/instagram-DaRMEoGRuAO.jpg",
       "publishDate": "2026-07-01",
       "shootDate": "2026-05-26",
-      "views": 5039962,
-      "likes": 115435
+      "views": 5300862,
+      "likes": 134735
     },
     {
       "videoId": "video-0085",
@@ -5134,25 +5134,25 @@
         },
         {
           "videoId": "video-0082",
-          "postId": "twitter-2065602244850876773",
-          "url": "https://x.com/albertadevs/status/2065602244850876773",
-          "platform": "twitter",
+          "postId": "tiktok-7650680365341822222",
+          "url": "https://www.tiktok.com/@alberta.nyc/video/7650680365341822222",
+          "platform": "tiktok",
           "creator": "Alberta.Tech",
           "shootDate": "2026-06-08",
-          "publishDate": null,
+          "publishDate": "2026-06-13",
           "roles": [
             "videographer"
           ],
           "sponsors": [],
-          "thumbnail": null,
-          "views": null,
-          "likes": null
+          "thumbnail": "/thumbnails/tiktok-7650680365341822222.jpg",
+          "views": 44200,
+          "likes": 3278
         },
         {
           "videoId": "video-0082",
-          "postId": "tiktok-7650680365341822222",
-          "url": "https://www.tiktok.com/@alberta.nyc/video/7650680365341822222",
-          "platform": "tiktok",
+          "postId": "twitter-2065602244850876773",
+          "url": "https://x.com/albertadevs/status/2065602244850876773",
+          "platform": "twitter",
           "creator": "Alberta.Tech",
           "shootDate": "2026-06-08",
           "publishDate": null,
@@ -5173,8 +5173,8 @@
       "thumbnail": "/thumbnails/instagram-DZgcUBPRn6E.jpg",
       "publishDate": "2026-06-13",
       "shootDate": "2026-06-08",
-      "views": 2122654,
-      "likes": 39713
+      "views": 2166854,
+      "likes": 42991
     },
     {
       "videoId": "video-0068",
@@ -5299,25 +5299,25 @@
         },
         {
           "videoId": "video-0071",
-          "postId": "twitter-2061867828689379740",
-          "url": "https://x.com/albertadevs/status/2061867828689379740",
-          "platform": "twitter",
+          "postId": "tiktok-7646856294296538382",
+          "url": "https://www.tiktok.com/@alberta.nyc/video/7646856294296538382",
+          "platform": "tiktok",
           "creator": "Alberta.Tech",
           "shootDate": "2026-05-26",
-          "publishDate": null,
+          "publishDate": "2026-06-02",
           "roles": [
             "videographer"
           ],
           "sponsors": [],
-          "thumbnail": null,
-          "views": null,
-          "likes": null
+          "thumbnail": "/thumbnails/tiktok-7646856294296538382.jpg",
+          "views": 1300000,
+          "likes": 92500
         },
         {
           "videoId": "video-0071",
-          "postId": "tiktok-7646856294296538382",
-          "url": "https://www.tiktok.com/@alberta.nyc/video/7646856294296538382",
-          "platform": "tiktok",
+          "postId": "twitter-2061867828689379740",
+          "url": "https://x.com/albertadevs/status/2061867828689379740",
+          "platform": "twitter",
           "creator": "Alberta.Tech",
           "shootDate": "2026-05-26",
           "publishDate": null,
@@ -5338,8 +5338,8 @@
       "thumbnail": "/thumbnails/instagram-DZF54g1Riz_.jpg",
       "publishDate": "2026-06-02",
       "shootDate": "2026-05-26",
-      "views": 14799969,
-      "likes": 395160
+      "views": 16099969,
+      "likes": 487660
     },
     {
       "videoId": "video-0072",
@@ -5409,25 +5409,25 @@
         },
         {
           "videoId": "video-0070",
-          "postId": "twitter-2061112965294592179",
-          "url": "https://x.com/albertadevs/status/2061112965294592179",
-          "platform": "twitter",
+          "postId": "tiktok-7646082075258260749",
+          "url": "https://www.tiktok.com/@alberta.nyc/video/7646082075258260749",
+          "platform": "tiktok",
           "creator": "Alberta.Tech",
           "shootDate": "2026-05-21",
-          "publishDate": null,
+          "publishDate": "2026-05-31",
           "roles": [
             "videographer"
           ],
           "sponsors": [],
-          "thumbnail": null,
-          "views": null,
-          "likes": null
+          "thumbnail": "/thumbnails/tiktok-7646082075258260749.jpg",
+          "views": 60800,
+          "likes": 6363
         },
         {
           "videoId": "video-0070",
-          "postId": "tiktok-7646082075258260749",
-          "url": "https://www.tiktok.com/@alberta.nyc/video/7646082075258260749",
-          "platform": "tiktok",
+          "postId": "twitter-2061112965294592179",
+          "url": "https://x.com/albertadevs/status/2061112965294592179",
+          "platform": "twitter",
           "creator": "Alberta.Tech",
           "shootDate": "2026-05-21",
           "publishDate": null,
@@ -5448,8 +5448,8 @@
       "thumbnail": "/thumbnails/instagram-DZAiHGmxtp9.jpg",
       "publishDate": "2026-05-31",
       "shootDate": "2026-05-21",
-      "views": 861735,
-      "likes": 22436
+      "views": 922535,
+      "likes": 28799
     },
     {
       "videoId": "video-0069",
@@ -5565,6 +5565,38 @@
         },
         {
           "videoId": "video-0042",
+          "postId": "tiktok-7641324276892650783",
+          "url": "https://www.tiktok.com/@austinnasso/video/7641324276892650783",
+          "platform": "tiktok",
+          "creator": "Austin Nasso",
+          "shootDate": "2026-03-03",
+          "publishDate": "2026-05-18",
+          "roles": [
+            "videographer"
+          ],
+          "sponsors": [],
+          "thumbnail": "/thumbnails/tiktok-7641324276892650783.jpg",
+          "views": 181300,
+          "likes": 15500
+        },
+        {
+          "videoId": "video-0042",
+          "postId": "tiktok-7678441325682855182",
+          "url": "https://www.tiktok.com/@austinnasso/video/7678441325682855182",
+          "platform": "tiktok",
+          "creator": "Austin Nasso",
+          "shootDate": "2026-03-03",
+          "publishDate": "2026-08-26",
+          "roles": [
+            "videographer"
+          ],
+          "sponsors": [],
+          "thumbnail": "/thumbnails/tiktok-7678441325682855182.jpg",
+          "views": 177300,
+          "likes": 11200
+        },
+        {
+          "videoId": "video-0042",
           "postId": "youtube-yKdBpxUtLz8",
           "url": "https://www.youtube.com/shorts/yKdBpxUtLz8",
           "platform": "youtube",
@@ -5594,38 +5626,6 @@
           "thumbnail": "/thumbnails/youtube-144GbJZX1IU.jpg",
           "views": 11516,
           "likes": 662
-        },
-        {
-          "videoId": "video-0042",
-          "postId": "tiktok-7678441325682855182",
-          "url": "https://www.tiktok.com/@austinnasso/video/7678441325682855182",
-          "platform": "tiktok",
-          "creator": "Austin Nasso",
-          "shootDate": "2026-03-03",
-          "publishDate": null,
-          "roles": [
-            "videographer"
-          ],
-          "sponsors": [],
-          "thumbnail": null,
-          "views": null,
-          "likes": null
-        },
-        {
-          "videoId": "video-0042",
-          "postId": "tiktok-7641324276892650783",
-          "url": "https://www.tiktok.com/@austinnasso/video/7641324276892650783",
-          "platform": "tiktok",
-          "creator": "Austin Nasso",
-          "shootDate": "2026-03-03",
-          "publishDate": null,
-          "roles": [
-            "videographer"
-          ],
-          "sponsors": [],
-          "thumbnail": null,
-          "views": null,
-          "likes": null
         }
       ],
       "creator": "Austin Nasso",
@@ -5636,8 +5636,8 @@
       "thumbnail": "/thumbnails/instagram-DYfFeyEB6GN.jpg",
       "publishDate": "2026-05-18",
       "shootDate": "2026-03-03",
-      "views": 1235948,
-      "likes": 45485
+      "views": 1594548,
+      "likes": 72185
     },
     {
       "videoId": "video-0056",
@@ -6008,25 +6008,25 @@
         },
         {
           "videoId": "video-0052",
-          "postId": "twitter-2044208938791383347",
-          "url": "https://x.com/albertadevs/status/2044208938791383347",
-          "platform": "twitter",
+          "postId": "tiktok-7628773486500121869",
+          "url": "https://www.tiktok.com/@alberta.nyc/video/7628773486500121869",
+          "platform": "tiktok",
           "creator": "Alberta.Tech",
           "shootDate": "2026-03-30",
-          "publishDate": null,
+          "publishDate": "2026-04-15",
           "roles": [
             "videographer"
           ],
           "sponsors": [],
-          "thumbnail": null,
-          "views": null,
-          "likes": null
+          "thumbnail": "/thumbnails/tiktok-7628773486500121869.jpg",
+          "views": 369200,
+          "likes": 27500
         },
         {
           "videoId": "video-0052",
-          "postId": "tiktok-7628773486500121869",
-          "url": "https://www.tiktok.com/@alberta.nyc/video/7628773486500121869",
-          "platform": "tiktok",
+          "postId": "twitter-2044208938791383347",
+          "url": "https://x.com/albertadevs/status/2044208938791383347",
+          "platform": "twitter",
           "creator": "Alberta.Tech",
           "shootDate": "2026-03-30",
           "publishDate": null,
@@ -6047,8 +6047,8 @@
       "thumbnail": "/thumbnails/instagram-DXAG3DfEfAS.jpg",
       "publishDate": "2026-04-15",
       "shootDate": "2026-03-30",
-      "views": 5903113,
-      "likes": 141507
+      "views": 6272313,
+      "likes": 169007
     },
     {
       "videoId": "video-0040",
@@ -6092,14 +6092,14 @@
           "platform": "tiktok",
           "creator": "Austin Nasso",
           "shootDate": "2026-03-03",
-          "publishDate": null,
+          "publishDate": "2026-04-14",
           "roles": [
             "videographer"
           ],
           "sponsors": [],
-          "thumbnail": null,
-          "views": null,
-          "likes": null
+          "thumbnail": "/thumbnails/tiktok-7628702982703418638.jpg",
+          "views": 15900,
+          "likes": 957
         }
       ],
       "creator": "Austin Nasso",
@@ -6110,8 +6110,8 @@
       "thumbnail": "/thumbnails/instagram-DXHm_5MDRYI.jpg",
       "publishDate": "2026-04-14",
       "shootDate": "2026-03-03",
-      "views": 187537,
-      "likes": 4473
+      "views": 203437,
+      "likes": 5430
     },
     {
       "videoId": "video-0041",
@@ -6131,6 +6131,38 @@
           "thumbnail": "/thumbnails/instagram-DW9QWRgjS-e.jpg",
           "views": 337158,
           "likes": 9420
+        },
+        {
+          "videoId": "video-0041",
+          "postId": "tiktok-7696644846949371149",
+          "url": "https://www.tiktok.com/@austinnasso/video/7696644846949371149",
+          "platform": "tiktok",
+          "creator": "Austin Nasso",
+          "shootDate": "2026-03-03",
+          "publishDate": "2026-10-14",
+          "roles": [
+            "videographer"
+          ],
+          "sponsors": [],
+          "thumbnail": "/thumbnails/tiktok-7696644846949371149.jpg",
+          "views": 44200,
+          "likes": 3861
+        },
+        {
+          "videoId": "video-0041",
+          "postId": "tiktok-7627247565049695501",
+          "url": "https://www.tiktok.com/@austinnasso/video/7627247565049695501",
+          "platform": "tiktok",
+          "creator": "Austin Nasso",
+          "shootDate": "2026-03-03",
+          "publishDate": "2026-04-10",
+          "roles": [
+            "videographer"
+          ],
+          "sponsors": [],
+          "thumbnail": "/thumbnails/tiktok-7627247565049695501.jpg",
+          "views": 13200,
+          "likes": 801
         },
         {
           "videoId": "video-0041",
@@ -6163,38 +6195,6 @@
           "thumbnail": "/thumbnails/youtube-V4VnosNpEbw.jpg",
           "views": 5050,
           "likes": 223
-        },
-        {
-          "videoId": "video-0041",
-          "postId": "tiktok-7696644846949371149",
-          "url": "https://www.tiktok.com/@austinnasso/video/7696644846949371149",
-          "platform": "tiktok",
-          "creator": "Austin Nasso",
-          "shootDate": "2026-03-03",
-          "publishDate": null,
-          "roles": [
-            "videographer"
-          ],
-          "sponsors": [],
-          "thumbnail": null,
-          "views": null,
-          "likes": null
-        },
-        {
-          "videoId": "video-0041",
-          "postId": "tiktok-7627247565049695501",
-          "url": "https://www.tiktok.com/@austinnasso/video/7627247565049695501",
-          "platform": "tiktok",
-          "creator": "Austin Nasso",
-          "shootDate": "2026-03-03",
-          "publishDate": null,
-          "roles": [
-            "videographer"
-          ],
-          "sponsors": [],
-          "thumbnail": null,
-          "views": null,
-          "likes": null
         }
       ],
       "creator": "Austin Nasso",
@@ -6205,8 +6205,8 @@
       "thumbnail": "/thumbnails/instagram-DW9QWRgjS-e.jpg",
       "publishDate": "2026-04-10",
       "shootDate": "2026-03-03",
-      "views": 351648,
-      "likes": 10158
+      "views": 409048,
+      "likes": 14820
     },
     {
       "videoId": "video-0054",
@@ -6266,6 +6266,24 @@
         },
         {
           "videoId": "video-0049",
+          "postId": "tiktok-7624555658712452365",
+          "url": "https://www.tiktok.com/@alberta.nyc/video/7624555658712452365",
+          "platform": "tiktok",
+          "creator": "Alberta.Tech",
+          "shootDate": "2026-03-22",
+          "publishDate": "2026-04-03",
+          "roles": [
+            "videographer"
+          ],
+          "sponsors": [
+            "Mobbin"
+          ],
+          "thumbnail": "/thumbnails/tiktok-7624555658712452365.jpg",
+          "views": 168500,
+          "likes": 11100
+        },
+        {
+          "videoId": "video-0049",
           "postId": "youtube-eBRzdfU-K30",
           "url": "https://youtu.be/eBRzdfU-K30?si=WNh9PhM5L-J3Ltch",
           "platform": "youtube",
@@ -6317,24 +6335,6 @@
           "thumbnail": null,
           "views": null,
           "likes": null
-        },
-        {
-          "videoId": "video-0049",
-          "postId": "tiktok-7624555658712452365",
-          "url": "https://www.tiktok.com/@alberta.nyc/video/7624555658712452365",
-          "platform": "tiktok",
-          "creator": "Alberta.Tech",
-          "shootDate": "2026-03-22",
-          "publishDate": null,
-          "roles": [
-            "videographer"
-          ],
-          "sponsors": [
-            "Mobbin"
-          ],
-          "thumbnail": null,
-          "views": null,
-          "likes": null
         }
       ],
       "creator": "Alberta.Tech",
@@ -6347,8 +6347,8 @@
       "thumbnail": "/thumbnails/instagram-DWnRd5_ADQz.jpg",
       "publishDate": "2026-04-03",
       "shootDate": "2026-03-22",
-      "views": 2304146,
-      "likes": 51353
+      "views": 2472646,
+      "likes": 62453
     },
     {
       "videoId": "video-0050",
@@ -6837,6 +6837,22 @@
         },
         {
           "videoId": "video-0189",
+          "postId": "tiktok-7609109436921023757",
+          "url": "https://www.tiktok.com/@alberta.nyc/video/7609109436921023757",
+          "platform": "tiktok",
+          "creator": "Alberta.Tech",
+          "shootDate": "2026-01-30",
+          "publishDate": "2026-02-21",
+          "roles": [
+            "videographer"
+          ],
+          "sponsors": [],
+          "thumbnail": "/thumbnails/tiktok-7609109436921023757.jpg",
+          "views": 720300,
+          "likes": 41500
+        },
+        {
+          "videoId": "video-0189",
           "postId": "instagram-DU9cO6Tke19",
           "url": "https://www.instagram.com/reel/DU9cO6Tke19",
           "platform": "instagram",
@@ -6866,22 +6882,6 @@
           "thumbnail": null,
           "views": null,
           "likes": null
-        },
-        {
-          "videoId": "video-0189",
-          "postId": "tiktok-7609109436921023757",
-          "url": "https://www.tiktok.com/@alberta.nyc/video/7609109436921023757",
-          "platform": "tiktok",
-          "creator": "Alberta.Tech",
-          "shootDate": "2026-01-30",
-          "publishDate": null,
-          "roles": [
-            "videographer"
-          ],
-          "sponsors": [],
-          "thumbnail": null,
-          "views": null,
-          "likes": null
         }
       ],
       "creator": "Alberta.Tech",
@@ -6892,8 +6892,8 @@
       "thumbnail": "/thumbnails/instagram-DU9cO6Tke19.jpg",
       "publishDate": "2026-02-21",
       "shootDate": "2026-01-30",
-      "views": 6388411,
-      "likes": 114834
+      "views": 7108711,
+      "likes": 156334
     },
     {
       "videoId": "video-0027",
@@ -7045,25 +7045,25 @@
         },
         {
           "videoId": "video-0031",
-          "postId": "twitter-2018528334917877972",
-          "url": "https://x.com/albertadevs/status/2018528334917877972",
-          "platform": "twitter",
+          "postId": "tiktok-7602469783363194126",
+          "url": "https://www.tiktok.com/@alberta.nyc/video/7602469783363194126",
+          "platform": "tiktok",
           "creator": "Alberta.Tech",
           "shootDate": "2026-02-01",
-          "publishDate": null,
+          "publishDate": "2026-02-03",
           "roles": [
             "videographer"
           ],
           "sponsors": [],
-          "thumbnail": null,
-          "views": null,
-          "likes": null
+          "thumbnail": "/thumbnails/tiktok-7602469783363194126.jpg",
+          "views": 29200,
+          "likes": 2148
         },
         {
           "videoId": "video-0031",
-          "postId": "tiktok-7602469783363194126",
-          "url": "https://www.tiktok.com/@alberta.nyc/video/7602469783363194126",
-          "platform": "tiktok",
+          "postId": "twitter-2018528334917877972",
+          "url": "https://x.com/albertadevs/status/2018528334917877972",
+          "platform": "twitter",
           "creator": "Alberta.Tech",
           "shootDate": "2026-02-01",
           "publishDate": null,
@@ -7084,8 +7084,8 @@
       "thumbnail": "/thumbnails/instagram-DUR6XFLACu1.jpg",
       "publishDate": "2026-02-03",
       "shootDate": "2026-02-01",
-      "views": 748108,
-      "likes": 19703
+      "views": 777308,
+      "likes": 21851
     },
     {
       "videoId": "video-0032",
@@ -7520,25 +7520,25 @@
         },
         {
           "videoId": "video-0018",
-          "postId": "twitter-1999678420427637155",
-          "url": "https://x.com/albertadevs/status/1999678420427637155",
-          "platform": "twitter",
+          "postId": "tiktok-7583040767514479927",
+          "url": "https://www.tiktok.com/@alberta.nyc/video/7583040767514479927",
+          "platform": "tiktok",
           "creator": "Alberta.Tech",
           "shootDate": "2025-12-05",
-          "publishDate": null,
+          "publishDate": "2025-12-12",
           "roles": [
             "videographer"
           ],
           "sponsors": [],
-          "thumbnail": null,
-          "views": null,
-          "likes": null
+          "thumbnail": "/thumbnails/tiktok-7583040767514479927.jpg",
+          "views": 289000,
+          "likes": 30200
         },
         {
           "videoId": "video-0018",
-          "postId": "tiktok-7583040767514479927",
-          "url": "https://www.tiktok.com/@alberta.nyc/video/7583040767514479927",
-          "platform": "tiktok",
+          "postId": "twitter-1999678420427637155",
+          "url": "https://x.com/albertadevs/status/1999678420427637155",
+          "platform": "twitter",
           "creator": "Alberta.Tech",
           "shootDate": "2025-12-05",
           "publishDate": null,
@@ -7559,8 +7559,8 @@
       "thumbnail": "/thumbnails/instagram-DSLGp5_kanb.jpg",
       "publishDate": "2025-12-12",
       "shootDate": "2025-12-05",
-      "views": 6635692,
-      "likes": 269063
+      "views": 6924692,
+      "likes": 299263
     },
     {
       "videoId": "video-0016",
@@ -7669,6 +7669,38 @@
         },
         {
           "videoId": "video-0177",
+          "postId": "tiktok-7580117399257500983",
+          "url": "https://www.tiktok.com/@austinnasso/video/7580117399257500983",
+          "platform": "tiktok",
+          "creator": "Austin Nasso",
+          "shootDate": null,
+          "publishDate": "2025-12-04",
+          "roles": [
+            "editor"
+          ],
+          "sponsors": [],
+          "thumbnail": "/thumbnails/tiktok-7580117399257500983.jpg",
+          "views": 127000,
+          "likes": 7431
+        },
+        {
+          "videoId": "video-0177",
+          "postId": "tiktok-7634586444320754957",
+          "url": "https://www.tiktok.com/@austinnasso/video/7634586444320754957",
+          "platform": "tiktok",
+          "creator": "Austin Nasso",
+          "shootDate": null,
+          "publishDate": "2026-04-30",
+          "roles": [
+            "editor"
+          ],
+          "sponsors": [],
+          "thumbnail": "/thumbnails/tiktok-7634586444320754957.jpg",
+          "views": 36100,
+          "likes": 2429
+        },
+        {
+          "videoId": "video-0177",
           "postId": "youtube-F2HTpqW5rk0",
           "url": "https://www.youtube.com/shorts/F2HTpqW5rk0",
           "platform": "youtube",
@@ -7682,38 +7714,6 @@
           "thumbnail": "/thumbnails/youtube-F2HTpqW5rk0.jpg",
           "views": 3798,
           "likes": 193
-        },
-        {
-          "videoId": "video-0177",
-          "postId": "tiktok-7634586444320754957",
-          "url": "https://www.tiktok.com/@austinnasso/video/7634586444320754957",
-          "platform": "tiktok",
-          "creator": "Austin Nasso",
-          "shootDate": null,
-          "publishDate": null,
-          "roles": [
-            "editor"
-          ],
-          "sponsors": [],
-          "thumbnail": null,
-          "views": null,
-          "likes": null
-        },
-        {
-          "videoId": "video-0177",
-          "postId": "tiktok-7580117399257500983",
-          "url": "https://www.tiktok.com/@austinnasso/video/7580117399257500983",
-          "platform": "tiktok",
-          "creator": "Austin Nasso",
-          "shootDate": null,
-          "publishDate": null,
-          "roles": [
-            "editor"
-          ],
-          "sponsors": [],
-          "thumbnail": null,
-          "views": null,
-          "likes": null
         }
       ],
       "creator": "Austin Nasso",
@@ -7724,8 +7724,8 @@
       "thumbnail": "/thumbnails/instagram-DR2WbE4jalZ.jpg",
       "publishDate": "2025-12-04",
       "shootDate": null,
-      "views": 531281,
-      "likes": 18382
+      "views": 694381,
+      "likes": 28242
     },
     {
       "videoId": "video-0014",
@@ -7818,6 +7818,38 @@
         },
         {
           "videoId": "video-0009",
+          "postId": "tiktok-7571179458623753527",
+          "url": "https://www.tiktok.com/@austinnasso/video/7571179458623753527",
+          "platform": "tiktok",
+          "creator": "Austin Nasso",
+          "shootDate": "2025-10-22",
+          "publishDate": "2025-11-10",
+          "roles": [
+            "videographer"
+          ],
+          "sponsors": [],
+          "thumbnail": "/thumbnails/tiktok-7571179458623753527.jpg",
+          "views": 122700,
+          "likes": 5645
+        },
+        {
+          "videoId": "video-0009",
+          "postId": "tiktok-7611221819395214606",
+          "url": "https://www.tiktok.com/@austinnasso/video/7611221819395214606",
+          "platform": "tiktok",
+          "creator": "Austin Nasso",
+          "shootDate": "2025-10-22",
+          "publishDate": "2026-02-26",
+          "roles": [
+            "videographer"
+          ],
+          "sponsors": [],
+          "thumbnail": "/thumbnails/tiktok-7611221819395214606.jpg",
+          "views": 28200,
+          "likes": 880
+        },
+        {
+          "videoId": "video-0009",
           "postId": "youtube-dn1VViqBj-8",
           "url": "https://www.youtube.com/shorts/dn1VViqBj-8",
           "platform": "youtube",
@@ -7847,38 +7879,6 @@
           "thumbnail": "/thumbnails/youtube-L1FysVAoXXI.jpg",
           "views": 4437,
           "likes": 150
-        },
-        {
-          "videoId": "video-0009",
-          "postId": "tiktok-7611221819395214606",
-          "url": "https://www.tiktok.com/@austinnasso/video/7611221819395214606",
-          "platform": "tiktok",
-          "creator": "Austin Nasso",
-          "shootDate": "2025-10-22",
-          "publishDate": null,
-          "roles": [
-            "videographer"
-          ],
-          "sponsors": [],
-          "thumbnail": null,
-          "views": null,
-          "likes": null
-        },
-        {
-          "videoId": "video-0009",
-          "postId": "tiktok-7571179458623753527",
-          "url": "https://www.tiktok.com/@austinnasso/video/7571179458623753527",
-          "platform": "tiktok",
-          "creator": "Austin Nasso",
-          "shootDate": "2025-10-22",
-          "publishDate": null,
-          "roles": [
-            "videographer"
-          ],
-          "sponsors": [],
-          "thumbnail": null,
-          "views": null,
-          "likes": null
         }
       ],
       "creator": "Austin Nasso",
@@ -7889,8 +7889,8 @@
       "thumbnail": "/thumbnails/instagram-DQ4xR5NgXI1.jpg",
       "publishDate": "2025-11-10",
       "shootDate": "2025-10-22",
-      "views": 1633857,
-      "likes": 35028
+      "views": 1784757,
+      "likes": 41553
     },
     {
       "videoId": "video-0010",
@@ -7988,14 +7988,14 @@
           "platform": "tiktok",
           "creator": "Austin Nasso",
           "shootDate": "2025-10-10",
-          "publishDate": null,
+          "publishDate": "2025-11-05",
           "roles": [
             "videographer"
           ],
           "sponsors": [],
-          "thumbnail": null,
-          "views": null,
-          "likes": null
+          "thumbnail": "/thumbnails/tiktok-7569333579877076237.jpg",
+          "views": 11000,
+          "likes": 504
         }
       ],
       "creator": "Austin Nasso",
@@ -8006,8 +8006,8 @@
       "thumbnail": "/thumbnails/instagram-DQr1tUXgWBw.jpg",
       "publishDate": "2025-11-05",
       "shootDate": "2025-10-10",
-      "views": 299678,
-      "likes": 9236
+      "views": 310678,
+      "likes": 9740
     },
     {
       "videoId": "video-0012",
@@ -8069,7 +8069,7 @@
           "platform": "tiktok",
           "creator": "Austin Nasso",
           "shootDate": "2025-10-22",
-          "publishDate": null,
+          "publishDate": "2025-10-31",
           "roles": [
             "videographer",
             "editor"
@@ -8077,9 +8077,9 @@
           "sponsors": [
             "DUB"
           ],
-          "thumbnail": null,
-          "views": null,
-          "likes": null
+          "thumbnail": "/thumbnails/tiktok-7567413897133706510.jpg",
+          "views": 15700,
+          "likes": 448
         }
       ],
       "creator": "Austin Nasso",
@@ -8093,8 +8093,8 @@
       "thumbnail": "/thumbnails/instagram-DQepZFWDcUF.jpg",
       "publishDate": "2025-10-31",
       "shootDate": "2025-10-22",
-      "views": 235031,
-      "likes": 3129
+      "views": 250731,
+      "likes": 3577
     },
     {
       "videoId": "video-0006",
@@ -8124,16 +8124,16 @@
           "platform": "tiktok",
           "creator": "Austin Nasso",
           "shootDate": "2025-10-10",
-          "publishDate": null,
+          "publishDate": "2025-10-24",
           "roles": [
             "videographer"
           ],
           "sponsors": [
             "CodeRabbit"
           ],
-          "thumbnail": null,
-          "views": null,
-          "likes": null
+          "thumbnail": "/thumbnails/tiktok-7564841994871147831.jpg",
+          "views": 9150,
+          "likes": 318
         }
       ],
       "creator": "Austin Nasso",
@@ -8146,8 +8146,8 @@
       "thumbnail": "/thumbnails/instagram-DQMyeWADbPg.jpg",
       "publishDate": "2025-10-24",
       "shootDate": "2025-10-10",
-      "views": 131051,
-      "likes": null
+      "views": 140201,
+      "likes": 318
     },
     {
       "videoId": "video-0011",
@@ -8257,14 +8257,14 @@
           "platform": "tiktok",
           "creator": "Austin Nasso",
           "shootDate": "2025-09-30",
-          "publishDate": null,
+          "publishDate": "2025-10-15",
           "roles": [
             "videographer"
           ],
           "sponsors": [],
-          "thumbnail": null,
-          "views": null,
-          "likes": null
+          "thumbnail": "/thumbnails/tiktok-7561527525973806391.jpg",
+          "views": 8703,
+          "likes": 357
         }
       ],
       "creator": "Austin Nasso",
@@ -8275,8 +8275,8 @@
       "thumbnail": "/thumbnails/instagram-DP10YoSkrse.jpg",
       "publishDate": "2025-10-15",
       "shootDate": "2025-09-30",
-      "views": 275955,
-      "likes": 2999
+      "views": 284658,
+      "likes": 3356
     },
     {
       "videoId": "video-0002",
@@ -8306,16 +8306,16 @@
           "platform": "tiktok",
           "creator": "Austin Nasso",
           "shootDate": "2025-09-30",
-          "publishDate": null,
+          "publishDate": "2025-10-15",
           "roles": [
             "videographer"
           ],
           "sponsors": [
             "Lovable"
           ],
-          "thumbnail": null,
-          "views": null,
-          "likes": null
+          "thumbnail": "/thumbnails/tiktok-7561482655687101709.jpg",
+          "views": 7204,
+          "likes": 242
         }
       ],
       "creator": "Austin Nasso",
@@ -8328,8 +8328,8 @@
       "thumbnail": "/thumbnails/instagram-DP1f_1CkeuD.jpg",
       "publishDate": "2025-10-15",
       "shootDate": "2025-09-30",
-      "views": 165921,
-      "likes": null
+      "views": 173125,
+      "likes": 242
     },
     {
       "videoId": "video-0003",
@@ -8359,16 +8359,16 @@
           "platform": "tiktok",
           "creator": "Austin Nasso",
           "shootDate": "2025-09-30",
-          "publishDate": null,
+          "publishDate": "2025-10-08",
           "roles": [
             "videographer"
           ],
           "sponsors": [
             "DUB"
           ],
-          "thumbnail": null,
-          "views": null,
-          "likes": null
+          "thumbnail": "/thumbnails/tiktok-7558893534028320014.jpg",
+          "views": 11800,
+          "likes": 497
         }
       ],
       "creator": "Austin Nasso",
@@ -8381,8 +8381,8 @@
       "thumbnail": "/thumbnails/instagram-DPjfTslEX2j.jpg",
       "publishDate": "2025-10-08",
       "shootDate": "2025-09-30",
-      "views": 117127,
-      "likes": null
+      "views": 128927,
+      "likes": 497
     }
   ]
 }
