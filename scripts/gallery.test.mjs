@@ -33,3 +33,11 @@ test('keeps post IDs unique and video metrics aggregated from uploads', () => {
     assert.equal(video.likes, total(video.posts, 'likes'));
   }
 });
+
+test('uses an Instagram thumbnail when available, otherwise another upload thumbnail', () => {
+  for (const video of gallery.videos) {
+    const instagram = video.posts.find((post) => post.platform === 'instagram' && post.thumbnail);
+    const fallback = video.posts.find((post) => post.thumbnail);
+    assert.equal(video.thumbnail, instagram?.thumbnail || fallback?.thumbnail || null);
+  }
+});

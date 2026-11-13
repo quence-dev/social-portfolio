@@ -129,7 +129,8 @@ const videos = [...videosById.entries()].map(([videoId, group]) => {
     creator: primary.creator,
     roles: unique(group.flatMap((post) => post.roles)),
     sponsors: unique(group.flatMap((post) => post.sponsors)),
-    thumbnail: primary.thumbnail,
+    thumbnail: ordered.find((post) => post.platform === 'instagram' && post.thumbnail)?.thumbnail
+      || ordered.find((post) => post.thumbnail)?.thumbnail || null,
     publishDate: ordered.map(dateValue).find(Boolean) || null,
     shootDate: primary.shootDate,
     views: sum('views'),
