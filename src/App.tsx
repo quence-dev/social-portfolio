@@ -26,6 +26,7 @@ const platformNames: Record<Platform, string> = {
   instagram: 'Instagram',
   youtube: 'YouTube',
   linkedin: 'LinkedIn',
+  twitter: 'X / Twitter',
   other: 'Open post',
 };
 const focusableSelector = 'a[href], button:not([disabled]), iframe, [tabindex]:not([tabindex="-1"])';
@@ -160,8 +161,47 @@ function CreatorThumbnail({ video }: { video: Video }) {
   }} />;
 }
 
+function TwitterEmbed({ url }: { url: string }) {
+  const containerRef = useRef<HTMLDivElement>(null);
+  useEffect(() => {
+    const container = containerRef.current;
+    if (!container) return undefined;
+    const blockquote = document.createElement('blockquote');
+    blockquote.className = 'twitter-video';
+    blockquote.dataset.status = 'hidden';
+    const link = document.createElement('a');
+    link.href = url;
+    link.textContent = 'View video on X';
+    blockquote.appendChild(link);
+    container.appendChild(blockquote);
+
+    const widgets = window as Window & {
+      twttr?: { widgets?: { load: (element: HTMLElement) => void } };
+    };
+    const load = () => {
+      widgets.twttr?.widgets?.load(container);
+    };
+    let script = document.querySelector<HTMLScriptElement>('script[data-x-widgets]');
+    if (!script) {
+      script = document.createElement('script');
+      script.src = 'https://platform.x.com/widgets.js';
+      script.async = true;
+      script.dataset.xWidgets = 'true';
+      document.head.appendChild(script);
+    }
+    if (widgets.twttr?.widgets) load();
+    else script.addEventListener('load', load);
+    return () => {
+      script.removeEventListener('load', load);
+      container.replaceChildren();
+    };
+  }, [url]);
+  return <div className="twitter-embed" ref={containerRef} />;
+}
+
 function Embed({ post }: { post: Post }) {
   const [loaded, setLoaded] = useState(false);
+  if (post.platform === 'twitter') return <TwitterEmbed url={post.url} />;
   let source = null;
   if (post.platform === 'instagram') source = instagramEmbed(post.url);
   if (post.platform === 'youtube') source = youtubeEmbed(post.url);

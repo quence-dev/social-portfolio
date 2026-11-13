@@ -578,6 +578,16 @@ select:focus-visible {
   padding: 32px;
 }
 
+.twitter-embed {
+  width: min(100%, 550px);
+  max-height: 100%;
+  overflow-y: auto;
+}
+
+.twitter-embed a {
+  color: #f3eee5;
+}
+
 .modal-info {
   padding: 44px 34px 30px;
   overflow-y: auto;

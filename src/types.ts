@@ -1,4 +1,4 @@
-export type Platform = 'instagram' | 'youtube' | 'linkedin' | 'other';
+export type Platform = 'instagram' | 'youtube' | 'linkedin' | 'twitter' | 'other';
 
 export interface Post {
   postId: string;

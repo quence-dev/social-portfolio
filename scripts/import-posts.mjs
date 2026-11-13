@@ -27,6 +27,7 @@ function platformFor(url) {
   if (host.includes('instagram.com')) return 'instagram';
   if (host.includes('youtu')) return 'youtube';
   if (host.includes('linkedin.com')) return 'linkedin';
+  if (['x.com', 'www.x.com', 'twitter.com', 'www.twitter.com', 'mobile.twitter.com'].includes(host)) return 'twitter';
   return 'other';
 }
 
