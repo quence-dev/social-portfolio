@@ -25,13 +25,9 @@ export function mergePosts(sourceText, incomingText) {
   const additions = [];
 
   for (const row of incoming) {
+    if (row.url && urls.has(row.url)) continue;
     if (!row.post_id || !row.url) throw new Error('Incoming rows need both post_id and url.');
-    const knownPost = postIds.has(row.post_id);
-    const knownUrl = urls.has(row.url);
-    if (knownPost || knownUrl) {
-      if (knownPost !== knownUrl) throw new Error(`Conflicting existing post: ${row.post_id}`);
-      continue;
-    }
+    if (postIds.has(row.post_id)) throw new Error(`Conflicting existing post: ${row.post_id}`);
     additions.push(headers.map((header) => row[header] || ''));
     postIds.add(row.post_id);
     urls.add(row.url);

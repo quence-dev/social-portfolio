@@ -18,3 +18,11 @@ test('rejects a row whose ID and URL disagree with the existing catalog', () => 
   const incoming = `${header}\nvideo-2,instagram-one,https://instagram.com/reel/two,B,2/1/2026,videographer,,TRUE,,,\n`;
   assert.throws(() => mergePosts(existing, incoming), /Conflicting existing post/);
 });
+
+test('skips an existing URL even when its incoming ID is different or missing', () => {
+  const incoming = `${header}\nvideo-1,new-id,https://instagram.com/reel/one,A,1/1/2026,editor,,TRUE,,,\nvideo-1,,https://instagram.com/reel/one,A,1/1/2026,editor,,TRUE,,,\nvideo-2,new-id,https://instagram.com/reel/two,B,2/1/2026,editor,,TRUE,,,\n`;
+  const { additions, output } = mergePosts(existing, incoming);
+  assert.equal(additions.length, 1);
+  assert.match(output, /instagram-one,[^\n]*,50,5/);
+  assert.match(output, /new-id,https:\/\/instagram\.com\/reel\/two/);
+});
