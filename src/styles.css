@@ -614,6 +614,16 @@ select:focus-visible {
   font: 500 13px "DM Mono", monospace;
 }
 
+.modal-total {
+  margin-top: 16px;
+  color: #a6a096;
+  font: 400 11px/1.5 "DM Mono", monospace;
+}
+
+.modal-total .stats {
+  margin: 4px 0;
+}
+
 .tabs {
   display: flex;
   flex-wrap: wrap;

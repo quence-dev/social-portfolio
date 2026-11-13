@@ -287,21 +287,33 @@ function Modal({ video, close }: { video: Video; close: () => void }) {
         <div className="modal-info">
           <h2>{creatorName(video.creator)}</h2>
           <p className="modal-date">Posted {dateLabel(activePost.publishDate ?? activePost.shootDate)}</p>
-          {(video.views !== null || video.likes !== null) && (
+          {(activePost.views !== null || activePost.likes !== null) && (
             <div className="stats">
-              {video.views !== null && (
+              {activePost.views !== null && (
                 <span>
-                  {compact(video.views)}
+                  {compact(activePost.views)}
                   {' '}
-                  {pluralize(video.views, 'view')}
+                  {pluralize(activePost.views, 'view')}
                 </span>
               )}
-              {video.likes !== null && (
+              {activePost.likes !== null && (
                 <span>
-                  {compact(video.likes)}
+                  {compact(activePost.likes)}
                   {' '}
-                  {pluralize(video.likes, 'like')}
+                  {pluralize(activePost.likes, 'like')}
                 </span>
+              )}
+            </div>
+          )}
+          {video.posts.length > 1 && (video.views !== null || video.likes !== null) && (
+            <div className="modal-total">
+              <span>All uploads</span>
+              <div className="stats">
+                {video.views !== null && <span>{compact(video.views)} {pluralize(video.views, 'view')}</span>}
+                {video.likes !== null && <span>{compact(video.likes)} {pluralize(video.likes, 'like')}</span>}
+              </div>
+              {video.posts.some((post) => post.views === null || post.likes === null) && (
+                <span>Totals reflect available data.</span>
               )}
             </div>
           )}
