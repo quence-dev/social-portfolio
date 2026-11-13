@@ -26,7 +26,7 @@ Export your Posts sheet as a CSV and merge it into the local catalog. The export
 npm run posts:merge -- --input /absolute/path/to/new-posts.csv
 ```
 
-The merge skips existing URLs and appends new rows. It stops if a new URL uses an existing `post_id`. Check what's still missing:
+The merge skips existing uploads (including equivalent Instagram and YouTube URL formats) and appends new rows. It stops if a new URL uses an existing `post_id`. Check what's still missing:
 
 ```sh
 npm run posts:status

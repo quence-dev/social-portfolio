@@ -26,3 +26,11 @@ test('skips an existing URL even when its incoming ID is different or missing', 
   assert.match(output, /instagram-one,[^\n]*,50,5/);
   assert.match(output, /new-id,https:\/\/instagram\.com\/reel\/two/);
 });
+
+test('recognizes equivalent Instagram and YouTube URL forms', () => {
+  const source = `${existing}video-2,youtube-AbCd,https://youtu.be/AbCd,A,1/1/2026,editor,,TRUE,,,\n`;
+  const incoming = `${header}\nvideo-1,instagram-one,https://www.instagram.com/reels/one/?utm_source=share,A,1/1/2026,editor,,TRUE,,,\nvideo-2,youtube-AbCd,https://youtube.com/shorts/AbCd?feature=share,A,1/1/2026,editor,,TRUE,,,\n`;
+  assert.equal(mergePosts(source, incoming).additions.length, 0);
+  const differentCase = `${header}\nvideo-2,youtube-AbCd,https://youtube.com/shorts/abcd,A,1/1/2026,editor,,TRUE,,,\n`;
+  assert.throws(() => mergePosts(source, differentCase), /Conflicting existing post/);
+});
