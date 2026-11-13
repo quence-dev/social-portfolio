@@ -246,6 +246,28 @@ h1 {
   text-transform: uppercase;
 }
 
+.platform-stats {
+  margin-top: 10px;
+  color: #c3bcb0;
+  text-align: right;
+  font: 400 11px/1.6 "DM Mono", monospace;
+}
+
+.platform-stats summary {
+  color: #f3eee5;
+  cursor: pointer;
+  list-style: none;
+}
+
+.platform-stats summary::-webkit-details-marker { display: none; }
+.platform-stats summary:hover { text-decoration: underline; }
+.platform-stats .stats-hide, .platform-stats[open] .stats-show { display: none; }
+.platform-stats[open] .stats-hide { display: inline; }
+
+.platform-stats-list { margin-top: 12px; }
+.platform-stats-list > div { display: flex; justify-content: space-between; gap: 24px; }
+.platform-stats-list p { margin: 8px 0 0; color: #a6a096; }
+
 .totals div {
   display: grid;
   gap: 4px;
@@ -709,7 +731,8 @@ select:focus-visible {
   }
 
   .totals,
-  .updated-at {
+  .updated-at,
+  .platform-stats {
     text-align: left;
   }
 

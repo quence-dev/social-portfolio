@@ -405,6 +405,16 @@ export default function App() {
   );
   const totalViews = data.videos.reduce((total, video) => total + (video.views ?? 0), 0);
   const totalLikes = data.videos.reduce((total, video) => total + (video.likes ?? 0), 0);
+  const platformStats = Object.keys(platformNames).map((platform) => {
+    const posts = data.videos.flatMap((video) => video.posts)
+      .filter((post) => post.platform === platform);
+    const sum = (field: 'views' | 'likes') => {
+      const values = posts.map((post) => post[field])
+        .filter((value): value is number => value !== null);
+      return values.length ? values.reduce((total, value) => total + value, 0) : null;
+    };
+    return { platform: platform as Platform, views: sum('views'), likes: sum('likes') };
+  }).filter((item) => item.views !== null || item.likes !== null);
 
   return (
     <main>
@@ -455,6 +465,22 @@ export default function App() {
             </div>
           </div>
           <p className="updated-at">Updated {siteConfig.metricsUpdatedLabel}</p>
+          <details className="platform-stats">
+            <summary><span className="stats-show">View all stats ↓</span><span className="stats-hide">Hide stats ↑</span></summary>
+            <div className="platform-stats-list">
+              {platformStats.map((item) => (
+                <div key={item.platform}>
+                  <span>{item.platform === 'other' ? 'Other' : platformName(item.platform)}</span>
+                  <span>
+                    {item.views !== null && `${compact(item.views)} ${pluralize(item.views, 'view')}`}
+                    {item.views !== null && item.likes !== null && ' · '}
+                    {item.likes !== null && `${compact(item.likes)} ${pluralize(item.likes, 'like')}`}
+                  </span>
+                </div>
+              ))}
+              <p>Totals reflect available data.</p>
+            </div>
+          </details>
         </div>
         {siteConfig.portfolioUrl && (
           <a className="portfolio-link" href={siteConfig.portfolioUrl}>
