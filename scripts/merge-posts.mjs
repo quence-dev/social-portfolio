@@ -18,6 +18,14 @@ function urlKey(value) {
     const youtube = host === 'youtu.be' ? url.pathname.match(/^\/([^/]+)/)?.[1]
       : host === 'youtube.com' ? url.pathname.match(/^\/shorts\/([^/]+)/)?.[1] || (url.pathname === '/watch' ? url.searchParams.get('v') : null) : null;
     if (youtube) return `youtube:${youtube}`;
+    const tiktok = host === 'tiktok.com' && url.pathname.match(/^\/@[^/]+\/video\/(\d+)(?:\/|$)/);
+    if (tiktok) return `tiktok:${tiktok[1]}`;
+    const twitter = ['twitter.com', 'x.com', 'mobile.twitter.com', 'mobile.x.com'].includes(host)
+      && url.pathname.match(/^\/(?:[^/]+|i\/web)\/status\/(\d+)(?:\/|$)/);
+    if (twitter) return `twitter:${twitter[1]}`;
+    const linkedin = host === 'linkedin.com'
+      && decodeURIComponent(url.pathname).match(/(?:^|[-/:])(ugcPost|activity)[-:](\d+)(?:[-/]|$)/i);
+    if (linkedin) return `linkedin:${linkedin[1].toLowerCase()}:${linkedin[2]}`;
     url.hostname = host;
     url.pathname = url.pathname.replace(/\/+$/, '') || '/';
     url.hash = '';

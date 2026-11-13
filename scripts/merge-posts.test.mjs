@@ -34,3 +34,18 @@ test('recognizes equivalent Instagram and YouTube URL forms', () => {
   const differentCase = `${header}\nvideo-2,youtube-AbCd,https://youtube.com/shorts/abcd,A,1/1/2026,editor,,TRUE,,,\n`;
   assert.throws(() => mergePosts(source, differentCase), /Conflicting existing post/);
 });
+
+test('recognizes equivalent TikTok, X, and LinkedIn post links', () => {
+  const cases = [
+    ['tiktok-123', 'https://www.tiktok.com/@old/video/123', 'https://tiktok.com/@new/video/123/?share=1'],
+    ['twitter-456', 'https://twitter.com/person/status/456', 'https://x.com/i/web/status/456?s=20'],
+    ['linkedin-789', 'https://www.linkedin.com/posts/person_topic-ugcPost-789-abc', 'https://linkedin.com/feed/update/urn:li:ugcPost:789/?tracking=1'],
+  ];
+  for (const [id, original, alternate] of cases) {
+    const source = `${header}\nvideo-1,${id},${original},A,1/1/2026,editor,,TRUE,,,\n`;
+    const incoming = `${header}\nvideo-1,${id},${alternate},A,1/1/2026,editor,,TRUE,,,\n`;
+    assert.equal(mergePosts(source, incoming).additions.length, 0);
+    const different = incoming.replace(alternate, alternate.replace(/123|456|789/, '999'));
+    assert.throws(() => mergePosts(source, different), /Conflicting existing post/);
+  }
+});
