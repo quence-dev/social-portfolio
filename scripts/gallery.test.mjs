@@ -4,6 +4,13 @@ import test from 'node:test';
 
 const gallery = JSON.parse(await fs.readFile(new URL('../src/data/gallery.generated.json', import.meta.url), 'utf8'));
 
+test('recognizes TikTok uploads as TikTok', () => {
+  const posts = gallery.videos.flatMap((video) => video.posts);
+  const tiktok = posts.filter((post) => /https?:\/\/(?:www\.)?tiktok\.com\//i.test(post.url));
+  assert.ok(tiktok.length > 0);
+  assert.ok(tiktok.every((post) => post.platform === 'tiktok'));
+});
+
 function total(posts, field) {
   const values = posts.map((post) => post[field]).filter((value) => value !== null);
   return values.length ? values.reduce((sum, value) => sum + value, 0) : null;

@@ -27,6 +27,7 @@ const platformNames: Record<Platform, string> = {
   youtube: 'YouTube',
   linkedin: 'LinkedIn',
   twitter: 'X / Twitter',
+  tiktok: 'TikTok',
   other: 'Open post',
 };
 const focusableSelector = 'a[href], button:not([disabled]), iframe, [tabindex]:not([tabindex="-1"])';
@@ -56,6 +57,11 @@ function instagramEmbed(url: string) {
 function youtubeEmbed(url: string) {
   const match = /(?:youtu\.be\/|shorts\/|[?&]v=)([^?&#/]+)/.exec(url);
   return match ? `https://www.youtube.com/embed/${match[1]}` : null;
+}
+
+function tiktokEmbed(url: string) {
+  const match = /tiktok\.com\/@[^/]+\/video\/(\d+)/i.exec(url);
+  return match ? `https://www.tiktok.com/player/v1/${match[1]}?embed_from=webapp_share&music_info=1&description=1` : null;
 }
 
 function Icon({ role }: { role: string }) {
@@ -205,6 +211,7 @@ function Embed({ post }: { post: Post }) {
   let source = null;
   if (post.platform === 'instagram') source = instagramEmbed(post.url);
   if (post.platform === 'youtube') source = youtubeEmbed(post.url);
+  if (post.platform === 'tiktok') source = tiktokEmbed(post.url);
   if (!source) {
     return (
       <a className="embed-fallback" href={post.url} target="_blank" rel="noreferrer">
