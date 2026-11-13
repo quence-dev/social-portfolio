@@ -64,6 +64,13 @@ function tiktokEmbed(url: string) {
   return match ? `https://www.tiktok.com/player/v1/${match[1]}?embed_from=webapp_share&music_info=1&description=1` : null;
 }
 
+function linkedinEmbed(url: string) {
+  const match = /(?:ugcPost|activity)[-:](\d+)/i.exec(url);
+  if (!match) return null;
+  const type = match[0].toLowerCase().startsWith('ugcpost') ? 'ugcPost' : 'activity';
+  return `https://www.linkedin.com/embed/feed/update/urn:li:${type}:${match[1]}?compact=1`;
+}
+
 function Icon({ role }: { role: string }) {
   const icon = role === 'editor' ? faScissors : faVideo;
   const [width, height, , , path] = icon.icon;
@@ -212,6 +219,7 @@ function Embed({ post }: { post: Post }) {
   if (post.platform === 'instagram') source = instagramEmbed(post.url);
   if (post.platform === 'youtube') source = youtubeEmbed(post.url);
   if (post.platform === 'tiktok') source = tiktokEmbed(post.url);
+  if (post.platform === 'linkedin') source = linkedinEmbed(post.url);
   if (!source) {
     return (
       <a className="embed-fallback" href={post.url} target="_blank" rel="noreferrer">

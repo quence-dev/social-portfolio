@@ -11,6 +11,13 @@ test('recognizes TikTok uploads as TikTok', () => {
   assert.ok(tiktok.every((post) => post.platform === 'tiktok'));
 });
 
+test('recognizes LinkedIn short links', () => {
+  const posts = gallery.videos.flatMap((video) => video.posts);
+  const linkedin = posts.filter((post) => /^https?:\/\/lnkd\.in\//i.test(post.url));
+  assert.ok(linkedin.length > 0);
+  assert.ok(linkedin.every((post) => post.platform === 'linkedin'));
+});
+
 function total(posts, field) {
   const values = posts.map((post) => post[field]).filter((value) => value !== null);
   return values.length ? values.reduce((sum, value) => sum + value, 0) : null;
