@@ -1,6 +1,6 @@
 {
   "refreshedAt": null,
-  "postCount": 331,
+  "postCount": 337,
   "metricCoverage": {
     "views": 294,
     "likes": 290
@@ -34,6 +34,84 @@
       "thumbnail": "/thumbnails/instagram-DfqjOAHR8UL.jpg",
       "publishDate": "2026-11-13",
       "shootDate": "2026-11-11",
+      "views": null,
+      "likes": null
+    },
+    {
+      "videoId": "video-0194",
+      "posts": [
+        {
+          "videoId": "video-0194",
+          "postId": "instagram-DfxUMICpp9i",
+          "url": "https://www.instagram.com/reel/DfxUMICpp9i",
+          "platform": "instagram",
+          "creator": "MyTechCEO",
+          "shootDate": "2026-11-13",
+          "publishDate": null,
+          "roles": [
+            "videographer"
+          ],
+          "sponsors": [],
+          "thumbnail": null,
+          "views": null,
+          "likes": null
+        },
+        {
+          "videoId": "video-0194",
+          "postId": "twitter-2122027359763411369",
+          "url": "https://x.com/mytechceoo/status/2122027359763411369",
+          "platform": "twitter",
+          "creator": "MyTechCEO",
+          "shootDate": "2026-11-13",
+          "publishDate": null,
+          "roles": [
+            "videographer"
+          ],
+          "sponsors": [],
+          "thumbnail": null,
+          "views": null,
+          "likes": null
+        }
+      ],
+      "creator": "MyTechCEO",
+      "roles": [
+        "videographer"
+      ],
+      "sponsors": [],
+      "thumbnail": null,
+      "publishDate": "2026-11-13",
+      "shootDate": "2026-11-13",
+      "views": null,
+      "likes": null
+    },
+    {
+      "videoId": "video-0195",
+      "posts": [
+        {
+          "videoId": "video-0195",
+          "postId": "twitter-2122744765011677410",
+          "url": "https://x.com/albertadevs/status/2122744765011677410",
+          "platform": "twitter",
+          "creator": "Alberta.Tech",
+          "shootDate": "2026-11-13",
+          "publishDate": null,
+          "roles": [
+            "videographer"
+          ],
+          "sponsors": [],
+          "thumbnail": null,
+          "views": null,
+          "likes": null
+        }
+      ],
+      "creator": "Alberta.Tech",
+      "roles": [
+        "videographer"
+      ],
+      "sponsors": [],
+      "thumbnail": null,
+      "publishDate": "2026-11-13",
+      "shootDate": "2026-11-13",
       "views": null,
       "likes": null
     },
@@ -440,6 +518,53 @@
       "shootDate": "2026-10-30",
       "views": 216441,
       "likes": 7004
+    },
+    {
+      "videoId": "video-0193",
+      "posts": [
+        {
+          "videoId": "video-0193",
+          "postId": "instagram-Df29ERyhfBA",
+          "url": "https://www.instagram.com/reel/Df29ERyhfBA",
+          "platform": "instagram",
+          "creator": "Varun Rana",
+          "shootDate": "2026-11-06",
+          "publishDate": null,
+          "roles": [
+            "videographer"
+          ],
+          "sponsors": [],
+          "thumbnail": null,
+          "views": null,
+          "likes": null
+        },
+        {
+          "videoId": "video-0193",
+          "postId": "twitter-2122812195759149525",
+          "url": "https://x.com/the_varunrana/status/2122812195759149525",
+          "platform": "twitter",
+          "creator": "Varun Rana",
+          "shootDate": "2026-11-06",
+          "publishDate": null,
+          "roles": [
+            "videographer"
+          ],
+          "sponsors": [],
+          "thumbnail": null,
+          "views": null,
+          "likes": null
+        }
+      ],
+      "creator": "Varun Rana",
+      "roles": [
+        "videographer"
+      ],
+      "sponsors": [],
+      "thumbnail": null,
+      "publishDate": "2026-11-06",
+      "shootDate": "2026-11-06",
+      "views": null,
+      "likes": null
     },
     {
       "videoId": "video-0174",
@@ -1199,6 +1324,45 @@
       "shootDate": "2026-10-16",
       "views": 70897,
       "likes": 1392
+    },
+    {
+      "videoId": "video-0192",
+      "posts": [
+        {
+          "videoId": "video-0192",
+          "postId": "instagram-Df2XWR7hFBU",
+          "url": "https://www.instagram.com/reel/Df2XWR7hFBU",
+          "platform": "instagram",
+          "creator": "Alexis",
+          "shootDate": "2026-10-19",
+          "publishDate": null,
+          "roles": [
+            "videographer"
+          ],
+          "sponsors": [
+            "Cisco",
+            "Megaport",
+            "NinjaOne"
+          ],
+          "thumbnail": null,
+          "views": null,
+          "likes": null
+        }
+      ],
+      "creator": "Alexis",
+      "roles": [
+        "videographer"
+      ],
+      "sponsors": [
+        "Cisco",
+        "Megaport",
+        "NinjaOne"
+      ],
+      "thumbnail": null,
+      "publishDate": "2026-10-19",
+      "shootDate": "2026-10-19",
+      "views": null,
+      "likes": null
     },
     {
       "videoId": "video-0155",
