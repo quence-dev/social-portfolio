@@ -2,8 +2,8 @@
   "refreshedAt": null,
   "postCount": 337,
   "metricCoverage": {
-    "views": 294,
-    "likes": 290
+    "views": 295,
+    "likes": 291
   },
   "videos": [
     {
@@ -53,8 +53,8 @@
           ],
           "sponsors": [],
           "thumbnail": "/thumbnails/instagram-DfxUMICpp9i.jpg",
-          "views": null,
-          "likes": null
+          "views": 8000000,
+          "likes": 299000
         },
         {
           "videoId": "video-0194",
@@ -81,8 +81,8 @@
       "thumbnail": "/thumbnails/instagram-DfxUMICpp9i.jpg",
       "publishDate": "2026-11-13",
       "shootDate": "2026-11-13",
-      "views": null,
-      "likes": null
+      "views": 8000000,
+      "likes": 299000
     },
     {
       "videoId": "video-0195",
