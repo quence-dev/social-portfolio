@@ -14,6 +14,29 @@ const page = await context.newPage();
 let downloaded = 0;
 let skipped = 0;
 
+async function clickForDownload(link) {
+  try {
+    const [download] = await Promise.all([
+      page.waitForEvent('download', { timeout: 30_000 }),
+      link.click(),
+    ]);
+    return download;
+  } catch (error) {
+    for (const frame of page.frames()) {
+      const closeAd = frame.locator('#dismiss-button');
+      if (await closeAd.isVisible().catch(() => false)) {
+        await closeAd.click();
+        const [download] = await Promise.all([
+          page.waitForEvent('download', { timeout: 30_000 }),
+          link.click(),
+        ]);
+        return download;
+      }
+    }
+    throw error;
+  }
+}
+
 for (const row of rows) {
   if (downloaded >= limit) break;
   const target = await thumbnailTarget(row.post_id, overwrite);
@@ -33,12 +56,12 @@ for (const row of rows) {
       await thumbnailLink.waitFor({ state: 'visible', timeout: 60_000 });
     }
 
-    const href = await thumbnailLink.getAttribute('href');
-    if (!href) throw new Error('FastVideoSave returned a thumbnail link without an address.');
-    const response = await context.request.get(new URL(href, page.url()).href);
-    if (!response.ok()) throw new Error(`Thumbnail download failed (${response.status()}).`);
-    if (!response.headers()['content-type']?.startsWith('image/')) throw new Error('Thumbnail link did not return an image.');
-    await fs.writeFile(target, await response.body());
+    const download = await clickForDownload(thumbnailLink);
+    const failure = await download.failure();
+    if (failure) throw new Error(`Thumbnail download failed: ${failure}`);
+    const bytes = await fs.readFile(await download.path());
+    if (bytes[0] !== 0xff || bytes[1] !== 0xd8) throw new Error('Thumbnail download is not a JPEG.');
+    await fs.writeFile(target, bytes, { flag: overwrite ? 'w' : 'wx' });
     downloaded += 1;
     console.log(`Saved ${relativePath(target)}`);
   } catch (error) {
