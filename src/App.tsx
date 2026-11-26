@@ -380,7 +380,7 @@ export default function App() {
       views: videos.reduce((total, video) => total + (video.views ?? 0), 0),
       likes: videos.reduce((total, video) => total + (video.likes ?? 0), 0),
     };
-  }), [creators]);
+  }).sort((a, b) => b.views - a.views || b.videos.length - a.videos.length), [creators]);
   useEffect(() => {
     const updateRoute = () => {
       setRoute(currentRoute());
