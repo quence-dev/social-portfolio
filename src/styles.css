@@ -234,7 +234,7 @@ h1 {
 .totals {
   display: flex;
   gap: 32px;
-  text-align: right;
+  justify-content: end;
 }
 
 .updated-at {
