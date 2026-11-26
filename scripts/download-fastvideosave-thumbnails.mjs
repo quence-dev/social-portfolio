@@ -15,25 +15,26 @@ let downloaded = 0;
 let skipped = 0;
 
 async function clickForDownload(link) {
-  try {
-    const [download] = await Promise.all([
-      page.waitForEvent('download', { timeout: 30_000 }),
-      link.click(),
-    ]);
-    return download;
-  } catch (error) {
+  const result = page.waitForEvent('download', { timeout: 30_000 })
+    .then((download) => ({ download }), (error) => ({ error }));
+  await link.click();
+  let dismissed = false;
+  while (true) {
+    const outcome = await Promise.race([result, page.waitForTimeout(500).then(() => null)]);
+    if (outcome) {
+      if ('error' in outcome) throw outcome.error;
+      return outcome.download;
+    }
+    if (dismissed) continue;
     for (const frame of page.frames()) {
       const closeAd = frame.locator('#dismiss-button');
       if (await closeAd.isVisible().catch(() => false)) {
         await closeAd.click();
-        const [download] = await Promise.all([
-          page.waitForEvent('download', { timeout: 30_000 }),
-          link.click(),
-        ]);
-        return download;
+        dismissed = true;
+        await link.click();
+        break;
       }
     }
-    throw error;
   }
 }
 
